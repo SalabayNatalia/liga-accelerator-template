@@ -1,0 +1,12 @@
+.catalog__item {
+  cursor: pointer;
+}
+
+.catalog__product-info {
+  // position: absolute;
+  display: none;
+}
+
+.catalog__item:hover .catalog__product-info {
+  display: block;
+}

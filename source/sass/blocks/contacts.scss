@@ -1,0 +1,43 @@
+.contacts__address {
+  display: block;
+  color: $color-default-black;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 19px;
+  background: left top no-repeat url("../../img/address.svg");
+  margin-bottom: 16px;
+  margin-top: 21px;
+  padding-left: 19px;
+  padding-right: 30px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: $color-neon-blue;
+  }
+}
+
+.contacts__phone {
+  display: block;
+  color: $color-default-black;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 19px;
+  background: left top no-repeat url("../../img/phone.svg");
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: $color-neon-blue;
+  }
+}

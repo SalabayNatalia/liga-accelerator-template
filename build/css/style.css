@@ -808,6 +808,66 @@ button,
   background-position: center;
 }
 
+.catalog__item {
+  cursor: pointer;
+}
+
+.catalog__product-info {
+  display: none;
+}
+
+.catalog__item:hover .catalog__product-info {
+  display: block;
+}
+
+.contacts__address {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 19px;
+  background: left top no-repeat url("../../img/address.svg");
+  margin-bottom: 16px;
+  margin-top: 21px;
+  padding-left: 19px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.contacts__address:hover,
+.contacts__address:focus {
+  opacity: 0.5;
+}
+
+.contacts__address:active {
+  color: #2c39f2;
+}
+
+.contacts__phone {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 19px;
+  background: left top no-repeat url("../../img/phone.svg");
+  cursor: pointer;
+}
+
+.contacts__phone:hover,
+.contacts__phone:focus {
+  opacity: 0.5;
+}
+
+.contacts__phone:active {
+  color: #2c39f2;
+}
+
+.footer {
+  background-color: #011c40;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
