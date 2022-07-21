@@ -1,0 +1,45 @@
+.advantages {
+  background-image: url("../../img/advantages-desktop.jpg");
+  background-color: $pattens-blue;
+}
+
+.advantages__item {
+  background-color: $alice-blue;
+
+  &--liner::before {
+    background-image: url("../../img/advantages-liner.svg");
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--allinclusive::before {
+    background-image: url("../../img/advantages-allinclusive.svg");
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--zodiac::before {
+    background-image: url("../../img/advantages-zodiac.svg");
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@mixin advantages-item-before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
