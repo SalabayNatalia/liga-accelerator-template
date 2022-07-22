@@ -39,13 +39,13 @@
                 <a class="main-nav__link" href="#Advantages">Преимущества</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#Направления">Направления</a>
+                <a class="main-nav__link" href="#">Направления</a>
               </li>
               <li class="main-nav__item">
                 <a class="main-nav__link" href="#Upcoming-cruises">Ближайшие круизы</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#Контакты">Контакты</a>
+                <a class="main-nav__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -114,15 +114,15 @@
               <div class="modal-boxes">
                 <p class="description-box">
                   <label class="visually-hidden" for="your-name">Ваше имя:</label>
-                  <input id="your-name" type="text" name="name" placeholder="Имя" required minlength="2" maxlength="25">
+                  <input id="your-name" type="text" name="name" placeholder="Имя" data-rule="" required minlength="2" maxlength="25">
                 </p>
                 <p class="description-box">
                   <label class="visually-hidden" for="phone">Ваш телефон:</label>
-                  <input id="phone" type="tel" name="telephone" placeholder="Телефон" required></input>
+                  <input id="phone" type="tel" name="telephone" data-rule="number" placeholder="Телефон" required>
                 </p>
                 <p class="description-box">
                   <label class="visually-hidden" for="email">Ваш email:</label>
-                  <input id="email" type="email" name="mail" placeholder="E-mail" required>
+                  <input id="email" type="email" name="mail" data-rule="email" placeholder="E-mail" required>
                 </p>
               </div>
               <button type="submit">Оставить заявку</button>
