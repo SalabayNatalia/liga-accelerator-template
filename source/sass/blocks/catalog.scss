@@ -1,5 +1,11 @@
 .catalog__item {
   cursor: pointer;
+  width: 23%;
+  height: 386px;
+}
+
+.catalog__item img {
+  background-size: cover;
 }
 
 .catalog__product-info {
