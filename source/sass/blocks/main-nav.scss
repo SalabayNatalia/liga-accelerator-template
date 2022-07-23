@@ -14,4 +14,23 @@
   color: $alice-blue;
 }
 
-.main-nav
+.main-nav button {
+  background-color: transparent;
+  border: none;
+  display: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: $pattens-blue;
+  }
+}
+
+@media (max-width: $vp-375) {
+  .main-nav button {
+    display: block;
+  }
+}

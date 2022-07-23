@@ -938,6 +938,21 @@ button,
   color: #f9fbfd;
 }
 
+.main-nav button {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.main-nav button:hover,
+.main-nav button:focus {
+  opacity: 0.5;
+}
+
+.main-nav button:active {
+  color: #d9e6f4;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -980,5 +995,11 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-nav button {
+    display: block;
   }
 }
