@@ -1,0 +1,15 @@
+.main-nav {
+  display: flex;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__list a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $alice-blue;
+}

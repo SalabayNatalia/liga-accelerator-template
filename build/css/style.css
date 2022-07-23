@@ -794,6 +794,12 @@ button,
   height: 650px;
 }
 
+.page-header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .head {
   margin-top: -100px;
 }
@@ -903,12 +909,33 @@ button,
   background-color: #011c40;
 }
 
-.valid {
+.is-valid {
   border: 1px solid #6aa84f;
 }
 
-.invalid {
+.is-invalid {
   border: 1px solid #cc0000;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.main-nav__list a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f9fbfd;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
