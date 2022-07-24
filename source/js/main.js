@@ -44,3 +44,21 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+const burger = document.querySelector('.page-header__burger');
+const menu = document.querySelector('.main-nav__list');
+const menuLinks = document.querySelectorAll('.main-nav__link');
+const logo = document.querySelector('.page-header__logo');
+const wrapperMenu = document.querySelector('.page-header__wrapper');
+
+burger.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  burger.classList.toggle('is-active');
+  menu.classList.toggle('is-open');
+  for (const link of menuLinks) {
+    link.classList.toggle('is-mobile-menu');
+  }
+  logo.classList.toggle('is-logo-open-menu');
+  wrapperMenu.classList.toggle('is-mobile-open');
+});
+

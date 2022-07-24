@@ -2,35 +2,38 @@
   display: flex;
 }
 
+.main-nav__burger {
+  display: none;
+}
+
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.main-nav__list a {
+.main-nav__link {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: $alice-blue;
 }
 
-.main-nav button {
-  background-color: transparent;
-  border: none;
-  display: none;
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
-
-  &:active {
-    color: $pattens-blue;
-  }
-}
-
 @media (max-width: $vp-375) {
-  .main-nav button {
+  .main__nav {
+    grid-row: 2;
+  }
+  
+  .main-nav__list {
+    display: none;
+  }
+
+  .is-open {
     display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .is-mobile-menu {
+    color: $tangaroa;
   }
 }

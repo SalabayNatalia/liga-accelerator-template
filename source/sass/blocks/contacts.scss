@@ -41,3 +41,9 @@
     color: $color-neon-blue;
   }
 }
+
+@media (max-width: $vp-375) {
+  .contacts__map {
+    max-width: 100%;
+  }
+}

@@ -11,58 +11,49 @@
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <div class="container">
-          <div class="page-header__wrapper">
-            <a class="page-header__logo-link" href="#">
-              <img
-                class="page-header__logo"
-                src="img/svg/logo.svg"
-                width="70"
-                height="38"
-                alt="Антарктика"
-              />
-            </a>
-            <nav class="page-header__main-nav main-nav">
-              <ul class="main-nav__list list-reset">
-                <li class="main-nav__item main-nav__item--current">
-                  <a class="main-nav__link" href="#Advantages">Преимущества</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Направления</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#Upcoming-cruises">Ближайшие круизы</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
+        <div class="page-header__popup">
+          <div class="container">
+            <div class="page-header__wrapper">
+              <a class="page-header__logo-link" href="#">
+                <svg class="page-header__logo" width="70" height="38" viewBox="0 0 70 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z"/>
+                  </svg>
+              </a>
+              <nav class="page-header__main-nav main-nav">
+                <ul class="main-nav__list list-reset" data-menu>
+                  <li class="main-nav__item main-nav__item--current">
+                    <a class="main-nav__link" data-menu-link href="#Advantages">Преимущества</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" data-menu-link href="#">Направления</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" data-menu-link href="#Upcoming-cruises">Ближайшие круизы</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" data-menu-link href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
               <button
-                class="main-nav__burger"
-                type="button"
-              >
-              <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 1H24M0 7H24M0 13H24" stroke="#F9FBFD" stroke-width="2"/>
-                </svg>
-                <span class="visually-hidden">Открыть меню</span>
+                  class="page-header__burger"
+                  data-burger
+                  type="button"
+                >
+                  <span class="visually-hidden">Открыть меню</span>
               </button>
-              <button
-                class="main-nav__close"
-                type="button"
-              >
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7.5 7.5M14 14L7.5 7.5M7.5 7.5L14 1L1 14" stroke="#011C40" stroke-width="2"/>
-                </svg>
-                <span class="visually-hidden">Закрыть меню</span>
-              </button>
-            </nav>
+            </div>
           </div>
         </div>
       </header>
       <main class="page-main">
         <section class="page-main__head head">
-          <h1>Круизы в Антарктику</h1>
-          <p>Волшебный мир айсбергов и пингвинов</p>
+          <div class="container">
+            <h1>Круизы в Антарктику</h1>
+            <p>Волшебный мир айсбергов и пингвинов</p>
+          </div>
         </section>
         <section class="page-main__trip trip">
           <div class="container">
@@ -96,6 +87,45 @@
             <ul class="catalog__list list-reset">
               <li class="catalog__item">
                 <h3 class="catalog__product-name">Круиз "Астория"</h3>
+                <!-- <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                    srcset="
+                      img/catalog/astoria-l.webp    1x,
+                      img/catalog/astoria-l@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 767px) and (max-width: 1023px)"
+                    type="image/webp"
+                    srcset="
+                      img/catalog/astoria-m.webp    1x,
+                      img/catalog/astoria-m@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                    srcset="
+                      img/catalog/astoria-s.webp    1x,
+                      img/catalog/astoria-s@2x.webp 2x
+                    "
+                  />
+                  <!--mobile-1x: 270px-->
+                  <!--mobile-2x: 540px-->
+                  <!--tablet-1x: 309px-->
+                  <!--tablet-2x: 618px-->
+                  <!--desktop-1x: 260px-->
+                  <!--desktop-2x: 520px-->
+                  <img loading="lazy"
+                    srcset="img/catalog/astoria-l@2x.png 2x"
+                    src="img/catalog/astoria-l.png"
+                    alt="Невероятный круиз Астория"
+                    width="260"
+                    height="386"
+                  />
+                </picture> -->
                 <img src="img/cruise-1.jpg" width="100%" height="100%" alt="замёрзший водоём">
                 <div class="catalog__product-info">
                   <dl class="list-reset">
@@ -141,7 +171,7 @@
           <div class="container">
             <h2 class="visually-hidden" id="contacts">Контакты</h2>
             <div class="layout">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858715897256!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1658435492846!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858715897256!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1658435492846!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               <div>
                 <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
                 <ul class="list-reset">
@@ -172,6 +202,16 @@
             <li>
               <a href="#">
                 <svg width="11" height="20"><use xlink:href="img/sprite/sprite.svg#facebook"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="20" height="20"><use xlink:href="img/sprite/sprite.svg#instagram"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="20" height="16"><use xlink:href="img/sprite/sprite.svg#twitter"></use></svg>
               </a>
             </li>
           </ul>

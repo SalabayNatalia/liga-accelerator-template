@@ -787,11 +787,19 @@ button,
 }
 
 .page-header {
-  background-color: #2c39f2;
+  background-color: #0B4880;
   background-image: url("../../img/background-desktop.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 650px;
+}
+
+.page-header__logo {
+  fill: #f9fbfd;
+}
+
+.page-header__burger {
+  display: none;
 }
 
 .page-header__wrapper {
@@ -923,6 +931,10 @@ button,
   display: flex;
 }
 
+.main-nav__burger {
+  display: none;
+}
+
 .main-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -931,26 +943,11 @@ button,
   flex-wrap: wrap;
 }
 
-.main-nav__list a {
+.main-nav__link {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: #f9fbfd;
-}
-
-.main-nav button {
-  background-color: transparent;
-  border: none;
-  display: none;
-}
-
-.main-nav button:hover,
-.main-nav button:focus {
-  opacity: 0.5;
-}
-
-.main-nav button:active {
-  color: #d9e6f4;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -999,7 +996,84 @@ button,
 }
 
 @media (max-width: 375px) {
-  .main-nav button {
+  .page-header {
+    background-image: url("../../img/background-mobile.jpg");
+    height: 500px;
+  }
+
+  .page-header__wrapper {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: transparent;
+    z-index: 10;
+    height: 568px;
+    width: 90%;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  .page-header__burger {
     display: block;
+    background: url(../img/burger.svg) no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+  }
+
+  .page-header__burger:hover,
+  .page-header__burger:focus {
+    opacity: 0.7;
+  }
+
+  .is-active {
+    background: url(../img/close.svg) no-repeat;
+  }
+
+  .is-logo-open-menu {
+    fill: #011c40;
+  }
+
+  .is-mobile-open {
+    background-color: #f9fbfd;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr -webkit-min-content;
+    -ms-grid-columns: 1fr min-content;
+    grid-template-columns: 1fr -webkit-min-content;
+    grid-template-columns: 1fr min-content;
+    -ms-grid-rows: -webkit-min-content 1fr;
+    -ms-grid-rows: min-content 1fr;
+    grid-template-rows: -webkit-min-content 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .contacts__map {
+    max-width: 100%;
+  }
+
+  .main__nav {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+
+  .main-nav__list {
+    display: none;
+  }
+
+  .is-open {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .is-mobile-menu {
+    color: #011c40;
   }
 }
