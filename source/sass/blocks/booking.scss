@@ -5,3 +5,40 @@
 .is-invalid {
   border: 1px solid $free-speech-red;
 }
+
+.booking h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $tangaroa;
+}
+
+.booking p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $tangaroa;
+}
+
+
+@media (max-width: $tablet-size-max) {
+  .booking h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: $mobile-size-max) {
+  .booking h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .booking p {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}

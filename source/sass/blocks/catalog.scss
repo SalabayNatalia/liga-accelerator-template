@@ -1,3 +1,12 @@
+.catalog h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $tangaroa;
+}
+
 .catalog__item {
   cursor: pointer;
   width: 23%;
@@ -44,4 +53,16 @@
 
 .catalog__item:hover .catalog__product-info {
   display: block;
+}
+
+@media (max-width: $tablet-size-max) {
+  .catalog h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: $mobile-size-max) {
+  .catalog h2 {
+    font-size: 24px;
+  }
 }

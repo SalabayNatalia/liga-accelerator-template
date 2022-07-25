@@ -58,11 +58,10 @@ $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
 
-$mobile-size: "(max-width: 767px)";
-$tablet-size-min: "(min-width: 768px)";
-$tablet-size: "(min-width: 768px) and (max-width: 1023px)";
-$tablet-size-max: "(max-width: 1023px)";
-$desktop-size-min: "(min-width: 1024px)";
+$mobile-size-max: 767px;
+$tablet-size-min: 768px;
+$tablet-size-max: 1023px;
+$desktop-size-min: 1024px;
 
 // Retina
 // ---------------------------------

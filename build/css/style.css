@@ -796,6 +796,8 @@ button,
 
 .page-header__logo {
   fill: #f9fbfd;
+  width: 70px;
+  height: 38px;
 }
 
 .page-header__burger {
@@ -808,13 +810,36 @@ button,
   display: flex;
 }
 
-.head {
+.antarctic h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: #f9fbfd;
   margin-top: -100px;
+  margin-bottom: 0;
+}
+
+.antarctic p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f9fbfd;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .advantages {
   background-image: url("../../img/advantages-desktop.jpg");
   background-color: #d9e6f4;
+}
+
+.advantages h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
 }
 
 .advantages__item {
@@ -849,6 +874,33 @@ button,
   height: 15px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.advantages__item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
+}
+
+.advantages__item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
+}
+
+.catalog h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
 }
 
 .catalog__item {
@@ -895,6 +947,15 @@ button,
 
 .catalog__item:hover .catalog__product-info {
   display: block;
+}
+
+.contacts p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
 }
 
 .contacts__address {
@@ -953,6 +1014,24 @@ button,
   border: 1px solid #cc0000;
 }
 
+.booking h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
+}
+
+.booking p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1002,6 +1081,27 @@ button,
   .container {
     padding: 0 24px;
   }
+
+  .page-header__logo {
+    width: 42px;
+    height: 22px;
+  }
+
+  .advantages h2 {
+    font-size: 26px;
+  }
+
+  .advantages__item h3 {
+    line-height: 140%;
+  }
+
+  .catalog h2 {
+    font-size: 26px;
+  }
+
+  .booking h2 {
+    font-size: 34px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1021,6 +1121,34 @@ button,
   .modal--fit-content .modal__content {
     width: 100%;
   }
+
+  .page-header__logo {
+    width: 38px;
+    height: 20px;
+  }
+
+  .antarctic h1 {
+    font-size: 36px;
+    line-height: 125%;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+  }
+
+  .catalog h2 {
+    font-size: 24px;
+  }
+
+  .booking h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .booking p {
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1034,6 +1162,9 @@ button,
     right: 0;
     top: 0;
     background-color: transparent;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
     z-index: 10;
     height: 568px;
     width: 90%;
@@ -1048,6 +1179,9 @@ button,
   .page-header__burger {
     display: block;
     background: url(../img/burger.svg) no-repeat;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
     border: none;
     cursor: pointer;
     width: 24px;
@@ -1060,18 +1194,26 @@ button,
 
   .is-active {
     background: url(../img/close.svg) no-repeat;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
   }
 
   .is-logo-open-menu {
     fill: #011c40;
+    -webkit-transition: fill 3s;
+    -o-transition: fill 3s;
+    transition: fill 3s;
   }
 
   .is-popup-open {
     background-color: #f9fbfd;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
   }
 
   .is-mobile-open {
-    background-color: #f9fbfd;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr -webkit-min-content;
@@ -1109,5 +1251,12 @@ button,
 
   .is-mobile-menu {
     color: #011c40;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .antarctic h1 {
+    font-size: 50px;
+    line-height: 61px;
   }
 }

@@ -1,0 +1,31 @@
+.antarctic h1{
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: $alice-blue;
+  margin-top: -100px;
+  margin-bottom: 0;
+}
+
+.antarctic p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $alice-blue;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width:$tablet-size-min) and (max-width:$tablet-size-max) {
+  .antarctic h1 {
+    font-size: 50px;
+    line-height: 61px;
+   }
+}
+
+@media (max-width:$mobile-size-max) {
+  .antarctic h1 {
+    font-size: 36px;
+    line-height: 125%;
+  }
+}

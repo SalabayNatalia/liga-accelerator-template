@@ -1,0 +1,27 @@
+.trip h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $tangaroa;
+}
+
+.trip p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media (max-width: $tablet-size-max) {
+  .trip h2 {
+    font-size: 26px;
+    line-height: 140%;
+  }
+}
+
+@media (max-width: $mobile-size-max) {
+  .trip h2 {
+    font-size: 24px;
+  }
+}
