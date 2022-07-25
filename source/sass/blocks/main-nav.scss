@@ -19,10 +19,6 @@
 }
 
 @media (max-width: $vp-375) {
-  .main__nav {
-    grid-row: 2;
-  }
-  
   .main-nav__list {
     display: none;
   }

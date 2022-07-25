@@ -24,15 +24,25 @@
     height: 500px;
   }
 
-  .page-header__wrapper {
-    justify-content: space-between;
+  .page-header__popup {
+    position: absolute;
+    right: 0;
+    top: 0;
     background-color: transparent;
     z-index: 10;
     height: 568px;
     width: 90%;
-    position: fixed;
-    right: 0;
-    top: 0;
+  }
+
+  .page-header__wrapper {
+    justify-content: space-between;
+    // background-color: transparent;
+    // z-index: 10;
+    // height: 568px;
+    // width: 90%;
+    // position: fixed;
+    // right: 0;
+    // top: 0;
   }
 
   .page-header__burger {
@@ -56,11 +66,18 @@
     fill: $tangaroa;
   }
 
+  .is-popup-open {
+    background-color: $alice-blue;
+  }
+
   .is-mobile-open {
     background-color: $alice-blue;
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: min-content 1fr;
   }
-}
 
+  .is-mobile-open nav{
+    grid-row: 2/-1;
+  }
+}

@@ -4,14 +4,43 @@
   height: 386px;
 }
 
+.catalog__item h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: $alice-blue;
+  text-align: left;
+}
+
+
 .catalog__item img {
   background-size: cover;
 }
 
 .catalog__product-info {
-  // position: absolute;
+  position: relative;
   display: none;
+  background-color: $tangaroa;
+  padding: 35px;
 }
+
+.catalog__product-info dt{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $alice-blue;
+}
+
+.catalog__product-info dd{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $quartz;
+  margin-left: 0;
+}
+
 
 .catalog__item:hover .catalog__product-info {
   display: block;

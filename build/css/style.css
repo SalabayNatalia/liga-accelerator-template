@@ -857,12 +857,40 @@ button,
   height: 386px;
 }
 
+.catalog__item h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #f9fbfd;
+  text-align: left;
+}
+
 .catalog__item img {
   background-size: cover;
 }
 
 .catalog__product-info {
+  position: relative;
   display: none;
+  background-color: #011c40;
+  padding: 35px;
+}
+
+.catalog__product-info dt {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.catalog__product-info dd {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #d8d8d9;
+  margin-left: 0;
 }
 
 .catalog__item:hover .catalog__product-info {
@@ -1001,17 +1029,20 @@ button,
     height: 500px;
   }
 
-  .page-header__wrapper {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  .page-header__popup {
+    position: absolute;
+    right: 0;
+    top: 0;
     background-color: transparent;
     z-index: 10;
     height: 568px;
     width: 90%;
-    position: fixed;
-    right: 0;
-    top: 0;
+  }
+
+  .page-header__wrapper {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .page-header__burger {
@@ -1035,6 +1066,10 @@ button,
     fill: #011c40;
   }
 
+  .is-popup-open {
+    background-color: #f9fbfd;
+  }
+
   .is-mobile-open {
     background-color: #f9fbfd;
     display: -ms-grid;
@@ -1049,13 +1084,12 @@ button,
     grid-template-rows: min-content 1fr;
   }
 
-  .contacts__map {
-    max-width: 100%;
+  .is-mobile-open nav {
+    grid-row: 2/-1;
   }
 
-  .main__nav {
-    -ms-grid-row: 2;
-    grid-row: 2;
+  .contacts__map {
+    max-width: 100%;
   }
 
   .main-nav__list {

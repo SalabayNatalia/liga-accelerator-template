@@ -18,6 +18,8 @@ $tangaroa: #011c40;
 $free-speech-red: #cc0000;
 $apple: #6aa84f;
 $dark-cerulean: #0B4880;
+$quartz: #d8d8d9;
+
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -55,6 +57,12 @@ $vp-1024:                           1024px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
+
+$mobile-size: "(max-width: 767px)";
+$tablet-size-min: "(min-width: 768px)";
+$tablet-size: "(min-width: 768px) and (max-width: 1023px)";
+$tablet-size-max: "(max-width: 1023px)";
+$desktop-size-min: "(min-width: 1024px)";
 
 // Retina
 // ---------------------------------

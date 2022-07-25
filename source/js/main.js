@@ -50,6 +50,7 @@ const menu = document.querySelector('.main-nav__list');
 const menuLinks = document.querySelectorAll('.main-nav__link');
 const logo = document.querySelector('.page-header__logo');
 const wrapperMenu = document.querySelector('.page-header__wrapper');
+const popup = document.querySelector('.page-header__popup');
 
 burger.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -60,5 +61,18 @@ burger.addEventListener('click', function (evt) {
   }
   logo.classList.toggle('is-logo-open-menu');
   wrapperMenu.classList.toggle('is-mobile-open');
+  popup.classList.toggle('is-popup-open');
 });
 
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute('href');
+
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+}
