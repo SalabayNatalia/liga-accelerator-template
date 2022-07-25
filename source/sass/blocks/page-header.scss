@@ -18,6 +18,8 @@
 
 .page-header__wrapper {
   display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
 }
 
 @media (max-width: $tablet-size-max) {

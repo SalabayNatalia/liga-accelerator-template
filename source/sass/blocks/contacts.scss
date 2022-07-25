@@ -51,6 +51,10 @@
   }
 }
 
+.contacts__map {
+  max-width: 50%;
+}
+
 @media (max-width: $vp-375) {
   .contacts__map {
     max-width: 100%;

@@ -76,3 +76,24 @@ for (let smoothLink of smoothLinks) {
     });
   });
 }
+
+// const form = document.querySelector['data-form'];
+// const inputs = document.querySelectorAll['data-input'];
+// const email = document.querySelector['data-email'];
+// const phone = document.querySelector['data-phone'];
+// const checkbox = document.querySelector['data-checkbox'];
+
+// form.onsubmit = function () {
+//   const emailVal = email.value;
+//   const phoneVal = phone.value;
+
+//   inputs.forEach(function (input) {
+//     if (input.value === '') {
+//       input.classList.add('is-error');
+//     } else {
+//       input.classList.remove('is-error');
+//     }
+//   });
+
+//   return false;
+// };

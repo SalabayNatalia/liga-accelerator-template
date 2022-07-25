@@ -142,21 +142,24 @@
           <div class="container">
             <h2>Раннее бронирование</h2>
             <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
-            <form class="booking__form" action="https//echo.htmlacadeny.ru" method="post" autocomplete="off">
+            <form class="booking__form" action="https//echo.htmlacadeny.ru" method="post" autocomplete="off" data-form>
+              <legend>Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
               <div class="modal-boxes">
                 <p class="description-box">
                   <label class="visually-hidden" for="your-name">Ваше имя:</label>
-                  <input id="your-name" type="text" name="name" placeholder="Имя" data-rule="" required minlength="2" maxlength="25">
+                  <input id="your-name" type="text" name="name" data-input placeholder="Имя" data-rule="" required minlength="2" maxlength="25">
                 </p>
                 <p class="description-box">
                   <label class="visually-hidden" for="phone">Ваш телефон:</label>
-                  <input id="phone" type="tel" name="telephone" data-rule="number" placeholder="Телефон" required>
+                  <input id="phone" type="tel" name="telephone" data-phone data-input data-rule="number" placeholder="Телефон" required>
                 </p>
                 <p class="description-box">
                   <label class="visually-hidden" for="email">Ваш email:</label>
-                  <input id="email" type="email" name="mail" data-rule="email" placeholder="E-mail" required>
+                  <input id="email" type="email" name="mail" data-email data-input data-rule="email" placeholder="E-mail" required>
                 </p>
               </div>
+              <input class ="booking__input-agree" type="checkbox" id="agree" data-checkbox>
+              <label class ="booking__label-agree" fot="agree">согласен на обработку моих персональных данных</label>
               <button type="submit">Оставить заявку</button>
             </form>
           </div>
@@ -164,7 +167,7 @@
         <section class="page-main__contacts contacts">
           <div class="container">
             <h2 class="visually-hidden" id="contacts">Контакты</h2>
-            <div class="layout">
+            <div class="contacts__layout">
               <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858715897256!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1658435492846!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               <div>
                 <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
