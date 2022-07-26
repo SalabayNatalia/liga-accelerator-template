@@ -425,8 +425,6 @@ template {
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  outline: 1px solid pink;
-  outline-offset: 0;
 }
 
 html,
@@ -451,7 +449,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font-family: "Monserrat", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   background-color: #ffffff;
 }
 
@@ -647,9 +645,10 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 .btn {
@@ -824,8 +823,8 @@ button,
   text-shadow: 0px 4px 4px #ffffff 0.25;
   margin-bottom: 0;
   position: absolute;
-  left: 198px;
-  top: 283px;
+  left: 202px;
+  top: 233px;
 }
 
 .antarctic p {
@@ -836,13 +835,14 @@ button,
   margin-top: 0;
   margin-bottom: 0;
   position: absolute;
-  left: 198px;
-  top: 388px;
+  left: 202px;
+  top: 349px;
 }
 
 .advantages {
   background-image: url("../../img/advantages-desktop.jpg");
   background-color: #d9e6f4;
+  padding: 120px 0;
 }
 
 .advantages h2 {
@@ -850,7 +850,7 @@ button,
   font-size: 28px;
   line-height: 150%;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 60px;
   color: #011c40;
   text-align: center;
 }
@@ -861,16 +861,16 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .advantages li {
   background-color: #f9fbfd;
   padding: 30px;
   width: 31%;
-}
-
-.advantages li:not(:last-child) {
-  margin-right: 3%;
+  height: 241px;
 }
 
 .advantages li--liner::before {
@@ -881,6 +881,7 @@ button,
   height: 32px;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 50;
 }
 
 .advantages li--allinclusive::before {
@@ -924,6 +925,7 @@ button,
 .advantages li {
   padding: 20px;
   width: 27%;
+  height: 310px;
 }
 
 .advantages li:not(:last-child) {
@@ -989,6 +991,19 @@ button,
   display: none;
 }
 
+.contacts {
+  background-color: #f9fbfd;
+}
+
+.contacts__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 48% 52%;
+  grid-template-columns: 48% 52%;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 .contacts p {
   font-weight: 500;
   font-size: 18px;
@@ -996,6 +1011,24 @@ button,
   margin-top: 0;
   margin-bottom: 0;
   color: #011c40;
+  grid-column: 2/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.contacts ul {
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+}
+
+.contacts_map-wrapper {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  width: 48%;
+  height: 306px;
 }
 
 .contacts__address {
@@ -1043,7 +1076,9 @@ button,
 }
 
 .contacts__map {
-  max-width: 50%;
+  max-width: 100%;
+  height: 306px;
+  display: block;
 }
 
 .footer {
@@ -1056,6 +1091,11 @@ button,
 
 .is-invalid {
   border: 1px solid #cc0000;
+}
+
+.booking {
+  background-image: url("../../img/booking.jpg");
+  background-color: #d9e6f4;
 }
 
 .booking__wrapper {
@@ -1097,10 +1137,11 @@ button,
 
 .booking__form {
   background-color: #011c40;
-  -webkit-box-shadow: 0px 4px 45px;
-  box-shadow: 0px 4px 45px;
+  -webkit-box-shadow: 0px 4px 45px #011c40 0.15;
+  box-shadow: 0px 4px 45px #011c40 0.15;
   padding: 50px;
-  width: 35%;
+  width: 70%;
+  height: 455px;
   grid-column: 2/-1;
   grid-row: 1/-1;
 }
@@ -1160,7 +1201,7 @@ button,
   display: none;
 }
 
-.main-nav__list {
+.main-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1168,9 +1209,10 @@ button,
   flex-wrap: wrap;
   -ms-flex-item-align: center;
   align-self: center;
+  gap: 33px;
 }
 
-.main-nav__link {
+.main-nav a {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -1237,15 +1279,11 @@ button,
   }
 }
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    max-width: 1023px;
+    padding-right: 45px;
+    padding-left: 45px;
   }
 
   .page-header__logo {
@@ -1256,6 +1294,21 @@ button,
   .page-header {
     background-image: url("../../img/background-tablet.jpg");
     height: 638px;
+  }
+
+  .page-header__wrapper {
+    padding-top: 26px;
+  }
+
+  .antarctic h1 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .advantages {
+    background-image: url("../../img/advantages-tablet.jpg");
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .advantages h2 {
@@ -1270,8 +1323,28 @@ button,
     font-size: 26px;
   }
 
+  .booking {
+    background-image: url("../../img/booking-tablet.jpg");
+  }
+
+  .booking__wrapper {
+    display: block;
+  }
+
+  .booking__form {
+    width: 53%;
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+  }
+
   .booking h2 {
     font-size: 34px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .trip h2 {
@@ -1282,7 +1355,9 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    max-width: 767px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .modal__wrapper {
@@ -1397,12 +1472,20 @@ button,
     top: 281px;
   }
 
+  .advantages {
+    background-image: url("../../img/advantages-mobile.jpg");
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
   .advantages h2 {
     font-size: 24px;
+    margin-bottom: 40px;
   }
 
   .advantages li {
     width: 100%;
+    height: 250px;
   }
 
   .advantages li:not(:last-child) {
@@ -1418,8 +1501,17 @@ button,
     font-size: 24px;
   }
 
+  .contacts__map {
+    max-width: 100%;
+  }
+
+  .booking {
+    background-image: url("../../img/booking-mobile.jpg");
+  }
+
   .booking__form {
     padding: 40px 30px;
+    width: 100%;
   }
 
   .booking__form legend {
@@ -1436,7 +1528,7 @@ button,
     line-height: 140%;
   }
 
-  .main-nav__list {
+  .main-nav ul {
     display: none;
   }
 
@@ -1461,18 +1553,5 @@ button,
 
   .trip h2 {
     font-size: 24px;
-  }
-}
-
-@media (max-width: 375px) {
-  .contacts__map {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .antarctic h1 {
-    font-size: 50px;
-    line-height: 61px;
   }
 }

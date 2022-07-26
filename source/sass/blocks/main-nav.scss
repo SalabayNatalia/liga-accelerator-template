@@ -6,23 +6,28 @@
   display: none;
 }
 
-.main-nav__list {
+.main-nav ul {
   display: flex;
   flex-wrap: wrap;
   align-self: center;
+  gap: 33px;
 }
 
-.main-nav__link {
+.main-nav a {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: $alice-blue;
 }
+@media (max-width: $tablet-size-max) {
+  .main-nav a {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 
-// @media (max-width: $vp-375) {
-  @media (max-width: $mobile-size-max) {
-
-  .main-nav__list {
+@media (max-width: $mobile-size-max) {
+  .main-nav ul {
     display: none;
   }
 

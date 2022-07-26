@@ -6,8 +6,8 @@
   text-shadow: 0px 4px 4px $color-default-white 0.25;
   margin-bottom: 0;
   position: absolute;
-  left: 198px;
-  top: 283px;
+  left: 202px;
+  top: 233px;
 }
 
 .antarctic p {
@@ -18,11 +18,11 @@
   margin-top: 0;
   margin-bottom: 0;
   position: absolute;
-  left: 198px;
-  top: 388px;
+  left: 202px;
+  top: 349px;
 }
 
-@media (min-width:$tablet-size-min) and (max-width:$tablet-size-max) {
+@media (max-width:$tablet-size-max) {
   .antarctic h1 {
     font-size: 50px;
     line-height: 61px;

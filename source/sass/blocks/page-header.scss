@@ -32,6 +32,10 @@
     background-image: url("../../img/background-tablet.jpg");
     height: 638px;
   }
+
+  .page-header__wrapper {
+    padding-top: 26px;
+  }
 }
 
 @media (max-width: $mobile-size-max) {

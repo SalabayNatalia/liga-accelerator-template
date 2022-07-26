@@ -6,6 +6,11 @@
   border: 1px solid $free-speech-red;
 }
 
+.booking {
+  background-image: url("../../img/booking.jpg");
+  background-color: $pattens-blue;
+}
+
 .booking__wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -36,9 +41,10 @@
 
 .booking__form {
   background-color: $tangaroa;
-  box-shadow: 0px 4px 45px;
+  box-shadow: 0px 4px 45px $tangaroa 0.15;
   padding: 50px;
-  width: 35%;
+  width: 70%;
+  height: 455px;
   grid-column: 2/-1;
   grid-row: 1/-1;
 }
@@ -90,14 +96,32 @@
 
 
 @media (max-width: $tablet-size-max) {
+  .booking {
+    background-image: url("../../img/booking-tablet.jpg");
+  }
+
+  .booking__wrapper {
+    display: block;
+  }
+
+  .booking__form {
+    width: 53%;
+    transition: width 0.5s;
+  }
+
   .booking h2 {
     font-size: 34px;
   }
 }
 
 @media (max-width: $mobile-size-max) {
+  .booking {
+    background-image: url("../../img/booking-mobile.jpg");
+  }
+
   .booking__form {
     padding: 40px 30px;
+    width: 100%;
   }
 
   .booking__form legend {
