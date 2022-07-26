@@ -426,6 +426,7 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: 1px solid pink;
+  outline-offset: 0;
 }
 
 html,
@@ -820,8 +821,11 @@ button,
   font-size: 54px;
   line-height: 66px;
   color: #f9fbfd;
-  margin-top: -100px;
+  text-shadow: 0px 4px 4px #ffffff 0.25;
   margin-bottom: 0;
+  position: absolute;
+  left: 198px;
+  top: 283px;
 }
 
 .antarctic p {
@@ -831,6 +835,9 @@ button,
   color: #f9fbfd;
   margin-top: 0;
   margin-bottom: 0;
+  position: absolute;
+  left: 198px;
+  top: 388px;
 }
 
 .advantages {
@@ -845,13 +852,28 @@ button,
   margin-top: 0;
   margin-bottom: 0;
   color: #011c40;
+  text-align: center;
 }
 
-.advantages__item {
+.advantages ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.advantages li {
   background-color: #f9fbfd;
+  padding: 30px;
+  width: 31%;
 }
 
-.advantages__item--liner::before {
+.advantages li:not(:last-child) {
+  margin-right: 3%;
+}
+
+.advantages li--liner::before {
   background-image: url("../../img/advantages-liner.svg");
   content: "";
   position: absolute;
@@ -861,7 +883,7 @@ button,
   background-position: center;
 }
 
-.advantages__item--allinclusive::before {
+.advantages li--allinclusive::before {
   background-image: url("../../img/advantages-allinclusive.svg");
   content: "";
   position: absolute;
@@ -871,7 +893,7 @@ button,
   background-position: center;
 }
 
-.advantages__item--zodiac::before {
+.advantages li--zodiac::before {
   background-image: url("../../img/advantages-zodiac.svg");
   content: "";
   position: absolute;
@@ -897,6 +919,15 @@ button,
   margin-top: 0;
   margin-bottom: 0;
   color: #011c40;
+}
+
+.advantages li {
+  padding: 20px;
+  width: 27%;
+}
+
+.advantages li:not(:last-child) {
+  margin-right: 4%;
 }
 
 .catalog h2 {
@@ -952,6 +983,10 @@ button,
 
 .catalog__item:hover .catalog__product-info {
   display: block;
+}
+
+.catalog__item:hover .catalog__item img {
+  display: none;
 }
 
 .contacts p {
@@ -1023,6 +1058,15 @@ button,
   border: 1px solid #cc0000;
 }
 
+.booking__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 .booking h2 {
   font-weight: 700;
   font-size: 40px;
@@ -1030,6 +1074,12 @@ button,
   margin-top: 0;
   margin-bottom: 0;
   color: #011c40;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 
 .booking p {
@@ -1039,6 +1089,10 @@ button,
   margin-top: 0;
   margin-bottom: 0;
   color: #011c40;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 2/-1;
 }
 
 .booking__form {
@@ -1047,9 +1101,11 @@ button,
   box-shadow: 0px 4px 45px;
   padding: 50px;
   width: 35%;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
 }
 
-.is-error {
+.is-invalid {
   border: red;
 }
 
@@ -1121,6 +1177,52 @@ button,
   color: #f9fbfd;
 }
 
+.trip {
+  background-color: #f9fbfd;
+  padding: 120px 0;
+}
+
+.trip__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.trip__wrapper h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #011c40;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.trip__wrapper p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 2/-1;
+}
+
+.trip__image {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1151,6 +1253,11 @@ button,
     height: 22px;
   }
 
+  .page-header {
+    background-image: url("../../img/background-tablet.jpg");
+    height: 638px;
+  }
+
   .advantages h2 {
     font-size: 26px;
   }
@@ -1165,6 +1272,11 @@ button,
 
   .booking h2 {
     font-size: 34px;
+  }
+
+  .trip h2 {
+    font-size: 26px;
+    line-height: 140%;
   }
 }
 
@@ -1191,39 +1303,6 @@ button,
     height: 20px;
   }
 
-  .antarctic h1 {
-    font-size: 36px;
-    line-height: 125%;
-  }
-
-  .advantages h2 {
-    font-size: 24px;
-  }
-
-  .catalog h2 {
-    font-size: 24px;
-  }
-
-  .booking__form {
-    padding: 40px 30px;
-  }
-
-  .booking__form legend {
-    line-height: 140%;
-  }
-
-  .booking h2 {
-    font-size: 24px;
-    line-height: 130%;
-  }
-
-  .booking p {
-    font-size: 16px;
-    line-height: 140%;
-  }
-}
-
-@media (max-width: 375px) {
   .page-header {
     background-image: url("../../img/background-mobile.jpg");
     height: 500px;
@@ -1257,6 +1336,7 @@ button,
     border: none;
     cursor: pointer;
     width: 24px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .page-header__burger:hover,
@@ -1266,9 +1346,12 @@ button,
 
   .is-active {
     background: url(../img/close.svg) no-repeat;
+    width: 13px;
+    height: 13px;
     -webkit-transition: background 0.5s;
     -o-transition: background 0.5s;
     transition: background 0.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .is-logo-open-menu {
@@ -1302,8 +1385,55 @@ button,
     grid-row: 2/-1;
   }
 
-  .contacts__map {
-    max-width: 100%;
+  .antarctic h1 {
+    font-size: 36px;
+    line-height: 125%;
+    left: 15px;
+    top: 185px;
+  }
+
+  .antarctic p {
+    left: 15px;
+    top: 281px;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+  }
+
+  .advantages li {
+    width: 100%;
+  }
+
+  .advantages li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .catalog__item {
+    width: 100%;
+  }
+
+  .catalog h2 {
+    font-size: 24px;
+  }
+
+  .booking__form {
+    padding: 40px 30px;
+  }
+
+  .booking__form legend {
+    line-height: 140%;
+  }
+
+  .booking h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .booking p {
+    font-size: 16px;
+    line-height: 140%;
   }
 
   .main-nav__list {
@@ -1323,6 +1453,20 @@ button,
 
   .is-mobile-menu {
     color: #011c40;
+  }
+
+  .trip__wrapper {
+    display: block;
+  }
+
+  .trip h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contacts__map {
+    max-width: 100%;
   }
 }
 

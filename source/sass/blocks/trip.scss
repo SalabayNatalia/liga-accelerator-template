@@ -1,16 +1,38 @@
-.trip h2 {
+.trip {
+  background-color: $alice-blue;
+  padding: 120px 0;
+}
+
+.trip__wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.trip__wrapper h2 {
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
   margin-top: 0;
   margin-bottom: 0;
   color: $tangaroa;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
-.trip p {
+.trip__wrapper p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+  grid-column: 1/2;
+  grid-row: 2/-1;
+}
+
+.trip__image {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
 }
 
 @media (max-width: $tablet-size-max) {
@@ -21,6 +43,10 @@
 }
 
 @media (max-width: $mobile-size-max) {
+  .trip__wrapper {
+      display: block;
+  }
+
   .trip h2 {
     font-size: 24px;
   }

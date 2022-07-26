@@ -3,8 +3,11 @@
   font-size: 54px;
   line-height: 66px;
   color: $alice-blue;
-  margin-top: -100px;
+  text-shadow: 0px 4px 4px $color-default-white 0.25;
   margin-bottom: 0;
+  position: absolute;
+  left: 198px;
+  top: 283px;
 }
 
 .antarctic p {
@@ -14,6 +17,9 @@
   color: $alice-blue;
   margin-top: 0;
   margin-bottom: 0;
+  position: absolute;
+  left: 198px;
+  top: 388px;
 }
 
 @media (min-width:$tablet-size-min) and (max-width:$tablet-size-max) {
@@ -27,5 +33,12 @@
   .antarctic h1 {
     font-size: 36px;
     line-height: 125%;
+    left: 15px;
+    top: 185px;
+  }
+
+  .antarctic p {
+    left: 15px;
+    top: 281px;
   }
 }

@@ -10,10 +10,22 @@
   margin-top: 0;
   margin-bottom: 0;
   color: $tangaroa;
+  text-align: center;
 }
 
-.advantages__item {
+.advantages ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages li  {
   background-color: $alice-blue;
+  padding: 30px;
+  width: 31%;
+
+  &:not(:last-child) {
+    margin-right: 3%;
+  }
 
   &--liner::before {
     background-image: url("../../img/advantages-liner.svg");
@@ -74,9 +86,27 @@
   }
 }
 
+.advantages li  {
+  padding: 20px;
+  width: 27%;
+
+  &:not(:last-child) {
+    margin-right: 4%;
+  }
+}
+
 @media (max-width: $mobile-size-max) {
   .advantages h2 {
     font-size: 24px;
+  }
+
+  .advantages li  {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 

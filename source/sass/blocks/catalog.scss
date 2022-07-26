@@ -55,6 +55,10 @@
   display: block;
 }
 
+.catalog__item:hover .catalog__item img {
+  display: none;
+}
+
 @media (max-width: $tablet-size-max) {
   .catalog h2 {
     font-size: 26px;
@@ -62,6 +66,9 @@
 }
 
 @media (max-width: $mobile-size-max) {
+  .catalog__item {
+    width: 100%; }
+
   .catalog h2 {
     font-size: 24px;
   }

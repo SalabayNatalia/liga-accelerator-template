@@ -19,7 +19,9 @@
   color: $alice-blue;
 }
 
-@media (max-width: $vp-375) {
+// @media (max-width: $vp-375) {
+  @media (max-width: $mobile-size-max) {
+
   .main-nav__list {
     display: none;
   }
