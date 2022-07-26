@@ -81,6 +81,7 @@
   .is-active {
     background: url(../img/close.svg) no-repeat;
     transition: background 0.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .is-logo-open-menu {
