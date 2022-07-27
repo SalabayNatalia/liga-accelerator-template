@@ -62,7 +62,7 @@
   color: $alice-blue;
 }
 
-.booking__form input {
+.booking__form input:not(input[type="checkbox"]) {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -72,6 +72,12 @@
   height: 43px;
   padding-left: 16px;
   margin-bottom: 20px;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px $java;
+  }
 }
 
 .booking__label-agree {
@@ -84,6 +90,44 @@
 .booking__input-agree {
   width: 18px;
   height: 18px;
+  position: relative;
+//   appearance: none;
+//   flex-shrink: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $alice-blue;
+  }
+
+  &:hover {
+    &::before {
+      box-shadow: 0 0 0 2px $java;
+    }
+
+    &::after {
+      border-color: $java;
+    }
+  }
+
+  &:checked {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      width: 6px;
+      height: 8px;
+      border-left: solid 1px $sapphire;
+      border-top: solid 1px $sapphire;
+      transform: rotate(-135deg);
+    }
+  }
 }
 
 .booking button {
@@ -94,6 +138,15 @@
   line-height: 150%;
   color: $tangaroa;
   background-color: $alice-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $java;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 

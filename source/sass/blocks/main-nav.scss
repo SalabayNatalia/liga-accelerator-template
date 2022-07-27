@@ -18,7 +18,17 @@
   font-size: 16px;
   line-height: 20px;
   color: $alice-blue;
+
+  &:hover,
+  &:focus {
+    color: $java;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
+
 @media (max-width: $tablet-size-max) {
   .main-nav ul {
     gap: 24px
@@ -39,9 +49,16 @@
     display: block;
     flex-direction: column;
     align-items: center;
+    z-index: 20;
   }
 
   .is-mobile-menu {
+    color: $tangaroa;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+    line-height: 22px;
     color: $tangaroa;
   }
 }

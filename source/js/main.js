@@ -58,6 +58,9 @@ const menuLinks = document.querySelectorAll('[data-menu-link]');
 const logo = document.querySelector('[data-logo]');
 const wrapperMenu = document.querySelector('[data-wrapper]');
 const popup = document.querySelector('[data-popup]');
+const antarcticHeader = document.querySelector('[data-antarctic-header]');
+const antarcticText = document.querySelector('[data-antarctic-text]');
+
 
 burger.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -69,6 +72,8 @@ burger.addEventListener('click', function (evt) {
   logo.classList.toggle('is-logo-open-menu');
   wrapperMenu.classList.toggle('is-mobile-open');
   popup.classList.toggle('is-popup-open');
+  antarcticHeader.classList.toggle('is-mobile-menu-open');
+  antarcticText.classList.toggle('is-mobile-menu-open');
 });
 
 
@@ -85,75 +90,18 @@ for (let smoothLink of smoothLinks) {
   });
 }
 
-const form = document.querySelector('[data-form]');
-const inputs = document.querySelectorAll('[data-input]');
-const email = document.querySelector('[data-email]');
-const phone = document.querySelector('[data-phone]');
-const checkbox = document.querySelector('[data-checkbox]');
+// const form = document.querySelector('[data-form]');
+// const inputs = document.querySelectorAll('[data-input]');
+// const email = document.querySelector('[data-email]');
+// const phone = document.querySelector('[data-phone]');
+// const checkbox = document.querySelector('[data-checkbox]');
 
-function validateEmail(mail) {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(mail).toLowerCase());
-}
+// function validateEmail(mail) {
+//   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return re.test(String(mail).toLowerCase());
+// }
 
-function validateCountry(country) {
-  let re = new RegExp('.co$');
-  return re.test(String(country).toLowerCase());
-}
-
-function validatePhone(tel) {
-  let re = /^[0-9\s]*$/;
-  return re.test(String(tel));
-}
-
-form.onsubmit - function () {
-  const emailVal = email.value;
-  const phoneVal = phone.value;
-  const emptyInputs = Array.from(inputs).filter(input => input.value === '');
-
-  inputs.forEach(function (input) {
-    if (input.value === '') {
-      input.classList.add('is-invalid');
-    } else {
-      input.classList.remove('is-invalid');
-    }
-  });
-
-  if (emptyInputs.length !== 0) {
-    console.log('inputs not filled');
-    return false;
-  }
-
-  if (!validateEmail(emailVal)) {
-    console.log('email not valid');
-    email.classList.add('is-invalid');
-    return false;
-  } else {
-    email.classList.remove('is-invalid');
-  }
-
-  if (validateCountry(emailVal)) {
-    console.log('email from Columbia');
-    email.classList.add('is-invalid');
-    return false;
-  } else {
-    email.classList.remove('is-invalid');
-  }
-
-  if (!validatePhone(phoneVal)) {
-    console.log('phone not valid');
-    phone.classList.add('is-invalid');
-    return false;
-  } else {
-    phone.classList.remove('is-invalid');
-  }
-
-  if (!checkbox.checked) {
-    console.log('checkbox not checked');
-    checkbox.classList.add('is-invalid');
-    return false;
-  } else {
-    checkbox.classList.remove('is-invalid');
-  }
-}
-
+// function validatePhone(tel) {
+//   let re = /^[0-9\s]*$/;
+//   return re.test(String(tel));
+// }

@@ -795,16 +795,6 @@ button,
   height: 650px;
 }
 
-.page-header__logo-link {
-  padding-top: 3px;
-}
-
-.page-header__logo {
-  fill: #f9fbfd;
-  width: 70px;
-  height: 38px;
-}
-
 .page-header__burger {
   display: none;
 }
@@ -819,16 +809,36 @@ button,
   padding-top: 32px;
 }
 
+.logo {
+  padding-top: 3px;
+}
+
+.logo__image {
+  fill: #f9fbfd;
+  width: 70px;
+  height: 38px;
+}
+
+.logo__image:hover,
+.logo__image:focus {
+  fill: #339a9a;
+}
+
+.logo__image:active {
+  opacity: 0.5;
+}
+
 .antarctic h1 {
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
   color: #f9fbfd;
   text-shadow: 0px 4px 4px #ffffff 0.25;
+  margin-top: 0;
   margin-bottom: 0;
   position: absolute;
   left: 198px;
-  top: 233px;
+  top: 270px;
 }
 
 .antarctic p {
@@ -1163,7 +1173,7 @@ button,
   color: #f9fbfd;
 }
 
-.booking__form input {
+.booking__form input:not(input[type="checkbox"]) {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -1173,6 +1183,13 @@ button,
   height: 43px;
   padding-left: 16px;
   margin-bottom: 20px;
+  border-color: transparent;
+}
+
+.booking__form input:not(input[type="checkbox"]):hover,
+.booking__form input:not(input[type="checkbox"]):focus {
+  -webkit-box-shadow: 0 0 0 2px #339a9a;
+  box-shadow: 0 0 0 2px #339a9a;
 }
 
 .booking__label-agree {
@@ -1185,6 +1202,41 @@ button,
 .booking__input-agree {
   width: 18px;
   height: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.booking__input-agree::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9fbfd;
+}
+
+.booking__input-agree:hover::before {
+  -webkit-box-shadow: 0 0 0 2px #339a9a;
+  box-shadow: 0 0 0 2px #339a9a;
+}
+
+.booking__input-agree:hover::after {
+  border-color: #339a9a;
+}
+
+.booking__input-agree:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 6px;
+  height: 8px;
+  border-left: solid 1px #101a56;
+  border-top: solid 1px #101a56;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
 .booking button {
@@ -1223,6 +1275,15 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: #f9fbfd;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #339a9a;
+}
+
+.main-nav a:active {
+  opacity: 0.5;
 }
 
 .trip {
@@ -1296,20 +1357,21 @@ button,
     padding-top: 24px;
   }
 
-  .page-header__logo {
-    width: 38px;
-    height: 20px;
-  }
-
   .page-header {
     background-image: url("../../img/background-tablet.jpg");
     height: 638px;
+  }
+
+  .logo__image {
+    width: 38px;
+    height: 20px;
   }
 
   .antarctic h1 {
     font-size: 50px;
     line-height: 61px;
     left: 44px;
+    top: 268px;
   }
 
   .antarctic p {
@@ -1391,16 +1453,6 @@ button,
     width: 100%;
   }
 
-  .page-header__logo {
-    width: 42px;
-    height: 22px;
-    margin-left: -35px;
-  }
-
-  .page-header__logo-link {
-    padding-top: 0px;
-  }
-
   .page-header {
     background-image: url("../../img/background-mobile.jpg");
     height: 500px;
@@ -1436,11 +1488,12 @@ button,
     cursor: pointer;
     width: 24px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin-top: 4px;
   }
 
   .page-header__burger:hover,
   .page-header__burger:focus {
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
   .is-active {
@@ -1451,17 +1504,6 @@ button,
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     width: 14px;
     margin-top: 3px;
-  }
-
-  .is-logo-open-menu {
-    fill: #011c40;
-    -webkit-transition: fill 3s;
-    -o-transition: fill 3s;
-    transition: fill 3s;
-    margin-left: 0;
-    -webkit-transition: margin-left 3s;
-    -o-transition: margin-left 3s;
-    transition: margin-left 3s;
   }
 
   .is-popup-open {
@@ -1488,16 +1530,41 @@ button,
     grid-row: 2/-1;
   }
 
+  .logo {
+    padding-top: 0px;
+  }
+
+  .logo__image {
+    width: 42px;
+    height: 22px;
+    margin-left: -35px;
+  }
+
+  .is-logo-open-menu {
+    fill: #011c40;
+    -webkit-transition: fill 3s;
+    -o-transition: fill 3s;
+    transition: fill 3s;
+    margin-left: 0;
+    -webkit-transition: margin-left 3s;
+    -o-transition: margin-left 3s;
+    transition: margin-left 3s;
+  }
+
   .antarctic h1 {
     font-size: 36px;
     line-height: 125%;
     left: 15px;
-    top: 185px;
+    top: 176px;
   }
 
   .antarctic p {
     left: 15px;
     top: 281px;
+  }
+
+  .is-mobile-menu-open {
+    display: none;
   }
 
   .advantages {
@@ -1569,9 +1636,16 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    z-index: 20;
   }
 
   .is-mobile-menu {
+    color: #011c40;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+    line-height: 22px;
     color: #011c40;
   }
 
