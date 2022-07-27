@@ -53,10 +53,12 @@
   border: red;
 }
 
-.booking__form legend {
+.booking__form p {
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
   color: $alice-blue;
 }
 
@@ -124,7 +126,7 @@
     width: 100%;
   }
 
-  .booking__form legend {
+  .booking__form p {
     line-height: 140%;
   }
 
