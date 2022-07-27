@@ -18,6 +18,7 @@
   color: $tangaroa;
   grid-column: 1/2;
   grid-row: 1/2;
+  align-self: center;
 }
 
 .trip__wrapper p {
@@ -28,26 +29,53 @@
   margin-bottom: 0;
   grid-column: 1/2;
   grid-row: 2/-1;
+  padding-right: 60px;
+  margin-top: -29px;
 }
 
 .trip__image {
   grid-column: 2/-1;
   grid-row: 1/-1;
+  justify-self: end;
 }
 
 @media (max-width: $tablet-size-max) {
-  .trip h2 {
+  .trip {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .trip__image {
+    width: 324px;
+    height: 264px;
+  }
+
+  .trip__wrapper h2 {
     font-size: 26px;
     line-height: 140%;
+    align-self: start;
+    padding-right: 115px;
+    margin-top: -10px;
+  }
+
+  .trip__wrapper p {
+    padding-right: 15px;
+    margin-top: -57px;
   }
 }
 
 @media (max-width: $mobile-size-max) {
   .trip__wrapper {
-      display: block;
+    display: block;
   }
 
   .trip h2 {
     font-size: 24px;
+  }
+
+  .trip__image {
+    width: 290px;
+    height: 186px;
+    margin: auto;
   }
 }

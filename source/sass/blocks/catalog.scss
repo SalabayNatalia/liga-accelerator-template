@@ -13,6 +13,10 @@
   height: 386px;
 }
 
+// .catalog__item-wrapper {
+
+// }
+
 .catalog__item h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -23,9 +27,13 @@
   text-align: left;
 }
 
-
 .catalog__item img {
   background-size: cover;
+}
+
+.catalog__photo {
+  width: 100%;
+  height: 100%;
 }
 
 .catalog__product-info {
@@ -33,6 +41,8 @@
   display: none;
   background-color: $tangaroa;
   padding: 35px;
+  width: 100%;
+  height: 100%;
 }
 
 .catalog__product-info dt{
@@ -55,7 +65,7 @@
   display: block;
 }
 
-.catalog__item:hover .catalog__item img {
+.catalog__item:hover .catalog__photo {
   display: none;
 }
 

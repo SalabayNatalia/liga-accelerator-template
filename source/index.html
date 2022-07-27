@@ -51,7 +51,7 @@
       <main class="page-main">
         <section class="page-main__antarctic antarctic">
           <div class="container">
-            <h1 data-antarctic-header>Круизы в Антарктику</h1>
+            <h1 data-antarctic-header>Круизы в&nbsp;Антарктику</h1>
             <p data-antarctic-text>Волшебный мир айсбергов и пингвинов</p>
           </div>
         </section>
@@ -59,7 +59,7 @@
           <div class="container">
             <div class="trip__wrapper">
               <h2>Путешествие на край Земли</h2>
-              <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
               <div class="trip__image">
                 <picture>
               <source
@@ -122,52 +122,56 @@
             <h2 id="Upcoming-cruises">Ближайшие круизы</h2>
             <ul class="catalog__list list-reset">
               <li class="catalog__item">
-                <h3 class="catalog__product-name">Круиз "Астория"</h3>
-                <picture>
-                  <source
-                    media="(min-width: 1024px)"
-                    type="image/webp"
-                    srcset="
-                      img/cruise-1.webp    1x,
-                      img/cruise-1@2x.webp 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 767px) and (max-width: 1023px)"
-                    type="image/webp"
-                    srcset="
-                      img/cruise-1-tablet.webp    1x,
-                      img/cruise-1-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    type="image/webp"
-                    srcset="
-                      img/cruise-1-mobile.webp    1x,
-                      img/cruise-1-mobile@2x.webp 2x
-                    "
-                  />
-                  <!--mobile1x: 270px-->
-                  <!--mobile2x: 540px-->
-                  <!--tablet1x: 309px-->
-                  <!--tablet2x: 618px-->
-                  <!--desktop1x: 260px-->
-                  <!--desktop2x: 520px -->
-                  <img srcset="img/cruise-1@2x.jpg 2x" src="img/cruise-1.jpg" width="260" height="386" alt="ледяная гладь на водоёме">
-                </picture>
-                <div class="catalog__product-info">
-                  <dl class="list-reset">
-                    <dt>Маршрут</dt>
-                    <dd>Аргентина - Фолклендские острова - Антарктида</dd>
-                    <dt>Порт отправления</dt>
-                    <dd> Ушуайя</dd>
-                    <dt>Продолжительность</dt>
-                    <dd>11 дней</dd>
-                    <dt>Цена</dt>
-                    <dd>от 11500 $</dd>
-                  </dl>
-                  <a href="#">Забронировать</a>
+                <div class="catalog__item-wrapper">
+                  <h3 class="catalog__product-name">Круиз "Астория"</h3>
+                  <div class="catalog__photo">
+                    <picture>
+                      <source
+                      media="(min-width: 1024px)"
+                      type="image/webp"
+                      srcset="
+                        img/cruise-1.webp    1x,
+                        img/cruise-1@2x.webp 2x
+                      "
+                      />
+                      <source
+                      media="(min-width: 767px) and (max-width: 1023px)"
+                      type="image/webp"
+                      srcset="
+                        img/cruise-1-tablet.webp    1x,
+                        img/cruise-1-tablet@2x.webp 2x
+                      "
+                      />
+                      <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        img/cruise-1-mobile.webp    1x,
+                        img/cruise-1-mobile@2x.webp 2x
+                      "
+                      />
+                      <!--mobile1x: 270px-->
+                      <!--mobile2x: 540px-->
+                      <!--tablet1x: 309px-->
+                      <!--tablet2x: 618px-->
+                      <!--desktop1x: 260px-->
+                      <!--desktop2x: 520px -->
+                      <img srcset="img/cruise-1@2x.jpg 2x" src="img/cruise-1.jpg" width="260" height="386" alt="ледяная гладь на водоёме">
+                    </picture>
+                  </div>
+                  <div class="catalog__product-info">
+                    <dl class="list-reset">
+                      <dt>Маршрут</dt>
+                      <dd>Аргентина - Фолклендские острова - Антарктида</dd>
+                      <dt>Порт отправления</dt>
+                      <dd> Ушуайя</dd>
+                      <dt>Продолжительность</dt>
+                      <dd>11 дней</dd>
+                      <dt>Цена</dt>
+                      <dd>от 11500 $</dd>
+                    </dl>
+                    <a class="booking__button button" href="#">Забронировать</a>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -196,7 +200,7 @@
               </div>
               <input class ="booking__input-agree" type="checkbox" id="agree" data-checkbox>
               <label class ="booking__label-agree" for="agree">согласен на обработку моих персональных данных</label>
-              <button type="submit">Оставить заявку</button>
+              <button class="booking__button button" type="submit">Оставить заявку</button>
               </form>
             </div>
           </div>
