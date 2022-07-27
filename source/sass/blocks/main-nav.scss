@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   align-self: center;
-  gap: 33px;
+  gap: 34px;
 }
 
 .main-nav a {
@@ -20,6 +20,10 @@
   color: $alice-blue;
 }
 @media (max-width: $tablet-size-max) {
+  .main-nav ul {
+    gap: 24px
+  }
+
   .main-nav a {
     font-size: 14px;
     line-height: 17px;

@@ -6,7 +6,7 @@
   text-shadow: 0px 4px 4px $color-default-white 0.25;
   margin-bottom: 0;
   position: absolute;
-  left: 202px;
+  left: 198px;
   top: 233px;
 }
 
@@ -18,7 +18,7 @@
   margin-top: 0;
   margin-bottom: 0;
   position: absolute;
-  left: 202px;
+  left: 198px;
   top: 349px;
 }
 
@@ -26,8 +26,16 @@
   .antarctic h1 {
     font-size: 50px;
     line-height: 61px;
+    left: 44px;
    }
-}
+
+   .antarctic p {
+      font-size: 18px;
+      line-height: 22px;
+      left: 45px;
+      top: 340px;
+    }
+  }
 
 @media (max-width:$mobile-size-max) {
   .antarctic h1 {
