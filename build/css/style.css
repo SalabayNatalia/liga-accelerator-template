@@ -953,7 +953,16 @@ button,
   margin-bottom: 0;
   color: #011c40;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: -5px;
+}
+
+.catalog ul {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 15px;
+  gap: 30px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .catalog__item {
@@ -977,37 +986,31 @@ button,
 
 .catalog__item img {
   background-size: cover;
-  display: block;
+  background-color: #a4ccf1;
+  height: 386px;
+  max-width: none;
 }
 
 .catalog__photo {
   width: 100%;
-  height: 100%;
-  display: none;
+  height: 386px;
+  display: block;
 }
 
 .catalog__product-info {
   position: relative;
+  display: none;
   background-color: #011c40;
   padding: 22px;
-  width: 100%;
-  height: 385px;
+  width: 260px;
+  height: 386px;
   z-index: -1;
 }
 
-.catalog__item:hover .catalog__item h3 {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 150%;
-  color: #f9fbfd;
-  -webkit-transform: translate(3px, 6px);
-  -ms-transform: translate(3px, 6px);
-  transform: translate(3px, 6px);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  -o-transition: transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+.catalog__product-info dl {
+  margin-top: 47px;
+  margin-left: 3px;
+  margin-bottom: 33px;
 }
 
 .catalog__product-info dt {
@@ -1023,6 +1026,7 @@ button,
   font-weight: 400;
   color: #d8d8d9;
   margin-left: 0;
+  margin-bottom: 12px;
 }
 
 .catalog__item:hover .catalog__product-info {
@@ -1033,10 +1037,23 @@ button,
   display: none;
 }
 
+.catalog__item:hover .catalog__item h3 {
+  line-height: 150%;
+  -webkit-transform: translate(3px, 6px);
+  -ms-transform: translate(3px, 6px);
+  transform: translate(3px, 6px);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
 .catalog__button {
   width: 100%;
-  padding: 15px 0;
+  padding: 11px 47px;
   border: none;
+  margin-left: 3px;
 }
 
 .contacts {
@@ -1591,10 +1608,9 @@ button,
     right: 0;
     top: 0;
     background-color: transparent;
-    -webkit-transition: background-color 1s;
-    -o-transition: background-color 1s;
-    transition: background-color 1s;
-    z-index: 10;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
     height: 568px;
     width: 89%;
   }
@@ -1772,11 +1788,18 @@ button,
   }
 
   .main-nav ul {
-    display: none;
+    margin-top: 35px;
+    gap: 26px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    visibility: hidden;
+    overflow-y: scroll;
   }
 
   .is-open {
     display: block;
+    visibility: visible;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1784,7 +1807,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 20;
+    z-index: 200;
   }
 
   .is-mobile-menu {
@@ -1795,6 +1818,8 @@ button,
     font-size: 18px;
     line-height: 22px;
     color: #011c40;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .trip {

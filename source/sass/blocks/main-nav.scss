@@ -42,14 +42,19 @@
 
 @media (max-width: $mobile-size-max) {
   .main-nav ul {
-    display: none;
+    margin-top: 35px;
+    gap: 26px;
+    align-items: start;
+    visibility: hidden;
+    overflow-y: scroll;
   }
 
   .is-open {
     display: block;
+    visibility: visible;
     flex-direction: column;
     align-items: center;
-    z-index: 20;
+    z-index: 200;
   }
 
   .is-mobile-menu {
@@ -60,5 +65,7 @@
     font-size: 18px;
     line-height: 22px;
     color: $tangaroa;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
