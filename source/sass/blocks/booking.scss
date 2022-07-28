@@ -9,6 +9,10 @@
 .booking {
   background-image: url("../../img/booking.jpg");
   background-color: $pattens-blue;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/booking@2x.jpg");
+  }
 }
 
 .booking__wrapper {
@@ -153,6 +157,10 @@
 @media (max-width: $tablet-size-max) {
   .booking {
     background-image: url("../../img/booking-tablet.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/booking-tablet@2x.jpg");
+    }
   }
 
   .booking__wrapper {
@@ -172,6 +180,10 @@
 @media (max-width: $mobile-size-max) {
   .booking {
     background-image: url("../../img/booking-mobile.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/booking-mobile@2x.jpg");
+    }
   }
 
   .booking__form {

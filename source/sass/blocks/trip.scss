@@ -42,7 +42,7 @@
 @media (max-width: $tablet-size-max) {
   .trip {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 94px;
   }
 
   .trip__image {
@@ -54,7 +54,7 @@
     font-size: 26px;
     line-height: 140%;
     align-self: start;
-    padding-right: 115px;
+    padding-right: 81px;
     margin-top: -10px;
   }
 
@@ -65,12 +65,23 @@
 }
 
 @media (max-width: $mobile-size-max) {
+  .trip {
+    padding-top: 67px;
+    padding-bottom: 65px;
+  }
+
   .trip__wrapper {
     display: block;
   }
 
   .trip h2 {
     font-size: 24px;
+    margin-bottom: 72px;
+  }
+
+  .trip__wrapper p {
+    padding-right: 9px;
+    margin-bottom: 34px;
   }
 
   .trip__image {

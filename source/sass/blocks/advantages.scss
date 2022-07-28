@@ -1,7 +1,8 @@
 .advantages {
   background-image: url("../../img/advantages-desktop.jpg");
   background-color: $pattens-blue;
-  padding: 120px 0;
+  padding-top: 110px;
+  padding-bottom: 120px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/advantages-desktop@2x.jpg");
@@ -13,53 +14,49 @@
   font-size: 28px;
   line-height: 150%;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   color: $tangaroa;
   text-align: center;
 }
 
 .advantages ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: 3%;
 }
 
-.advantages li  {
+.advantages__item {
   background-color: $alice-blue;
   padding: 30px;
-  width: 31%;
   height: 241px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   &--liner::before {
     background-image: url("../../img/advantages-liner.svg");
-    content: "";
-    position: absolute;
     width: 27px;
     height: 32px;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 50;
   }
 
   &--allinclusive::before {
     background-image: url("../../img/advantages-allinclusive.svg");
-    content: "";
-    position: absolute;
     width: 38px;
     height: 21px;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-left: 2px;
+    margin-top: 4px;
   }
 
   &--zodiac::before {
     background-image: url("../../img/advantages-zodiac.svg");
-    content: "";
-    position: absolute;
     width: 42px;
     height: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-top: 11px;
+    margin-left: 4px;
   }
 }
 
@@ -68,7 +65,8 @@
   font-size: 18px;
   line-height: 150%;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  padding-top: 49px;
   color: $tangaroa;
 }
 
@@ -81,15 +79,27 @@
   color: $tangaroa;
 }
 
+.advantages__text--allinclusive {
+  padding-right: 18px;
+}
+
+.advantages__text--zodiac {
+  padding-right: 55px;
+}
+
 @media (max-width: $tablet-size-max) {
   .advantages {
     background-image: url("../../img/advantages-tablet.jpg");
-    padding-top: 100px;
+    padding-top: 89px;
     padding-bottom: 100px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/advantages-tablet@2x.jpg");
     }
+  }
+
+  .advantages ul {
+    gap: 4%;
   }
 
   .advantages h2 {
@@ -99,41 +109,85 @@
   .advantages__item h3 {
     line-height: 140%;
   }
-}
 
-.advantages li  {
-  padding: 20px;
-  width: 27%;
-  height: 310px;
+  .advantages__item {
+    padding: 20px;
+    height: 310px;
 
-  &:not(:last-child) {
-    margin-right: 4%;
+    &--liner::before {
+      background-image: url("../../img/liner-tablet.svg");
+      width: 21px;
+      height: 26px;
+      margin-top: 5px;
+    }
+
+    &--allinclusive::before {
+      background-image: url("../../img/allinclusive-tablet.svg");
+      width: 33px;
+      height: 19px;
+      margin-left: -1px;
+      margin-top: 10px;
+    }
+
+    &--zodiac::before {
+      background-image: url("../../img/zodiac-tablet.svg");
+      width: 38px;
+      height: 13px;
+      margin-top: 12px;
+      margin-left: 2px;
+    }
+  }
+
+  .advantages__text--allinclusive {
+    padding-right: 0;
+  }
+
+  .advantages__text--zodiac {
+    padding-right: 0;
   }
 }
 
 @media (max-width: $mobile-size-max) {
   .advantages {
     background-image: url("../../img/advantages-mobile.jpg");
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 56px;
+    padding-bottom: 64px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/advantages-mobile@2x.jpg");
     }
   }
 
-  .advantages h2 {
-    font-size: 24px;
-    margin-bottom: 40px;
+  .advantages ul {
+    display: block;
   }
 
-  .advantages li  {
+  .advantages h2 {
+    font-size: 24px;
+    margin-bottom: 31px;
+  }
+
+  .advantages__item {
     width: 100%;
     height: 250px;
 
     &:not(:last-child) {
       margin-right: 0;
       margin-bottom: 30px;
+    }
+
+    & h3 {
+      padding-right: 50px;
+    }
+
+    &--allinclusive::before {
+      margin-left: 0px;
+      margin-top: 8px;
+    }
+
+    &--zodiac::before {
+      margin-top: 11px;
+      margin-left: 0px;
     }
   }
 }
