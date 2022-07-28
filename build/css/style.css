@@ -942,7 +942,8 @@ button,
 }
 
 .catalog {
-  padding: 110px 0;
+  padding-top: 110px;
+  padding-bottom: 147px;
 }
 
 .catalog h2 {
@@ -953,7 +954,7 @@ button,
   margin-bottom: 0;
   color: #011c40;
   text-align: center;
-  margin-bottom: -5px;
+  margin-bottom: 21px;
 }
 
 .catalog ul {
@@ -979,9 +980,9 @@ button,
   font-weight: 500;
   color: #f9fbfd;
   text-align: left;
-  -webkit-transform: translate(10px, 351px);
-  -ms-transform: translate(10px, 351px);
-  transform: translate(10px, 351px);
+  -webkit-transform: translate(31px, 363px);
+  -ms-transform: translate(31px, 363px);
+  transform: translate(31px, 363px);
 }
 
 .catalog__item img {
@@ -1170,6 +1171,10 @@ button,
   grid-template-columns: 50% 50%;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 34px;
+  padding-right: 33px;
 }
 
 .booking h2 {
@@ -1185,6 +1190,10 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -ms-grid-row-align: end;
+  align-self: end;
+  -ms-grid-column-align: end;
+  justify-self: end;
 }
 
 .booking p {
@@ -1200,6 +1209,19 @@ button,
   grid-row: 2/-1;
 }
 
+.booking__sale {
+  padding-right: 210px;
+  margin-bottom: 12px;
+  margin-top: -6px;
+}
+
+.booking__form-wrapper {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  -ms-grid-column-align: center;
+  justify-self: center;
+}
+
 .booking__form {
   background-color: #011c40;
   -webkit-box-shadow: 0px 4px 45px #011c40 0.15;
@@ -1207,12 +1229,10 @@ button,
   padding: 50px;
   width: 70%;
   height: 455px;
-  grid-column: 2/-1;
-  grid-row: 1/-1;
 }
 
 .is-invalid {
-  border: red;
+  border: 4px solid #d93c3c;
 }
 
 .booking__form p {
@@ -1506,8 +1526,19 @@ button,
     padding-right: 0;
   }
 
+  .catalog {
+    padding-top: 37px;
+  }
+
   .catalog h2 {
     font-size: 26px;
+  }
+
+  .catalog ul {
+    margin: 0 15px;
+    gap: 30px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .booking {
@@ -1752,12 +1783,34 @@ button,
     margin-left: 0px;
   }
 
+  .catalog {
+    padding-top: 56px;
+  }
+
+  .catalog ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
   .catalog__item {
-    width: 100%;
+    width: 270px;
+    max-width: 100%;
+  }
+
+  .catalog__item img {
+    width: 270px;
+  }
+
+  .catalog__product-info {
+    width: 270px;
   }
 
   .catalog h2 {
     font-size: 24px;
+    margin-bottom: 4px;
   }
 
   .contacts__map {
