@@ -393,30 +393,34 @@ template {
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-display: swap;
   src: local("Montserrat"), url("../fonts/MontserratRegular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-display: swap;
   src: local("Montserrat"), url("../fonts/MontserratMedium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
   font-style: normal;
+  font-weight: 600;
+  font-family: "Montserrat";
+  font-display: swap;
   src: local("Montserrat"), url("../fonts/MontserratSemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-display: swap;
   src: local("Montserrat"), url("../fonts/MontserratExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff");
 }
 
@@ -429,9 +433,9 @@ template {
 
 html,
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
 }
 
 html {
@@ -543,13 +547,7 @@ input[type="number"] {
 
 select,
 textarea,
-input:matches([type="email"],
-[type="number"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="text"],
-[type="url"]) {
+input:matches([type="email"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="url"]) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -651,28 +649,30 @@ button,
   margin: 0 auto;
 }
 
-.btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #2c39f2;
+.catalog__button {
+  width: 100%;
+  margin-left: 3px;
+  padding: 11px 47px;
   border: none;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 
-.btn--red {
-  background-color: #ff1553;
+.button {
+  width: 100%;
+  height: 43px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011c40;
+  background-color: #f9fbfd;
 }
 
-.btn:disabled {
+.button:hover,
+.button:focus {
+  background-color: #339a9a;
+}
+
+.button:active {
   opacity: 0.5;
-  pointer-events: none;
 }
 
 .modal {
@@ -788,11 +788,11 @@ button,
 }
 
 .page-header {
-  background-color: #0B4880;
-  background-image: url("../../img/background-desktop.jpg");
+  height: 650px;
+  background-color: #0b4880;
+  background-image: url("../img/background-desktop.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 650px;
 }
 
 .page-header__burger {
@@ -814,9 +814,9 @@ button,
 }
 
 .logo__image {
-  fill: #f9fbfd;
   width: 70px;
   height: 38px;
+  fill: #f9fbfd;
 }
 
 .logo__image:hover,
@@ -829,115 +829,116 @@ button,
 }
 
 .antarctic h1 {
+  position: absolute;
+  top: 270px;
+  left: 198px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
   color: #f9fbfd;
-  text-shadow: 0px 4px 4px #ffffff 0.25;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: absolute;
-  left: 198px;
-  top: 270px;
   letter-spacing: -0.9px;
+  text-shadow: 0 4px 4px #ffffff 0.25;
 }
 
 .antarctic p {
+  position: absolute;
+  top: 349px;
+  left: 198px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #f9fbfd;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: absolute;
-  left: 198px;
-  top: 349px;
 }
 
 .advantages {
-  background-image: url("../../img/advantages-desktop.jpg");
-  background-color: #d9e6f4;
   padding-top: 110px;
   padding-bottom: 120px;
+  background-color: #d9e6f4;
+  background-image: url("../../img/advantages-desktop.jpg");
+  background-size: cover;
 }
 
 .advantages h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: #011c40;
   text-align: center;
+  color: #011c40;
 }
 
 .advantages ul {
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
   display: -ms-grid;
   display: grid;
   gap: 3%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .advantages__item {
-  background-color: #f9fbfd;
-  padding: 30px;
   height: 241px;
+  padding: 30px;
+  background-color: #f9fbfd;
 }
 
 .advantages__item::before {
-  position: absolute;
   content: "";
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .advantages__item--liner::before {
-  background-image: url("../../img/advantages-liner.svg");
   width: 27px;
   height: 32px;
+  background-image: url("../../img/advantages-liner.svg");
 }
 
 .advantages__item--allinclusive::before {
-  background-image: url("../../img/advantages-allinclusive.svg");
   width: 38px;
   height: 21px;
-  margin-left: 2px;
   margin-top: 4px;
+  margin-left: 2px;
+  background-image: url("../../img/advantages-allinclusive.svg");
 }
 
 .advantages__item--zodiac::before {
-  background-image: url("../../img/advantages-zodiac.svg");
   width: 42px;
   height: 15px;
   margin-top: 11px;
   margin-left: 4px;
+  background-image: url("../../img/advantages-zodiac.svg");
 }
 
 .advantages__item h3 {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 150%;
   margin-top: 0;
   margin-bottom: 10px;
   padding-top: 49px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
   color: #011c40;
 }
 
 .advantages__item p {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: #011c40;
 }
 
-.advantages__text--allinclusive {
+.advantages__item--allinclusive p {
   padding-right: 18px;
 }
 
-.advantages__text--zodiac {
+.advantages__item--zodiac p {
   padding-right: 55px;
 }
 
@@ -947,14 +948,13 @@ button,
 }
 
 .catalog h2 {
+  margin-top: 0;
+  margin-bottom: 21px;
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #011c40;
   text-align: center;
-  margin-bottom: 21px;
+  color: #011c40;
 }
 
 .catalog ul {
@@ -967,67 +967,67 @@ button,
 }
 
 .catalog__item {
-  cursor: pointer;
   width: 22%;
   height: 386px;
+  cursor: pointer;
 }
 
 .catalog__item h3 {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  font-weight: 500;
-  color: #f9fbfd;
   text-align: left;
+  color: #f9fbfd;
   -webkit-transform: translate(31px, 363px);
   -ms-transform: translate(31px, 363px);
   transform: translate(31px, 363px);
 }
 
 .catalog__item img {
-  background-size: cover;
-  background-color: #a4ccf1;
-  height: 386px;
   max-width: none;
+  height: 386px;
+  background-color: #a4ccf1;
+  background-size: cover;
 }
 
 .catalog__photo {
+  display: block;
   width: 100%;
   height: 386px;
-  display: block;
 }
 
 .catalog__product-info {
   position: relative;
+  z-index: -1;
   display: none;
-  background-color: #011c40;
-  padding: 22px;
   width: 260px;
   height: 386px;
-  z-index: -1;
+  padding: 22px;
+  background-color: #011c40;
 }
 
-.catalog__product-info dl {
+.catalog__product-info .catalog__product-info dl {
   margin-top: 47px;
-  margin-left: 3px;
   margin-bottom: 33px;
+  margin-left: 3px;
 }
 
-.catalog__product-info dt {
+.catalog__product-info .catalog__product-info dt {
+  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
   color: #f9fbfd;
 }
 
-.catalog__product-info dd {
+.catalog__product-info .catalog__product-info dd {
+  margin-bottom: 12px;
+  margin-left: 0;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
   color: #d8d8d9;
-  margin-left: 0;
-  margin-bottom: 12px;
 }
 
 .catalog__item:hover .catalog__product-info {
@@ -1050,13 +1050,6 @@ button,
   transition: transform 1s, -webkit-transform 1s;
 }
 
-.catalog__button {
-  width: 100%;
-  padding: 11px 47px;
-  border: none;
-  margin-left: 3px;
-}
-
 .contacts {
   background-color: #f9fbfd;
 }
@@ -1071,11 +1064,11 @@ button,
 }
 
 .contacts p {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: #011c40;
   grid-column: 2/-1;
   -ms-grid-row: 1;
@@ -1089,26 +1082,25 @@ button,
 }
 
 .contacts_map-wrapper {
+  width: 48%;
+  height: 306px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   grid-row: 1/-1;
-  width: 48%;
-  height: 306px;
 }
 
 .contacts__address {
   display: block;
-  color: #000000;
-  text-decoration: none;
+  margin-top: 21px;
+  margin-bottom: 16px;
+  padding-right: 30px;
+  padding-left: 19px;
   font-size: 14px;
   line-height: 20px;
-  padding-left: 19px;
+  color: #000000;
+  text-decoration: none;
   background: left top no-repeat url("../../img/address.svg");
-  margin-bottom: 16px;
-  margin-top: 21px;
-  padding-left: 19px;
-  padding-right: 30px;
   cursor: pointer;
 }
 
@@ -1123,11 +1115,11 @@ button,
 
 .contacts__phone {
   display: block;
-  color: #000000;
-  text-decoration: none;
+  padding-left: 19px;
   font-size: 14px;
   line-height: 20px;
-  padding-left: 19px;
+  color: #000000;
+  text-decoration: none;
   background: left top no-repeat url("../../img/phone.svg");
   cursor: pointer;
 }
@@ -1142,9 +1134,12 @@ button,
 }
 
 .contacts__map {
-  max-width: 100%;
-  height: 306px;
   display: block;
+  width: 600px;
+  max-width: 100%;
+  height: 450px;
+  height: 306px;
+  border: 0;
 }
 
 .footer {
@@ -1160,29 +1155,31 @@ button,
 }
 
 .booking {
-  background-image: url("../../img/booking.jpg");
   background-color: #d9e6f4;
+  background-image: url("../../img/booking.jpg");
 }
 
 .booking__wrapper {
   display: -ms-grid;
   display: grid;
+  padding-top: 50px;
+  padding-right: 33px;
+  padding-bottom: 50px;
+  padding-left: 34px;
   -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 34px;
-  padding-right: 33px;
 }
 
 .booking h2 {
+  -ms-grid-row-align: end;
+  align-self: end;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: #011c40;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1190,29 +1187,22 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-row-align: end;
-  align-self: end;
   -ms-grid-column-align: end;
   justify-self: end;
 }
 
 .booking p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 210px;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: #011c40;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   grid-row: 2/-1;
-}
-
-.booking__sale {
-  padding-right: 210px;
-  margin-bottom: 12px;
-  margin-top: -6px;
 }
 
 .booking__form-wrapper {
@@ -1223,38 +1213,35 @@ button,
 }
 
 .booking__form {
-  background-color: #011c40;
-  -webkit-box-shadow: 0px 4px 45px #011c40 0.15;
-  box-shadow: 0px 4px 45px #011c40 0.15;
-  padding: 50px;
   width: 70%;
   height: 455px;
-}
-
-.is-invalid {
-  border: 4px solid #d93c3c;
+  padding: 50px;
+  background-color: #011c40;
+  -webkit-box-shadow: 0 4px 45px #011c40 0.15;
+  box-shadow: 0 4px 45px #011c40 0.15;
 }
 
 .booking__form p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: #f9fbfd;
 }
 
 .booking__form input:not(input[type="checkbox"]) {
+  width: 100%;
+  height: 43px;
+  margin-bottom: 20px;
+  padding-left: 16px;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #011c40;
-  opacity: 0.7;
-  width: 100%;
-  height: 43px;
-  padding-left: 16px;
-  margin-bottom: 20px;
   border-color: transparent;
+  opacity: 0.7;
 }
 
 .booking__form input:not(input[type="checkbox"]):hover,
@@ -1271,13 +1258,13 @@ button,
 }
 
 .booking__input-agree {
+  position: relative;
   width: 18px;
   height: 18px;
-  position: relative;
+  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  cursor: pointer;
 }
 
 .booking__input-agree::before {
@@ -1308,30 +1295,11 @@ button,
   left: 5px;
   width: 6px;
   height: 8px;
-  border-left: solid 1px #101a56;
   border-top: solid 1px #101a56;
+  border-left: solid 1px #101a56;
   -webkit-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
-}
-
-.button {
-  height: 43px;
-  width: 100%;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  color: #011c40;
-  background-color: #f9fbfd;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #339a9a;
-}
-
-.button:active {
-  opacity: 0.5;
 }
 
 .main-nav {
@@ -1372,8 +1340,8 @@ button,
 }
 
 .trip {
-  background-color: #f9fbfd;
   padding: 120px 0;
+  background-color: #f9fbfd;
 }
 
 .trip__wrapper {
@@ -1386,11 +1354,13 @@ button,
 }
 
 .trip__wrapper h2 {
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: #011c40;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1398,22 +1368,19 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-row-align: center;
-  align-self: center;
 }
 
 .trip__wrapper p {
+  margin-top: -29px;
+  margin-bottom: 0;
+  padding-right: 60px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   grid-row: 2/-1;
-  padding-right: 60px;
-  margin-top: -29px;
 }
 
 .trip__image {
@@ -1430,13 +1397,6 @@ button,
   }
 } */
 
-@media (hover: hover), screen and (min-width: 0\0) {
-  .btn:hover,
-  .btn:focus {
-    opacity: 0.8;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
     max-width: 1023px;
@@ -1449,8 +1409,8 @@ button,
   }
 
   .page-header {
-    background-image: url("../../img/background-tablet.jpg");
     height: 638px;
+    background-image: url("../img/background-tablet.jpg");
   }
 
   .logo__image {
@@ -1459,23 +1419,23 @@ button,
   }
 
   .antarctic h1 {
+    top: 268px;
+    left: 44px;
     font-size: 50px;
     line-height: 61px;
-    left: 44px;
-    top: 268px;
   }
 
   .antarctic p {
+    top: 340px;
+    left: 45px;
     font-size: 18px;
     line-height: 22px;
-    left: 45px;
-    top: 340px;
   }
 
   .advantages {
-    background-image: url("../../img/advantages-tablet.jpg");
     padding-top: 89px;
     padding-bottom: 100px;
+    background-image: url("../../img/advantages-tablet.jpg");
   }
 
   .advantages ul {
@@ -1491,38 +1451,38 @@ button,
   }
 
   .advantages__item {
-    padding: 20px;
     height: 310px;
+    padding: 20px;
   }
 
   .advantages__item--liner::before {
-    background-image: url("../../img/liner-tablet.svg");
     width: 21px;
     height: 26px;
     margin-top: 5px;
+    background-image: url("../../img/liner-tablet.svg");
   }
 
   .advantages__item--allinclusive::before {
-    background-image: url("../../img/allinclusive-tablet.svg");
     width: 33px;
     height: 19px;
-    margin-left: -1px;
     margin-top: 10px;
+    margin-left: -1px;
+    background-image: url("../../img/allinclusive-tablet.svg");
   }
 
   .advantages__item--zodiac::before {
-    background-image: url("../../img/zodiac-tablet.svg");
     width: 38px;
     height: 13px;
     margin-top: 12px;
     margin-left: 2px;
+    background-image: url("../../img/zodiac-tablet.svg");
   }
 
-  .advantages__text--allinclusive {
+  .advantages__item--allinclusive p {
     padding-right: 0;
   }
 
-  .advantages__text--zodiac {
+  .advantages__item--zodiac p {
     padding-right: 0;
   }
 
@@ -1580,24 +1540,24 @@ button,
   }
 
   .trip__wrapper h2 {
-    font-size: 26px;
-    line-height: 140%;
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
-    padding-right: 81px;
     margin-top: -10px;
+    padding-right: 81px;
+    font-size: 26px;
+    line-height: 140%;
   }
 
   .trip__wrapper p {
-    padding-right: 15px;
     margin-top: -57px;
+    padding-right: 15px;
   }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .page-header {
-    background-image: url("../../img/background-tablet@2x.jpg");
+    background-image: url("../img/background-tablet@2x.jpg");
   }
 
   .advantages {
@@ -1630,20 +1590,20 @@ button,
   }
 
   .page-header {
-    background-image: url("../../img/background-mobile.jpg");
     height: 500px;
+    background-image: url("../img/background-mobile.jpg");
   }
 
   .page-header__popup {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
+    width: 89%;
+    height: 568px;
     background-color: transparent;
     -webkit-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
     transition: background-color 0.5s;
-    height: 568px;
-    width: 89%;
   }
 
   .page-header__wrapper {
@@ -1655,15 +1615,16 @@ button,
 
   .page-header__burger {
     display: block;
-    background: url(../img/burger.svg) no-repeat;
+    width: 24px;
+    height: 20px;
+    margin-top: 4px;
+    background: url("../img/burger.svg") no-repeat;
+    border: none;
+    cursor: pointer;
     -webkit-transition: background 0.5s;
     -o-transition: background 0.5s;
     transition: background 0.5s;
-    border: none;
-    cursor: pointer;
-    width: 24px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    margin-top: 4px;
   }
 
   .page-header__burger:hover,
@@ -1672,13 +1633,13 @@ button,
   }
 
   .is-active {
-    background: url(../img/close.svg) no-repeat;
+    width: 14px;
+    margin-top: 3px;
+    background: url("../img/close.svg") no-repeat;
     -webkit-transition: background 0.5s;
     -o-transition: background 0.5s;
     transition: background 0.5s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    width: 14px;
-    margin-top: 3px;
   }
 
   .is-popup-open {
@@ -1706,7 +1667,7 @@ button,
   }
 
   .logo {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   .logo__image {
@@ -1716,28 +1677,25 @@ button,
   }
 
   .is-logo-open-menu {
-    fill: #011c40;
-    -webkit-transition: fill 3s;
-    -o-transition: fill 3s;
-    transition: fill 3s;
     margin-left: 0;
-    -webkit-transition: margin-left 3s;
-    -o-transition: margin-left 3s;
-    transition: margin-left 3s;
+    -webkit-transition: fill 3s margin-left 3s;
+    -o-transition: fill 3s margin-left 3s;
+    transition: fill 3s margin-left 3s;
+    fill: #011c40;
   }
 
   .antarctic h1 {
+    top: 176px;
+    left: 15px;
     font-size: 36px;
     line-height: 125%;
-    left: 15px;
-    top: 176px;
   }
 
   .antarctic p {
-    font-size: 16px;
-    left: 15px;
     top: 281px;
+    left: 15px;
     margin-top: -5px;
+    font-size: 16px;
   }
 
   .is-mobile-menu-open {
@@ -1745,9 +1703,9 @@ button,
   }
 
   .advantages {
-    background-image: url("../../img/advantages-mobile.jpg");
     padding-top: 56px;
     padding-bottom: 64px;
+    background-image: url("../../img/advantages-mobile.jpg");
   }
 
   .advantages ul {
@@ -1755,13 +1713,23 @@ button,
   }
 
   .advantages h2 {
-    font-size: 24px;
     margin-bottom: 31px;
+    font-size: 24px;
   }
 
   .advantages__item {
     width: 100%;
     height: 250px;
+  }
+
+  .advantages__item--allinclusive::before {
+    margin-top: 8px;
+    margin-left: 0;
+  }
+
+  .advantages__item--zodiac::before {
+    margin-top: 11px;
+    margin-left: 0;
   }
 
   .advantages__item:not(:last-child) {
@@ -1771,16 +1739,6 @@ button,
 
   .advantages__item h3 {
     padding-right: 50px;
-  }
-
-  .advantages__item--allinclusive::before {
-    margin-left: 0px;
-    margin-top: 8px;
-  }
-
-  .advantages__item--zodiac::before {
-    margin-top: 11px;
-    margin-left: 0px;
   }
 
   .catalog {
@@ -1809,8 +1767,8 @@ button,
   }
 
   .catalog h2 {
-    font-size: 24px;
     margin-bottom: 4px;
+    font-size: 24px;
   }
 
   .contacts__map {
@@ -1822,8 +1780,8 @@ button,
   }
 
   .booking__form {
-    padding: 40px 30px;
     width: 100%;
+    padding: 40px 30px;
   }
 
   .booking__form p {
@@ -1841,18 +1799,18 @@ button,
   }
 
   .main-nav ul {
-    margin-top: 35px;
-    gap: 26px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
-    visibility: hidden;
+    margin-top: 35px;
     overflow-y: scroll;
+    visibility: hidden;
+    gap: 26px;
   }
 
   .is-open {
+    z-index: 200;
     display: block;
-    visibility: visible;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1860,7 +1818,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 200;
+    visibility: visible;
   }
 
   .is-mobile-menu {
@@ -1868,11 +1826,11 @@ button,
   }
 
   .main-nav a {
+    padding-right: 10px;
+    padding-left: 10px;
     font-size: 18px;
     line-height: 22px;
     color: #011c40;
-    padding-right: 10px;
-    padding-left: 10px;
   }
 
   .trip {
@@ -1885,13 +1843,13 @@ button,
   }
 
   .trip h2 {
-    font-size: 24px;
     margin-bottom: 72px;
+    font-size: 24px;
   }
 
   .trip__wrapper p {
-    padding-right: 9px;
     margin-bottom: 34px;
+    padding-right: 9px;
   }
 
   .trip__image {
@@ -1903,7 +1861,7 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .page-header {
-    background-image: url("../../img/background-mobile@2x.jpg");
+    background-image: url("../img/background-mobile@2x.jpg");
   }
 
   .advantages {
@@ -1917,7 +1875,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .page-header {
-    background-image: url("../../img/background-desktop@2x.jpg");
+    background-image: url("../img/background-desktop@2x.jpg");
   }
 
   .advantages {

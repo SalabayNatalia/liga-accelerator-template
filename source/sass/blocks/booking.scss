@@ -7,8 +7,8 @@
 }
 
 .booking {
-  background-image: url("../../img/booking.jpg");
   background-color: $pattens-blue;
+  background-image: url("../../img/booking.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/booking@2x.jpg");
@@ -17,42 +17,42 @@
 
 .booking__wrapper {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr 1fr;
   padding-top: 50px;
+  padding-right: 33px;
   padding-bottom: 50px;
   padding-left: 34px;
-    padding-right: 33px;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
 }
 
 .booking h2 {
+  align-self: end;
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: $tangaroa;
+
   grid-column: 1/2;
   grid-row: 1/2;
-  align-self: end;
   justify-self: end;
 }
 
 .booking p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 210px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: $tangaroa;
+
   grid-column: 1/2;
   grid-row: 2/-1;
-}
-
-.booking__sale {
-  padding-right: 210px;
-  margin-bottom: 12px;
-  margin-top: -6px;
 }
 
 .booking__form-wrapper {
@@ -62,37 +62,38 @@
 }
 
 .booking__form {
-  background-color: $tangaroa;
-  box-shadow: 0px 4px 45px $tangaroa 0.15;
-  padding: 50px;
   width: 70%;
   height: 455px;
-}
+  padding: 50px;
 
-.is-invalid {
-  border: 4px solid $cinnabar;
+  background-color: $tangaroa;
+  box-shadow: 0 4px 45px $tangaroa 0.15;
 }
 
 .booking__form p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: $alice-blue;
 }
 
 .booking__form input:not(input[type="checkbox"]) {
+  width: 100%;
+  height: 43px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: $tangaroa;
-  opacity: 0.7;
-  width: 100%;
-  height: 43px;
-  padding-left: 16px;
-  margin-bottom: 20px;
+
   border-color: transparent;
+  opacity: 0.7;
 
   &:hover,
   &:focus {
@@ -104,23 +105,28 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 130%;
-  color:$alice-blue;
+  color: $alice-blue;
 }
 
 .booking__input-agree {
+  position: relative;
+
   width: 18px;
   height: 18px;
-  position: relative;
-  appearance: none;
+
   cursor: pointer;
+
+  appearance: none;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background-color: $alice-blue;
   }
 
@@ -141,34 +147,16 @@
       position: absolute;
       top: 3px;
       left: 5px;
+
       width: 6px;
       height: 8px;
-      border-left: solid 1px $sapphire;
+
       border-top: solid 1px $sapphire;
+      border-left: solid 1px $sapphire;
       transform: rotate(-135deg);
     }
   }
 }
-
-.button {
-  height: 43px;
-  width: 100%;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  color: $tangaroa;
-  background-color: $alice-blue;
-
-  &:hover,
-  &:focus {
-    background-color: $java;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
 
 @media (max-width: $tablet-size-max) {
   .booking {
@@ -185,6 +173,7 @@
 
   .booking__form {
     width: 53%;
+
     transition: width 0.5s;
   }
 
@@ -203,8 +192,8 @@
   }
 
   .booking__form {
-    padding: 40px 30px;
     width: 100%;
+    padding: 40px 30px;
   }
 
   .booking__form p {

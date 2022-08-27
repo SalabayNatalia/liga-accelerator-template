@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -9,32 +10,43 @@
 // ---------------------------------
 
 @import "variables";
+
 @import "mixins";
+
 @import "global/fonts";
+
 @import "global/reboot";
+
 @import "global/utils";
+
 @import "global/container";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
+@import "blocks/button.scss";
+
 @import "blocks/modal.scss";
+
 @import "blocks/page-header.scss";
+
 @import "blocks/logo.scss";
+
 @import "blocks/antarctic";
+
 @import "blocks/advantages.scss";
+
 @import "blocks/catalog.scss";
+
 @import "blocks/contacts.scss";
+
 @import "blocks/footer.scss";
+
 @import "blocks/booking.scss";
+
 @import "blocks/main-nav.scss";
+
 @import "blocks/trip.scss";
-
-
-
-
-
 
 // ---------------------------------
 

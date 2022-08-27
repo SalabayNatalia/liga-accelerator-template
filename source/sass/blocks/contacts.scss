@@ -4,17 +4,20 @@
 
 .contacts__wrapper {
   display: grid;
+
   grid-template-columns: 48% 52%;
   grid-template-rows: 1fr 1fr;
 }
 
 .contacts p {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: $tangaroa;
+
   grid-column: 2/-1;
   grid-row: 1/2;
 }
@@ -25,24 +28,26 @@
 }
 
 .contacts_map-wrapper {
-  grid-column: 1/2;
-  grid-row: 1/-1;
   width: 48%;
   height: 306px;
+
+  grid-column: 1/2;
+  grid-row: 1/-1;
 }
 
 .contacts__address {
   display: block;
-  color: $color-default-black;
-  text-decoration: none;
+  margin-top: 21px;
+  margin-bottom: 16px;
+  padding-right: 30px;
+  padding-left: 19px;
+
   font-size: 14px;
   line-height: 20px;
-  padding-left: 19px;
+  color: $color-default-black;
+  text-decoration: none;
+
   background: left top no-repeat url("../../img/address.svg");
-  margin-bottom: 16px;
-  margin-top: 21px;
-  padding-left: 19px;
-  padding-right: 30px;
   cursor: pointer;
 
   &:hover,
@@ -57,11 +62,13 @@
 
 .contacts__phone {
   display: block;
-  color: $color-default-black;
-  text-decoration: none;
+  padding-left: 19px;
+
   font-size: 14px;
   line-height: 20px;
-  padding-left: 19px;
+  color: $color-default-black;
+  text-decoration: none;
+
   background: left top no-repeat url("../../img/phone.svg");
   cursor: pointer;
 
@@ -76,9 +83,13 @@
 }
 
 .contacts__map {
-  max-width: 100%;
-  height: 306px;
   display: block;
+  width: 600px;
+  max-width: 100%;
+  height: 450px;
+  height: 306px;
+
+  border: 0;
 }
 
 @media (max-width: $mobile-size-max) {

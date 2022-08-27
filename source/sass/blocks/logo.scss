@@ -1,11 +1,12 @@
-.logo{
+.logo {
   padding-top: 3px;
 }
 
 .logo__image {
-  fill: $alice-blue;
   width: 70px;
   height: 38px;
+
+  fill: $alice-blue;
 
   &:hover,
   &:focus {
@@ -24,10 +25,9 @@
   }
 }
 
-
 @media (max-width: $mobile-size-max) {
   .logo {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   .logo__image {
@@ -37,9 +37,10 @@
   }
 
   .is-logo-open-menu {
-    fill: $tangaroa;
-    transition: fill 3s;
     margin-left: 0;
-    transition: margin-left 3s;
+
+    transition: fill 3s margin-left 3s;
+
+    fill: $tangaroa;
   }
 }

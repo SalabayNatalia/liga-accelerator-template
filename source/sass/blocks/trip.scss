@@ -1,36 +1,41 @@
 .trip {
-  background-color: $alice-blue;
   padding: 120px 0;
+
+  background-color: $alice-blue;
 }
 
 .trip__wrapper {
   display: grid;
+
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr;
 }
 
 .trip__wrapper h2 {
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
   color: $tangaroa;
+
   grid-column: 1/2;
   grid-row: 1/2;
-  align-self: center;
 }
 
 .trip__wrapper p {
+  margin-top: -29px;
+  margin-bottom: 0;
+  padding-right: 60px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  margin-top: 0;
-  margin-bottom: 0;
+
   grid-column: 1/2;
   grid-row: 2/-1;
-  padding-right: 60px;
-  margin-top: -29px;
 }
 
 .trip__image {
@@ -51,16 +56,17 @@
   }
 
   .trip__wrapper h2 {
+    align-self: start;
+    margin-top: -10px;
+    padding-right: 81px;
+
     font-size: 26px;
     line-height: 140%;
-    align-self: start;
-    padding-right: 81px;
-    margin-top: -10px;
   }
 
   .trip__wrapper p {
-    padding-right: 15px;
     margin-top: -57px;
+    padding-right: 15px;
   }
 }
 
@@ -75,13 +81,14 @@
   }
 
   .trip h2 {
-    font-size: 24px;
     margin-bottom: 72px;
+
+    font-size: 24px;
   }
 
   .trip__wrapper p {
-    padding-right: 9px;
     margin-bottom: 34px;
+    padding-right: 9px;
   }
 
   .trip__image {
