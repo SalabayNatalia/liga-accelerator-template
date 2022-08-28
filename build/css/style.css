@@ -675,116 +675,10 @@ button,
   opacity: 0.5;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  pointer-events: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.modal::-webkit-scrollbar {
-  display: none;
-}
-
-.modal__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 60px 40px;
-}
-
-.modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.modal__content {
-  position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.modal__close-btn {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
-}
-
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-.modal.is-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
+.booking__button {
+  width: 93%;
+  margin-top: 23px;
+  margin-left: 25px;
 }
 
 .page-header {
@@ -858,7 +752,7 @@ button,
   padding-top: 110px;
   padding-bottom: 120px;
   background-color: #d9e6f4;
-  background-image: url("../../img/advantages-desktop.jpg");
+  background-image: url("../img/advantages-desktop.jpg");
   background-size: cover;
 }
 
@@ -881,7 +775,7 @@ button,
 }
 
 .advantages__item {
-  height: 241px;
+  min-height: 241px;
   padding: 30px;
   background-color: #f9fbfd;
 }
@@ -896,7 +790,7 @@ button,
 .advantages__item--liner::before {
   width: 27px;
   height: 32px;
-  background-image: url("../../img/advantages-liner.svg");
+  background-image: url("../img/advantages-liner.svg");
 }
 
 .advantages__item--allinclusive::before {
@@ -904,7 +798,7 @@ button,
   height: 21px;
   margin-top: 4px;
   margin-left: 2px;
-  background-image: url("../../img/advantages-allinclusive.svg");
+  background-image: url("../img/advantages-allinclusive.svg");
 }
 
 .advantages__item--zodiac::before {
@@ -912,7 +806,7 @@ button,
   height: 15px;
   margin-top: 11px;
   margin-left: 4px;
-  background-image: url("../../img/advantages-zodiac.svg");
+  background-image: url("../img/advantages-zodiac.svg");
 }
 
 .advantages__item h3 {
@@ -944,12 +838,12 @@ button,
 
 .catalog {
   padding-top: 110px;
-  padding-bottom: 147px;
+  padding-bottom: 122px;
 }
 
 .catalog h2 {
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 45px;
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
@@ -973,6 +867,7 @@ button,
 }
 
 .catalog__item h3 {
+  position: absolute;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
@@ -980,9 +875,6 @@ button,
   line-height: 27px;
   text-align: left;
   color: #f9fbfd;
-  -webkit-transform: translate(31px, 363px);
-  -ms-transform: translate(31px, 363px);
-  transform: translate(31px, 363px);
 }
 
 .catalog__item img {
@@ -993,35 +885,49 @@ button,
 }
 
 .catalog__photo {
+  position: absolute;
   display: block;
-  width: 100%;
   height: 386px;
+}
+
+.catalog__photo h3 {
+  bottom: 20px;
+  left: 30px;
 }
 
 .catalog__product-info {
-  position: relative;
+  position: absolute;
   z-index: -1;
-  display: none;
   width: 260px;
   height: 386px;
   padding: 22px;
+  overflow-y: auto;
   background-color: #011c40;
 }
 
-.catalog__product-info .catalog__product-info dl {
+.catalog__product-info h3 {
+  top: 0;
+  left: 20px;
+}
+
+.catalog__product-info h4 {
+  position: absolute;
+}
+
+.catalog__product-info dl {
   margin-top: 47px;
   margin-bottom: 33px;
   margin-left: 3px;
 }
 
-.catalog__product-info .catalog__product-info dt {
+.catalog__product-info dt {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   color: #f9fbfd;
 }
 
-.catalog__product-info .catalog__product-info dd {
+.catalog__product-info dd {
   margin-bottom: 12px;
   margin-left: 0;
   font-weight: 400;
@@ -1030,27 +936,21 @@ button,
   color: #d8d8d9;
 }
 
-.catalog__item:hover .catalog__product-info {
-  display: block;
+.catalog__item:hover .catalog__photo,
+.catalog__item:focus-within .catalog__photo {
+  z-index: -1;
+  opacity: 0;
 }
 
-.catalog__item:hover .catalog__photo {
-  display: none;
-}
-
-.catalog__item:hover .catalog__item h3 {
-  line-height: 150%;
-  -webkit-transform: translate(3px, 6px);
-  -ms-transform: translate(3px, 6px);
-  transform: translate(3px, 6px);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  -o-transition: transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+.catalog__item:hover .catalog__product-info,
+.catalog__item:focus-within .catalog__product-info {
+  z-index: 1;
+  opacity: 1;
 }
 
 .contacts {
+  padding-top: 120px;
+  padding-bottom: 123px;
   background-color: #f9fbfd;
 }
 
@@ -1066,6 +966,8 @@ button,
 .contacts p {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 77px;
+  padding-left: 104px;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
@@ -1077,12 +979,12 @@ button,
 }
 
 .contacts ul {
+  padding-left: 103px;
   grid-column: 2/-1;
   grid-row: 2/-1;
 }
 
-.contacts_map-wrapper {
-  width: 48%;
+.contacts__map-wrap {
   height: 306px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1090,46 +992,47 @@ button,
   grid-row: 1/-1;
 }
 
-.contacts__address {
+.contacts address {
   display: block;
-  margin-top: 21px;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 23px;
   padding-right: 30px;
-  padding-left: 19px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
+  padding-left: 28px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #011c40;
   text-decoration: none;
-  background: left top no-repeat url("../../img/address.svg");
+  background: left top no-repeat url("../img/address.svg");
   cursor: pointer;
 }
 
-.contacts__address:hover,
-.contacts__address:focus {
+.contacts address:hover,
+.contacts address:focus {
   opacity: 0.5;
 }
 
-.contacts__address:active {
+.contacts address:active {
   color: #2c39f2;
 }
 
-.contacts__phone {
+.contacts a {
   display: block;
-  padding-left: 19px;
-  font-size: 14px;
-  line-height: 20px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 24px;
   color: #000000;
   text-decoration: none;
-  background: left top no-repeat url("../../img/phone.svg");
+  background: left top no-repeat url("../img/phone.svg");
   cursor: pointer;
 }
 
-.contacts__phone:hover,
-.contacts__phone:focus {
+.contacts a:hover,
+.contacts a:focus {
   opacity: 0.5;
 }
 
-.contacts__phone:active {
+.contacts a:active {
   color: #2c39f2;
 }
 
@@ -1137,13 +1040,61 @@ button,
   display: block;
   width: 600px;
   max-width: 100%;
-  height: 450px;
   height: 306px;
   border: 0;
 }
 
 .footer {
+  padding-top: 15px;
   background-color: #011c40;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.footer__logo {
+  margin-right: 40px;
+}
+
+.footer__main-nav {
+  margin-right: 348px;
+}
+
+.footer__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.footer__social-list li {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.footer__social-list li:not(:last-child) {
+  margin-right: 27px;
+}
+
+.footer__social {
+  fill: #f9fbfd;
+}
+
+.footer__social-list li:hover .footer__social,
+.footer__social-list li:focus .footer__social {
+  fill: #339a9a;
+}
+
+.footer__social-list li:active .footer__social {
+  opacity: 0.5;
 }
 
 .is-valid {
@@ -1156,16 +1107,16 @@ button,
 
 .booking {
   background-color: #d9e6f4;
-  background-image: url("../../img/booking.jpg");
+  background-image: url("../img/booking.jpg");
 }
 
 .booking__wrapper {
   display: -ms-grid;
   display: grid;
-  padding-top: 50px;
-  padding-right: 33px;
-  padding-bottom: 50px;
-  padding-left: 34px;
+  padding: 48px 33px 48px 34px;
+  -webkit-column-gap: 118px;
+  -moz-column-gap: 118px;
+  column-gap: 118px;
   -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%;
   -ms-grid-rows: 1fr 1fr;
@@ -1187,14 +1138,17 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-column-align: end;
-  justify-self: end;
+  -ms-grid-column-align: center;
+  justify-self: center;
 }
 
 .booking p {
+  -ms-grid-row-align: start;
+  align-self: start;
   margin-top: 0;
   margin-bottom: 0;
-  padding-right: 210px;
+  padding-right: 128px;
+  padding-left: 27px;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
@@ -1203,6 +1157,8 @@ button,
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   grid-row: 2/-1;
+  -ms-grid-column-align: center;
+  justify-self: center;
 }
 
 .booking__form-wrapper {
@@ -1213,9 +1169,11 @@ button,
 }
 
 .booking__form {
-  width: 70%;
-  height: 455px;
-  padding: 50px;
+  width: 73%;
+  padding-top: 44px;
+  padding-right: 47px;
+  padding-bottom: 50px;
+  padding-left: 21px;
   background-color: #011c40;
   -webkit-box-shadow: 0 4px 45px #011c40 0.15;
   box-shadow: 0 4px 45px #011c40 0.15;
@@ -1223,12 +1181,16 @@ button,
 
 .booking__form p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 27px;
   padding-right: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
   color: #f9fbfd;
+}
+
+.modal-boxes p {
+  margin-bottom: 0;
 }
 
 .booking__form input:not(input[type="checkbox"]) {
@@ -1240,8 +1202,8 @@ button,
   font-size: 14px;
   line-height: 150%;
   color: #011c40;
+  background-color: #ffffff;
   border-color: transparent;
-  opacity: 0.7;
 }
 
 .booking__form input:not(input[type="checkbox"]):hover,
@@ -1251,9 +1213,11 @@ button,
 }
 
 .booking__label-agree {
+  margin-left: 29px;
   font-weight: 400;
   font-size: 10px;
   line-height: 130%;
+  vertical-align: text-top;
   color: #f9fbfd;
 }
 
@@ -1271,7 +1235,7 @@ button,
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: 28px;
   width: 100%;
   height: 100%;
   background-color: #f9fbfd;
@@ -1404,8 +1368,18 @@ button,
     padding-left: 45px;
   }
 
+  .catalog__button {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .catalog__product-info h3 {
+    top: 29px;
+    left: 36px;
+  }
+
   .page-header__wrapper {
-    padding-top: 24px;
+    padding-top: 25px;
   }
 
   .page-header {
@@ -1435,7 +1409,7 @@ button,
   .advantages {
     padding-top: 89px;
     padding-bottom: 100px;
-    background-image: url("../../img/advantages-tablet.jpg");
+    background-image: url("../img/advantages-tablet.jpg");
   }
 
   .advantages ul {
@@ -1451,7 +1425,7 @@ button,
   }
 
   .advantages__item {
-    height: 310px;
+    min-height: 310px;
     padding: 20px;
   }
 
@@ -1459,7 +1433,7 @@ button,
     width: 21px;
     height: 26px;
     margin-top: 5px;
-    background-image: url("../../img/liner-tablet.svg");
+    background-image: url("../img/liner-tablet.svg");
   }
 
   .advantages__item--allinclusive::before {
@@ -1467,7 +1441,7 @@ button,
     height: 19px;
     margin-top: 10px;
     margin-left: -1px;
-    background-image: url("../../img/allinclusive-tablet.svg");
+    background-image: url("../img/allinclusive-tablet.svg");
   }
 
   .advantages__item--zodiac::before {
@@ -1475,7 +1449,7 @@ button,
     height: 13px;
     margin-top: 12px;
     margin-left: 2px;
-    background-image: url("../../img/zodiac-tablet.svg");
+    background-image: url("../img/zodiac-tablet.svg");
   }
 
   .advantages__item--allinclusive p {
@@ -1487,10 +1461,12 @@ button,
   }
 
   .catalog {
-    padding-top: 37px;
+    padding-top: 90px;
+    padding-bottom: 100px;
   }
 
   .catalog h2 {
+    margin-bottom: 49px;
     font-size: 26px;
   }
 
@@ -1501,16 +1477,37 @@ button,
     grid-template-columns: 1fr 1fr;
   }
 
+  .catalog__photo h3 {
+    bottom: 28px;
+    left: 35px;
+  }
+
+  .catalog__item img {
+    width: 309px;
+  }
+
+  .catalog__product-info {
+    width: 309px;
+    padding-left: 32px;
+  }
+
   .booking {
-    background-image: url("../../img/booking-tablet.jpg");
+    background-image: url("../img/booking-tablet.jpg");
   }
 
   .booking__wrapper {
     display: block;
+    padding-top: 88px;
+    padding-right: 129px;
+    padding-left: 129px;
+  }
+
+  .booking__wrapper p {
+    padding-right: 35px;
   }
 
   .booking__form {
-    width: 53%;
+    width: 78%;
     -webkit-transition: width 0.5s;
     -o-transition: width 0.5s;
     transition: width 0.5s;
@@ -1544,7 +1541,7 @@ button,
     -ms-grid-row-align: start;
     align-self: start;
     margin-top: -10px;
-    padding-right: 81px;
+    padding-right: 125px;
     font-size: 26px;
     line-height: 140%;
   }
@@ -1561,11 +1558,11 @@ button,
   }
 
   .advantages {
-    background-image: url("../../img/advantages-tablet@2x.jpg");
+    background-image: url("../img/advantages-tablet@2x.jpg");
   }
 
   .booking {
-    background-image: url("../../img/booking-tablet@2x.jpg");
+    background-image: url("../img/booking-tablet@2x.jpg");
   }
 }
 
@@ -1574,19 +1571,6 @@ button,
     max-width: 767px;
     padding-right: 15px;
     padding-left: 15px;
-  }
-
-  .modal__wrapper {
-    padding: 60px 16px;
-  }
-
-  .modal__content {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
   }
 
   .page-header {
@@ -1705,7 +1689,7 @@ button,
   .advantages {
     padding-top: 56px;
     padding-bottom: 64px;
-    background-image: url("../../img/advantages-mobile.jpg");
+    background-image: url("../img/advantages-mobile.jpg");
   }
 
   .advantages ul {
@@ -1719,7 +1703,7 @@ button,
 
   .advantages__item {
     width: 100%;
-    height: 250px;
+    min-height: 250px;
   }
 
   .advantages__item--allinclusive::before {
@@ -1776,7 +1760,7 @@ button,
   }
 
   .booking {
-    background-image: url("../../img/booking-mobile.jpg");
+    background-image: url("../img/booking-mobile.jpg");
   }
 
   .booking__form {
@@ -1865,11 +1849,11 @@ button,
   }
 
   .advantages {
-    background-image: url("../../img/advantages-mobile@2x.jpg");
+    background-image: url("../img/advantages-mobile@2x.jpg");
   }
 
   .booking {
-    background-image: url("../../img/booking-mobile@2x.jpg");
+    background-image: url("../img/booking-mobile@2x.jpg");
   }
 }
 
@@ -1879,10 +1863,10 @@ button,
   }
 
   .advantages {
-    background-image: url("../../img/advantages-desktop@2x.jpg");
+    background-image: url("../img/advantages-desktop@2x.jpg");
   }
 
   .booking {
-    background-image: url("../../img/booking@2x.jpg");
+    background-image: url("../img/booking@2x.jpg");
   }
 }

@@ -1,4 +1,7 @@
 .contacts {
+  padding-top: 120px;
+  padding-bottom: 123px;
+
   background-color: $alice-blue;
 }
 
@@ -12,6 +15,8 @@
 .contacts p {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 77px;
+  padding-left: 104px;
 
   font-weight: 500;
   font-size: 18px;
@@ -23,31 +28,33 @@
 }
 
 .contacts ul {
+  padding-left: 103px;
+
   grid-column: 2/-1;
   grid-row: 2/-1;
 }
 
-.contacts_map-wrapper {
-  width: 48%;
+.contacts__map-wrap {
   height: 306px;
 
   grid-column: 1/2;
   grid-row: 1/-1;
 }
 
-.contacts__address {
+.contacts address {
   display: block;
-  margin-top: 21px;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 23px;
   padding-right: 30px;
-  padding-left: 19px;
+  padding-left: 28px;
 
-  font-size: 14px;
-  line-height: 20px;
-  color: $color-default-black;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $tangaroa;
   text-decoration: none;
 
-  background: left top no-repeat url("../../img/address.svg");
+  background: left top no-repeat url("../img/address.svg");
   cursor: pointer;
 
   &:hover,
@@ -60,16 +67,16 @@
   }
 }
 
-.contacts__phone {
+.contacts a {
   display: block;
-  padding-left: 19px;
+  padding-left: 30px;
 
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   color: $color-default-black;
   text-decoration: none;
 
-  background: left top no-repeat url("../../img/phone.svg");
+  background: left top no-repeat url("../img/phone.svg");
   cursor: pointer;
 
   &:hover,
@@ -86,7 +93,7 @@
   display: block;
   width: 600px;
   max-width: 100%;
-  height: 450px;
+  // height: 450px;
   height: 306px;
 
   border: 0;

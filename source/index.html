@@ -17,10 +17,8 @@
         <div class="container">
           <div class="page-header__wrapper" data-wrapper>
             <a class="page-header__logo logo" href="#">
-              <svg class="logo__image" data-logo width="70" height="38" viewbox="0 0 70 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" />
+              <svg class="logo__image" data-logo width="70" height="38" role="img" aria-label="logo">
+                <use xlink:href="../img/sprite_auto.svg#logo"></use>
               </svg>
             </a>
             <nav class="page-header__main-nav main-nav">
@@ -60,22 +58,13 @@
             <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
             <div class="trip__image">
               <picture>
-                <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/trip-desktop.webp    1x,
-                      img/trip-desktop@2x.webp 2x
-                    " />
-                <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/trip-tablet.webp    1x,
-                      img/trip-tablet@2x.webp 2x
-                    " />
-                <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/trip-mobile.webp    1x,
-                      img/trip-mobile@2x.webp 2x
-                    " />
+                <source media="(min-width: 1024px)" type="image/webp" srcset="../img/trip-desktop.webp 1x, ../img/trip-desktop@2x.webp 2x" />
+                <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/trip-tablet.webp 1x, ../img/trip-tablet@2x.webp 2x" />
+                <source media="(max-width: 767px)" type="image/webp" srcset="../img/trip-mobile.webp 1x, ../img/trip-mobile@2x.webp 2x" />
                 <!--mobile 1x: 290px; 2x: 580px-->
                 <!--tablet 1x: 324px; 2x: 648px-->
                 <!--desktop 1x: 560px; 2x: 1120px -->
-                <img srcset="img/trip-desktop@2x.jpg 2x" src="img/trip-desktop.jpg" width="560" height="301" alt="пингвины">
+                <img srcset="../img/trip-desktop@2x.jpg 2x" src="../img/trip-desktop.jpg" width="560" height="301" alt="пингвины">
               </picture>
             </div>
           </div>
@@ -105,28 +94,20 @@
           <h2 id="upcoming-cruises">Ближайшие круизы</h2>
           <ul class="catalog__list list-reset">
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Астория"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Астория"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-1.webp    1x,
-                      img/cruise-1@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-1-tablet.webp    1x,
-                      img/cruise-1-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-1-mobile.webp    1x,
-                      img/cruise-1-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-1.webp 1x, ../img/cruise-1@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-1-tablet.webp 1x, ../img/cruise-1-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-1-mobile.webp 1x, ../img/cruise-1-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-1@2x.jpg 2x" src="img/cruise-1.jpg" width="260" height="386" alt="ледяная гладь на водоёме">
+                  <img srcset="../img/cruise-1@2x.jpg 2x" src="../img/cruise-1.jpg" width="260" height="386" alt="ледяная гладь на водоёме">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Астория"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Аргентина -&nbsp;Фолклендские острова - Антарктида</dd>
@@ -141,28 +122,20 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Элайн"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Элайн"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-3.webp    1x,
-                      img/cruise-3@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-3-tablet.webp    1x,
-                      img/cruise-3-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-3-mobile.webp    1x,
-                      img/cruise-3-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-3.webp 1x, ../img/cruise-3@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-3-tablet.webp 1x, ../img/cruise-3-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-3-mobile.webp 1x, ../img/cruise-3-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-3@2x.jpg 2x" src="img/cruise-3.jpg" width="260" height="386" alt="завораживающий бирюзовый лёд">
+                  <img srcset="../img/cruise-3@2x.jpg 2x" src="../img/cruise-3.jpg" width="260" height="386" alt="завораживающий бирюзовый лёд">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Элайн"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Аргентина - Фолклендские острова - Антарктида - Чили</dd>
@@ -177,28 +150,20 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Атлантис"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Атлантис"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-3.webp    1x,
-                      img/cruise-3@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-3-tablet.webp    1x,
-                      img/cruise-3-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-3-mobile.webp    1x,
-                      img/cruise-3-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-3.webp 1x, ../img/cruise-3@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-3-tablet.webp 1x, ../img/cruise-3-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-3-mobile.webp 1x, ../img/cruise-3-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-3@2x.jpg 2x" src="img/cruise-3.jpg" width="260" height="386" alt="бирюзовая красотища">
+                  <img srcset="../img/cruise-3@2x.jpg 2x" src="../img/cruise-3.jpg" width="260" height="386" alt="бирюзовая красотища">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Атлантис"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</dd>
@@ -213,28 +178,20 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Одиссей"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Одиссей"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-4.webp    1x,
-                      img/cruise-4@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-4-tablet.webp    1x,
-                      img/cruise-4-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-4-mobile.webp    1x,
-                      img/cruise-4-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-4.webp 1x, ../img/cruise-4@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-4-tablet.webp 1x, ../img/cruise-4-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-4-mobile.webp 1x, ../img/cruise-4-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-4@2x.jpg 2x" src="img/cruise-4.jpg" width="260" height="386" alt="облачное небо и серые заснеженные скалы">
+                  <img srcset="../img/cruise-4@2x.jpg 2x" src="../img/cruise-4.jpg" width="260" height="386" alt="облачное небо и серые заснеженные скалы">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Одиссей"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Чили - Антарктида</dd>
@@ -249,28 +206,21 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Олимпия"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Олимпия"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-5.webp    1x,
-                      img/cruise-5@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-5-tablet.webp    1x,
-                      img/cruise-5-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-5-mobile.webp    1x,
-                      img/cruise-5-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-5.webp 1x, ../img/cruise-5@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-5-tablet.webp 1x,
+                      ../img/cruise-5-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-5-mobile.webp 1x, ../img/cruise-5-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-5@2x.jpg 2x" src="img/cruise-5.jpg" width="260" height="386" alt="идеально ровный срез толщи снега и люди на экскурсии">
+                  <img srcset="../img/cruise-5@2x.jpg 2x" src="../img/cruise-5.jpg" width="260" height="386" alt="идеально ровный срез толщи снега и люди на экскурсии">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Олимпия"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
@@ -285,28 +235,20 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Аврора"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Аврора"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-6.webp    1x,
-                      img/cruise-6@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-6-tablet.webp    1x,
-                      img/cruise-6-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-6-mobile.webp    1x,
-                      img/cruise-6-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-6.webp 1x, ../img/cruise-6@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-6-tablet.webp 1x, ../img/cruise-6-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-6-mobile.webp 1x, ../img/cruise-6-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-6@2x.jpg 2x" src="img/cruise-6.jpg" width="260" height="386" alt="некрупные заснеженные льдины плывут по воде">
+                  <img srcset="../img/cruise-6@2x.jpg 2x" src="../img/cruise-6.jpg" width="260" height="386" alt="некрупные заснеженные льдины плывут по воде">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Аврора"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Аргентина - Антарктида - Чили</dd>
@@ -321,28 +263,20 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Леонор"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Леонор"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-7.webp    1x,
-                      img/cruise-7@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-7-tablet.webp    1x,
-                      img/cruise-7-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-7-mobile.webp    1x,
-                      img/cruise-7-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-7.webp 1x, ../img/cruise-7@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-7-tablet.webp 1x, ../img/cruise-7-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-7-mobile.webp 1x, ../img/cruise-7-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-7@2x.jpg 2x" src="img/cruise-7.jpg" width="260" height="386" alt="кораблик на холодной, но незамёрзшей воде и ветер">
+                  <img srcset="../img/cruise-7@2x.jpg 2x" src="../img/cruise-7.jpg" width="260" height="386" alt="кораблик на холодной, но незамёрзшей воде и ветер">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Леонор"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Чили - Южная Георгия - Антарктида - Аргентина</dd>
@@ -357,28 +291,20 @@
               </div>
             </li>
             <li class="catalog__item">
-              <h3>Круиз&nbsp;"Минион&nbsp;-&nbsp;1"</h3>
               <div class="catalog__photo">
+                <h3>Круиз&nbsp;"Минион&nbsp;-&nbsp;1"</h3>
                 <picture>
-                  <source media="(min-width: 1024px)" type="image/webp" srcset="
-                      img/cruise-8.webp    1x,
-                      img/cruise-8@2x.webp 2x
-                    " />
-                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="
-                      img/cruise-8-tablet.webp    1x,
-                      img/cruise-8-tablet@2x.webp 2x
-                    " />
-                  <source media="(max-width: 767px)" type="image/webp" srcset="
-                      img/cruise-8-mobile.webp    1x,
-                      img/cruise-8-mobile@2x.webp 2x
-                    " />
+                  <source media="(min-width: 1024px)" type="image/webp" srcset="../img/cruise-8.webp 1x, ../img/cruise-8@2x.webp 2x" />
+                  <source media="(min-width: 767px) and (max-width: 1023px)" type="image/webp" srcset="../img/cruise-8-tablet.webp 1x, ../img/cruise-8-tablet@2x.webp 2x" />
+                  <source media="(max-width: 767px)" type="image/webp" srcset="../img/cruise-8-mobile.webp 1x, ../img/cruise-8-mobile@2x.webp 2x" />
                   <!--mobile 1x: 270px; 2x: 540px-->
                   <!--tablet 1x: 309px; 2x: 618px-->
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img srcset="img/cruise-8@2x.jpg 2x" src="img/cruise-8.jpg" width="260" height="386" alt="безкрайние снежные горы и подмёрзший водоём">
+                  <img srcset="../img/cruise-8@2x.jpg 2x" src="../img/cruise-8.jpg" width="260" height="386" alt="безкрайние снежные горы и подмёрзший водоём">
                 </picture>
               </div>
               <div class="catalog__product-info">
+                <h3>Круиз&nbsp;"Минион&nbsp;-&nbsp;1"</h3>
                 <dl class="list-reset">
                   <dt>Маршрут</dt>
                   <dd>Аргентина - Антарктида</dd>
@@ -414,11 +340,11 @@
                   </p>
                   <p>
                     <label class="visually-hidden" for="email">Ваш email:</label>
-                    <input id="email" type="email" name="mail" data-email data-input placeholder="E-mail" required>
+                    <input id="email" type="email" name="mail" data-email data-input placeholder="Email" required>
                   </p>
                 </div>
                 <input class="booking__input-agree" type="checkbox" id="agree" data-checkbox>
-                <label class="booking__label-agree" for="agree">согласен на обработку моих персональных данных</label>
+                <label class="booking__label-agree" for="agree">Я согласен на обработку моих персональных данных</label>
                 <button class="booking__button button" type="submit">Оставить заявку</button>
               </form>
             </div>
@@ -435,10 +361,10 @@
             <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
             <ul class="list-reset">
               <li>
-                <address class="contacts__address">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
+                <address>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
               </li>
               <li>
-                <a class="contacts__phone" href="tel:88002000000">8-800-200-00-00</a>
+                <a href="tel:88002000000">8-800-200-00-00</a>
               </li>
             </ul>
           </div>
@@ -447,52 +373,54 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <a class="footer__logo logo" href="#">
-          <svg class="logo__image" data-logo width="70" height="38" viewbox="0 0 70 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" />
-          </svg>
-        </a>
-        <nav class="footer__main-nav main-nav">
-          <ul class="list-reset" data-menu>
+        <div class="footer__wrapper">
+          <a class="footer__logo logo" href="#">
+            <svg class="logo__image" data-logo width="70" height="38" viewbox="0 0 70 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" />
+            </svg>
+          </a>
+          <nav class="footer__main-nav main-nav">
+            <ul class="list-reset" data-menu>
+              <li>
+                <a data-menu-link href="#advantages">Преимущества</a>
+              </li>
+              <li>
+                <a data-menu-link href="#">Направления</a>
+              </li>
+              <li>
+                <a data-menu-link href="#upcoming-cruises">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a data-menu-link href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__social-list list-reset">
             <li>
-              <a data-menu-link href="#advantages">Преимущества</a>
+              <a href="#">
+                <svg class="footer__social" width="11" height="20" fill="currentColor" role="img" aria-label="facebook">
+                  <use xlink:href="../img/sprite_auto.svg#facebook"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a data-menu-link href="#">Направления</a>
+              <a href="#">
+                <svg class="footer__social" width="20" height="20" fill="currentColor" role="img" aria-label="instagram">
+                  <use xlink:href="../img/sprite_auto.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a data-menu-link href="#upcoming-cruises">Ближайшие круизы</a>
-            </li>
-            <li>
-              <a data-menu-link href="#contacts">Контакты</a>
+              <a href="#">
+                <svg class="footer__social" width="20" height="16" fill="currentColor" role="img" aria-label="twitter">
+                  <use xlink:href="../img/sprite_auto.svg#twitter"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="footer__social list-reset">
-          <li>
-            <a href="#">
-              <svg width="11" height="20" fill="currentColor" role="img" aria-label="facebook">
-                <use xlink:href="img/sprite_auto.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg width="11" height="20" fill="currentColor" role="img" aria-label="instagram">
-                <use xlink:href="img/sprite_auto.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg width="11" height="20" fill="currentColor" role="img" aria-label="twitter">
-                <use xlink:href="img/sprite_auto.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
     </footer>
   </div>

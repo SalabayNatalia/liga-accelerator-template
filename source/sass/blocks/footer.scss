@@ -1,3 +1,46 @@
 .footer {
+  padding-top: 15px;
+
   background-color: $tangaroa;
+}
+
+.footer__wrapper {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.footer__logo {
+  margin-right: 40px;
+}
+
+.footer__main-nav {
+  margin-right: 348px;
+}
+
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.footer__social-list li {
+  align-self: center;
+}
+
+.footer__social-list li:not(:last-child) {
+  margin-right: 27px;
+}
+
+.footer__social {
+  fill: $alice-blue;
+}
+
+.footer__social-list li:hover .footer__social,
+.footer__social-list li:focus .footer__social {
+  fill: $java;
+}
+
+.footer__social-list li:active .footer__social {
+  opacity: 0.5;
 }

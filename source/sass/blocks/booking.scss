@@ -8,19 +8,18 @@
 
 .booking {
   background-color: $pattens-blue;
-  background-image: url("../../img/booking.jpg");
+  background-image: url("../img/booking.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/booking@2x.jpg");
+    background-image: url("../img/booking@2x.jpg");
   }
 }
 
 .booking__wrapper {
   display: grid;
-  padding-top: 50px;
-  padding-right: 33px;
-  padding-bottom: 50px;
-  padding-left: 34px;
+  padding: 48px 33px 48px 34px;
+
+  column-gap: 118px;
 
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr;
@@ -38,13 +37,15 @@
 
   grid-column: 1/2;
   grid-row: 1/2;
-  justify-self: end;
+  justify-self: center;
 }
 
 .booking p {
+  align-self: start;
   margin-top: 0;
   margin-bottom: 0;
-  padding-right: 210px;
+  padding-right: 128px;
+  padding-left: 27px;
 
   font-weight: 400;
   font-size: 18px;
@@ -53,6 +54,7 @@
 
   grid-column: 1/2;
   grid-row: 2/-1;
+  justify-self: center;
 }
 
 .booking__form-wrapper {
@@ -62,9 +64,11 @@
 }
 
 .booking__form {
-  width: 70%;
-  height: 455px;
-  padding: 50px;
+  width: 73%;
+  padding-top: 44px;
+  padding-right: 47px;
+  padding-bottom: 50px;
+  padding-left: 21px;
 
   background-color: $tangaroa;
   box-shadow: 0 4px 45px $tangaroa 0.15;
@@ -72,13 +76,17 @@
 
 .booking__form p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 27px;
   padding-right: 0;
 
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
   color: $alice-blue;
+}
+
+.modal-boxes p {
+  margin-bottom: 0;
 }
 
 .booking__form input:not(input[type="checkbox"]) {
@@ -92,8 +100,8 @@
   line-height: 150%;
   color: $tangaroa;
 
+  background-color: $color-default-white;
   border-color: transparent;
-  opacity: 0.7;
 
   &:hover,
   &:focus {
@@ -102,9 +110,12 @@
 }
 
 .booking__label-agree {
+  margin-left: 29px;
+
   font-weight: 400;
   font-size: 10px;
   line-height: 130%;
+  vertical-align: text-top;
   color: $alice-blue;
 }
 
@@ -122,7 +133,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 28px;
 
     width: 100%;
     height: 100%;
@@ -160,19 +171,26 @@
 
 @media (max-width: $tablet-size-max) {
   .booking {
-    background-image: url("../../img/booking-tablet.jpg");
+    background-image: url("../img/booking-tablet.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/booking-tablet@2x.jpg");
+      background-image: url("../img/booking-tablet@2x.jpg");
     }
   }
 
   .booking__wrapper {
     display: block;
+    padding-top: 88px;
+    padding-right: 129px;
+    padding-left: 129px;
+  }
+
+  .booking__wrapper p {
+    padding-right: 35px;
   }
 
   .booking__form {
-    width: 53%;
+    width: 78%;
 
     transition: width 0.5s;
   }
@@ -184,10 +202,10 @@
 
 @media (max-width: $mobile-size-max) {
   .booking {
-    background-image: url("../../img/booking-mobile.jpg");
+    background-image: url("../img/booking-mobile.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/booking-mobile@2x.jpg");
+      background-image: url("../img/booking-mobile@2x.jpg");
     }
   }
 
