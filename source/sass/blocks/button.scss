@@ -75,3 +75,14 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: $mobile-size-max) {
+  .catalog__button {
+    padding-right: 51px;
+    padding-left: 51px;
+  }
+
+  .booking__button {
+    margin-top: 25px;
+  }
+}

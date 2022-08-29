@@ -174,11 +174,14 @@
 @media (max-width: $mobile-size-max) {
   .catalog {
     padding-top: 56px;
+    padding-bottom: 65px;
   }
 
   .catalog ul {
     display: flex;
     flex-wrap: wrap;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .catalog__item {
@@ -190,13 +193,23 @@
     width: 270px;
   }
 
-  .catalog__product-info {
-    width: 270px;
-  }
-
   .catalog h2 {
-    margin-bottom: 4px;
+    margin-bottom: 31px;
 
     font-size: 24px;
+  }
+
+  .catalog__photo h3 {
+    bottom: 18px;
+    left: 25px;
+  }
+
+  .catalog__product-info {
+    width: 270px;
+    padding-left: 22px;
+  }
+
+  .catalog__product-info h3 {
+    left: 25px;
   }
 }

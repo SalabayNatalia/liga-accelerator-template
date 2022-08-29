@@ -89,3 +89,13 @@
     }
   }
 }
+
+@media (max-width: $mobile-size-max) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__main-nav {
+    margin-right: 0;
+  }
+}

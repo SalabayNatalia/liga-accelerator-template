@@ -48,19 +48,19 @@
     gap: 26px;
   }
 
-  .is-open {
-    z-index: 200;
+  // .is-open {
+  //   z-index: 200;
 
-    display: block;
-    flex-direction: column;
-    align-items: center;
+  //   display: block;
+  //   flex-direction: column;
+  //   align-items: center;
 
-    visibility: visible;
-  }
+  //   visibility: visible;
+  // }
 
-  .is-mobile-menu {
-    color: $tangaroa;
-  }
+  // .is-mobile-menu {
+  //   color: $tangaroa;
+  // }
 
   .main-nav a {
     padding-right: 10px;

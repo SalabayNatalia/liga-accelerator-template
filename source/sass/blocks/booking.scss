@@ -88,7 +88,7 @@
   color: $alice-blue;
 }
 
-.modal-boxes p {
+.booking__modal-boxes p {
   margin-bottom: 0;
 }
 
@@ -96,7 +96,7 @@
   width: 100%;
   height: 43px;
   margin-bottom: 20px;
-  padding-left: 16px;
+  padding-left: 14px;
 
   font-weight: 400;
   font-size: 14px;
@@ -138,8 +138,8 @@
     top: 0;
     left: 28px;
 
-    width: 100%;
-    height: 100%;
+    width: 18px;
+    height: 18px;
 
     background-color: $alice-blue;
   }
@@ -222,7 +222,7 @@
     font-size: 34px;
   }
 
-  .modal-boxes p {
+  .booking__modal-boxes p {
     margin-bottom: 0;
   }
 
@@ -244,22 +244,63 @@
     }
   }
 
-  .booking__form {
-    width: 100%;
-    padding: 40px 30px;
-  }
-
-  .booking__form p {
-    line-height: 140%;
-  }
-
-  .booking h2 {
-    font-size: 24px;
-    line-height: 130%;
-  }
-
   .booking p {
     font-size: 16px;
     line-height: 140%;
+  }
+
+  .booking__wrapper {
+    padding-top: 59px;
+    padding-right: 0;
+    padding-bottom: 67px;
+    padding-left: 0;
+  }
+
+  .booking__wrapper p {
+    margin-bottom: 32px;
+  }
+
+  .booking__form {
+    width: 100%;
+    padding-top: 36px;
+    padding-right: 30px;
+    padding-bottom: 39px;
+    padding-left: 30px;
+  }
+
+  .booking__form p {
+    margin-bottom: 28px;
+
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .booking__modal-boxes p {
+    margin-bottom: 0;
+  }
+
+  .booking__form input:not(input[type="checkbox"]) {
+    margin-bottom: 20px;
+  }
+
+  .booking h2 {
+    margin-bottom: 13px;
+
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .booking__check {
+    display: flex;
+  }
+
+  .booking__label-agree {
+    margin-top: -2px;
+  }
+
+  .booking__input-agree {
+    margin-right: 15px;
   }
 }

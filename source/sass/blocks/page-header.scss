@@ -1,10 +1,10 @@
 .page-header {
-  height: 650px;
+  min-height: 650px;
 
   background-color: $dark-cerulean;
   background-image: url("../img/background-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 650px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/background-desktop@2x.jpg");
@@ -53,9 +53,10 @@
   }
 
   .page-header {
-    height: 638px;
+    min-height: 638px;
 
     background-image: url("../img/background-tablet.jpg");
+    background-size: 100% 638px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/background-tablet@2x.jpg");
@@ -85,9 +86,10 @@
 
 @media (max-width: $mobile-size-max) {
   .page-header {
-    height: 500px;
+    min-height: 500px;
 
     background-image: url("../img/background-mobile.jpg");
+    background-size: 100% 500px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/background-mobile@2x.jpg");
@@ -110,12 +112,13 @@
 
   .page-header__wrapper {
     justify-content: space-between;
+    margin-bottom: 0;
     padding-top: 20px;
   }
 
   .page-header__burger {
     display: block;
-    width: 24px;
+    width: 48px;
     height: 20px;
     margin-top: 4px;
 
@@ -144,11 +147,11 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
-  .is-popup-open {
-    background-color: $alice-blue;
+  // .is-popup-open {
+  //   background-color: $alice-blue;
 
-    transition: background-color 0.5s;
-  }
+  //   transition: background-color 0.5s;
+  // }
 
   .is-mobile-open {
     display: grid;
@@ -161,7 +164,13 @@
     grid-row: 2/-1;
   }
 
+  .page-header__antarctic {
+    padding-top: 176px;
+  }
+
   .page-header__antarctic h1 {
+    margin-bottom: 16px;
+
     font-size: 36px;
     line-height: 125%;
   }
@@ -170,5 +179,25 @@
     margin-top: -5px;
 
     font-size: 16px;
+  }
+
+  .page-header .is-open .main-nav ul {
+    z-index: 200;
+
+    display: block;
+    flex-direction: column;
+    align-items: center;
+
+    visibility: visible;
+  }
+
+  .page-header .is-open .main-nav a {
+    color: $tangaroa;
+  }
+
+  .page-header .is-open .page-header__popup {
+    background-color: $alice-blue;
+
+    transition: background-color 0.5s;
   }
 }

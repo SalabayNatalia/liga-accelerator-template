@@ -682,11 +682,11 @@ button,
 }
 
 .page-header {
-  height: 650px;
+  min-height: 650px;
   background-color: #0b4880;
   background-image: url("../img/background-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 650px;
 }
 
 .page-header__burger {
@@ -1190,7 +1190,7 @@ button,
   color: #f9fbfd;
 }
 
-.modal-boxes p {
+.booking__modal-boxes p {
   margin-bottom: 0;
 }
 
@@ -1198,7 +1198,7 @@ button,
   width: 100%;
   height: 43px;
   margin-bottom: 20px;
-  padding-left: 16px;
+  padding-left: 14px;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -1237,8 +1237,8 @@ button,
   position: absolute;
   top: 0;
   left: 28px;
-  width: 100%;
-  height: 100%;
+  width: 18px;
+  height: 18px;
   background-color: #f9fbfd;
 }
 
@@ -1387,8 +1387,9 @@ button,
   }
 
   .page-header {
-    height: 638px;
+    min-height: 638px;
     background-image: url("../img/background-tablet.jpg");
+    background-size: 100% 638px;
   }
 
   .page-header__main-nav a {
@@ -1618,7 +1619,7 @@ button,
     font-size: 34px;
   }
 
-  .modal-boxes p {
+  .booking__modal-boxes p {
     margin-bottom: 0;
   }
 
@@ -1681,9 +1682,19 @@ button,
     padding-left: 15px;
   }
 
+  .catalog__button {
+    padding-right: 51px;
+    padding-left: 51px;
+  }
+
+  .booking__button {
+    margin-top: 25px;
+  }
+
   .page-header {
-    height: 500px;
+    min-height: 500px;
     background-image: url("../img/background-mobile.jpg");
+    background-size: 100% 500px;
   }
 
   .page-header__popup {
@@ -1702,12 +1713,13 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-bottom: 0;
     padding-top: 20px;
   }
 
   .page-header__burger {
     display: block;
-    width: 24px;
+    width: 48px;
     height: 20px;
     margin-top: 4px;
     background: url("../img/burger.svg") no-repeat;
@@ -1734,13 +1746,6 @@ button,
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
-  .is-popup-open {
-    background-color: #f9fbfd;
-    -webkit-transition: background-color 0.5s;
-    -o-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-  }
-
   .is-mobile-open {
     display: -ms-grid;
     display: grid;
@@ -1758,7 +1763,12 @@ button,
     grid-row: 2/-1;
   }
 
+  .page-header__antarctic {
+    padding-top: 176px;
+  }
+
   .page-header__antarctic h1 {
+    margin-bottom: 16px;
     font-size: 36px;
     line-height: 125%;
   }
@@ -1766,6 +1776,30 @@ button,
   .page-header__antarctic p {
     margin-top: -5px;
     font-size: 16px;
+  }
+
+  .page-header .is-open .main-nav ul {
+    z-index: 200;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    visibility: visible;
+  }
+
+  .page-header .is-open .main-nav a {
+    color: #011c40;
+  }
+
+  .page-header .is-open .page-header__popup {
+    background-color: #f9fbfd;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
   }
 
   .logo {
@@ -1827,6 +1861,7 @@ button,
 
   .catalog {
     padding-top: 56px;
+    padding-bottom: 65px;
   }
 
   .catalog ul {
@@ -1835,6 +1870,8 @@ button,
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .catalog__item {
@@ -1846,40 +1883,140 @@ button,
     width: 270px;
   }
 
-  .catalog__product-info {
-    width: 270px;
-  }
-
   .catalog h2 {
-    margin-bottom: 4px;
+    margin-bottom: 31px;
     font-size: 24px;
   }
 
+  .catalog__photo h3 {
+    bottom: 18px;
+    left: 25px;
+  }
+
+  .catalog__product-info {
+    width: 270px;
+    padding-left: 22px;
+  }
+
+  .catalog__product-info h3 {
+    left: 25px;
+  }
+
+  .contacts {
+    padding-top: 57px;
+    padding-bottom: 75px;
+  }
+
+  .contacts__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contacts p {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .contacts ul {
+    margin-bottom: 36px;
+    padding-left: 0;
+  }
+
+  .contacts__map-wrap {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
   .contacts__map {
+    width: 290px;
     max-width: 100%;
+    height: 316px;
+  }
+
+  .contacts address {
+    margin-bottom: 21px;
+    padding-right: 0;
+  }
+
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__main-nav {
+    margin-right: 0;
   }
 
   .booking {
     background-image: url("../img/booking-mobile.jpg");
   }
 
-  .booking__form {
-    width: 100%;
-    padding: 40px 30px;
-  }
-
-  .booking__form p {
-    line-height: 140%;
-  }
-
-  .booking h2 {
-    font-size: 24px;
-    line-height: 130%;
-  }
-
   .booking p {
     font-size: 16px;
     line-height: 140%;
+  }
+
+  .booking__wrapper {
+    padding-top: 59px;
+    padding-right: 0;
+    padding-bottom: 67px;
+    padding-left: 0;
+  }
+
+  .booking__wrapper p {
+    margin-bottom: 32px;
+  }
+
+  .booking__form {
+    width: 100%;
+    padding-top: 36px;
+    padding-right: 30px;
+    padding-bottom: 39px;
+    padding-left: 30px;
+  }
+
+  .booking__form p {
+    margin-bottom: 28px;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .booking__modal-boxes p {
+    margin-bottom: 0;
+  }
+
+  .booking__form input:not(input[type="checkbox"]) {
+    margin-bottom: 20px;
+  }
+
+  .booking h2 {
+    margin-bottom: 13px;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .booking__check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .booking__label-agree {
+    margin-top: -2px;
+  }
+
+  .booking__input-agree {
+    margin-right: 15px;
   }
 
   .main-nav ul {
@@ -1890,23 +2027,6 @@ button,
     overflow-y: scroll;
     visibility: hidden;
     gap: 26px;
-  }
-
-  .is-open {
-    z-index: 200;
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    visibility: visible;
-  }
-
-  .is-mobile-menu {
-    color: #011c40;
   }
 
   .main-nav a {
@@ -1929,6 +2049,10 @@ button,
   .trip h2 {
     margin-bottom: 72px;
     font-size: 24px;
+  }
+
+  .trip__wrapper h2 {
+    padding-right: 82px;
   }
 
   .trip__wrapper p {
