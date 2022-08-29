@@ -44,3 +44,48 @@
 .footer__social-list li:active .footer__social {
   opacity: 0.5;
 }
+
+@media (max-width: $tablet-size-max) {
+  .footer__wrapper {
+    padding-top: 27px;
+  }
+
+  .footer__logo {
+    margin-right: 24px;
+    padding-top: 7px;
+  }
+
+  .footer__main-nav {
+    margin-right: 87px;
+  }
+
+  .footer__main-nav a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__social-list {
+    padding-top: 5px;
+  }
+
+  .footer__social-list li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .footer__social {
+    &--facebook {
+      width: 9px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--twitter {
+      width: 16px;
+      height: 13px;
+    }
+  }
+}

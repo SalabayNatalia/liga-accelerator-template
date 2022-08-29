@@ -9,6 +9,9 @@
 .booking {
   background-color: $pattens-blue;
   background-image: url("../img/booking.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/booking@2x.jpg");
@@ -181,22 +184,54 @@
   .booking__wrapper {
     display: block;
     padding-top: 88px;
-    padding-right: 129px;
-    padding-left: 129px;
+    padding-right: 125px;
+    padding-bottom: 100px;
+    padding-left: 125px;
   }
 
   .booking__wrapper p {
-    padding-right: 35px;
+    margin-bottom: 53px;
+    padding-right: 27px;
+
+    text-align: center;
   }
 
   .booking__form {
+    position: 50px;
+
     width: 78%;
+    width: 94%;
+    margin: auto;
+    padding-right: 49px;
+    padding-left: 50px;
 
     transition: width 0.5s;
   }
 
+  .booking__form p {
+    margin-bottom: 26px;
+    padding-right: 0;
+    padding-left: 0;
+
+    text-align: start;
+  }
+
   .booking h2 {
+    margin-bottom: 5px;
+
     font-size: 34px;
+  }
+
+  .modal-boxes p {
+    margin-bottom: 0;
+  }
+
+  .booking__input-agree::before {
+    left: 0;
+  }
+
+  .booking__label-agree {
+    margin-left: 0;
   }
 }
 

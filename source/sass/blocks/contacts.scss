@@ -37,6 +37,8 @@
 .contacts__map-wrap {
   height: 306px;
 
+  cursor: pointer;
+
   grid-column: 1/2;
   grid-row: 1/-1;
 }
@@ -97,6 +99,40 @@
   height: 306px;
 
   border: 0;
+}
+
+@media (max-width: $tablet-size-max) {
+  .contacts {
+    padding-top: 102px;
+    padding-bottom: 90px;
+  }
+
+  .contacts p {
+    margin-bottom: 27px;
+    padding-top: 64px;
+    padding-left: 29px;
+  }
+
+  .contacts address {
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding-right: 33px;
+
+    background-position-y: top;
+  }
+
+  .contacts a {
+    padding-left: 28px;
+  }
+
+  .contacts ul {
+    padding-left: 29px;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+  }
 }
 
 @media (max-width: $mobile-size-max) {

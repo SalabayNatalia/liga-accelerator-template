@@ -58,8 +58,6 @@ const menuLinks = document.querySelectorAll('[data-menu-link]');
 const logo = document.querySelector('[data-logo]');
 const wrapperMenu = document.querySelector('[data-wrapper]');
 const popup = document.querySelector('[data-popup]');
-const antarcticHeader = document.querySelector('[data-antarctic-header]');
-const antarcticText = document.querySelector('[data-antarctic-text]');
 
 
 burger.addEventListener('click', function (evt) {
@@ -72,8 +70,6 @@ burger.addEventListener('click', function (evt) {
   logo.classList.toggle('is-logo-open-menu');
   wrapperMenu.classList.toggle('is-mobile-open');
   popup.classList.toggle('is-popup-open');
-  antarcticHeader.classList.toggle('is-mobile-menu-open');
-  antarcticText.classList.toggle('is-mobile-menu-open');
 });
 
 

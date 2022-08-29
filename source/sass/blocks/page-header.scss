@@ -18,11 +18,37 @@
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 191px;
   padding-top: 32px;
+}
+
+.page-header__antarctic h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 93px;
+
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: $alice-blue;
+  letter-spacing: -0.9px;
+  text-shadow: 0 4px 4px $color-default-white 0.25;
+}
+
+.page-header__antarctic p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 94px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $alice-blue;
 }
 
 @media (max-width: $tablet-size-max) {
   .page-header__wrapper {
+    margin-bottom: 213px;
     padding-top: 25px;
   }
 
@@ -34,6 +60,26 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/background-tablet@2x.jpg");
     }
+  }
+
+  .page-header__main-nav a {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .page-header__antarctic h1 {
+    margin-bottom: 12px;
+    padding-left: 0;
+
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .page-header__antarctic p {
+    padding-left: 0;
+
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -113,5 +159,16 @@
 
   .is-mobile-open nav {
     grid-row: 2/-1;
+  }
+
+  .page-header__antarctic h1 {
+    font-size: 36px;
+    line-height: 125%;
+  }
+
+  .page-header__antarctic p {
+    margin-top: -5px;
+
+    font-size: 16px;
   }
 }

@@ -1,5 +1,6 @@
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .main-nav__burger {
@@ -33,11 +34,6 @@
 @media (max-width: $tablet-size-max) {
   .main-nav ul {
     gap: 24px;
-  }
-
-  .main-nav a {
-    font-size: 14px;
-    line-height: 17px;
   }
 }
 
