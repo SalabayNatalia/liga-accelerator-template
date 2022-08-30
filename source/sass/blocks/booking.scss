@@ -8,13 +8,16 @@
 
 .booking {
   background-color: $pattens-blue;
-  background-image: url("../img/booking.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/booking@2x.jpg");
+  @media (min-width: $desktop-size-min) {
+    background-image: url("../img/booking.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/booking@2x.jpg");
+    }
   }
 }
 
@@ -199,7 +202,6 @@
   .booking__form {
     position: 50px;
 
-    width: 78%;
     width: 94%;
     margin: auto;
     padding-right: 49px;

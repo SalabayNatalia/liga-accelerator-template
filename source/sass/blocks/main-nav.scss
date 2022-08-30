@@ -40,10 +40,7 @@
 @media (max-width: $mobile-size-max) {
   .main-nav ul {
     align-items: start;
-    margin-top: 35px;
-    overflow-y: scroll;
-
-    visibility: hidden;
+    margin-top: 41px;
 
     gap: 26px;
   }
@@ -69,5 +66,19 @@
     font-size: 18px;
     line-height: 22px;
     color: $tangaroa;
+  }
+
+  .main-nav--footer a {
+    padding-left: 0;
+
+    font-size: 12px;
+    line-height: 15px;
+    color: $alice-blue;
+  }
+
+  .main-nav--footer ul {
+    flex-direction: column;
+
+    gap: 8px;
   }
 }

@@ -3,11 +3,14 @@
   padding-bottom: 120px;
 
   background-color: $pattens-blue;
-  background-image: url("../img/advantages-desktop.jpg");
   background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/advantages-desktop@2x.jpg");
+  @media (min-width: $desktop-size-min) {
+    background-image: url("../img/advantages-desktop.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantages-desktop@2x.jpg");
+    }
   }
 }
 

@@ -65,9 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
 //   popup.classList.toggle('is-popup-open');
 // });
 
+const burger = document.querySelector('[data-burger]');
 const header = document.querySelector('[data-header]');
+const body = document.querySelector('body');
 
-  const onPopupEscKeydown = (evt) => {
+const onPopupEscKeydown = (evt) => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     header.classList.remove('is-open');
@@ -75,24 +77,20 @@ const header = document.querySelector('[data-header]');
   }
 };
 
-const onMenuBurgerClick = () => {
-  closeMenu();
-}
-
-// function closeMenu() {
+burger.addEventListener('click', (evt) => {
+  evt.preventDefault();
   if (header.classList.contains('is-open')) {
     header.classList.remove('is-open');
 
     document.removeEventListener('keydown', onPopupEscKeydown);
-    burger.removeEventListener('click', onMenuBurgerClick);
+    body.classList.add('is-open-menu');
   } else {
     header.classList.add('is-open');
 
     document.addEventListener('keydown', onPopupEscKeydown);
-    burger.addEventListener('click', onMenuBurgerClick);
+    body.classList.remove('is-open-menu');
   }
-// }
-// closeMenu();
+});
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {

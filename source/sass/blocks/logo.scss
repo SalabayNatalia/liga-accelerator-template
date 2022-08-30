@@ -36,11 +36,15 @@
     margin-left: -35px;
   }
 
-  .is-logo-open-menu {
+  .logo__image-footer {
     margin-left: 0;
-
-    transition: fill 3s margin-left 3s;
-
-    fill: $tangaroa;
   }
+
+  // .is-logo-open-menu {
+  //   margin-left: 0;
+
+  //   transition: fill 3s margin-left 3s;
+
+  //   fill: $tangaroa;
+  // }
 }
