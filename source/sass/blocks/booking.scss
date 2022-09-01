@@ -10,7 +10,7 @@
   background-color: $pattens-blue;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
+  background-size: cover;
 
   @media (min-width: $desktop-size-min) {
     background-image: url("../img/booking.jpg");
@@ -175,6 +175,12 @@
   }
 }
 
+.booking__button {
+  width: 93%;
+  margin-top: 23px;
+  margin-left: 25px;
+}
+
 @media (max-width: $tablet-size-max) {
   .booking {
     background-image: url("../img/booking-tablet.jpg");
@@ -222,6 +228,7 @@
     margin-bottom: 5px;
 
     font-size: 34px;
+    text-align: center;
   }
 
   .booking__modal-boxes p {
@@ -233,6 +240,11 @@
   }
 
   .booking__label-agree {
+    margin-left: 0;
+  }
+
+  .booking__button {
+    width: 100%;
     margin-left: 0;
   }
 }
@@ -305,4 +317,16 @@
   .booking__input-agree {
     margin-right: 15px;
   }
+
+  .booking__button {
+    margin-top: 25px;
+  }
+}
+
+.is-valid {
+  border: 1px solid $apple;
+}
+
+.is-invalid {
+  border: 1px solid $free-speech-red;
 }

@@ -31,20 +31,14 @@
   }
 
   .logo__image {
+    position: absolute;
+    left: -305px;
+
     width: 42px;
     height: 22px;
-    margin-left: -35px;
   }
 
   .logo__image-footer {
-    margin-left: 0;
+    left: 14px;
   }
-
-  // .is-logo-open-menu {
-  //   margin-left: 0;
-
-  //   transition: fill 3s margin-left 3s;
-
-  //   fill: $tangaroa;
-  // }
 }

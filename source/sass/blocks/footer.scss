@@ -15,7 +15,7 @@
 }
 
 .footer__main-nav {
-  margin-right: 348px;
+  margin-right: auto;
 }
 
 .footer__social-list {
@@ -55,10 +55,6 @@
     padding-top: 7px;
   }
 
-  .footer__main-nav {
-    margin-right: 87px;
-  }
-
   .footer__main-nav a {
     font-size: 12px;
     line-height: 15px;
@@ -93,10 +89,6 @@
 @media (max-width: $mobile-size-max) {
   .footer__wrapper {
     flex-direction: column;
-  }
-
-  .footer__main-nav {
-    margin-right: 0;
   }
 
   .footer__social-list {

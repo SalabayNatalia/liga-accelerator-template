@@ -649,13 +649,6 @@ button,
   margin: 0 auto;
 }
 
-.catalog__button {
-  width: 100%;
-  margin-left: 3px;
-  padding: 11px 47px;
-  border: none;
-}
-
 .button {
   width: 100%;
   height: 43px;
@@ -664,6 +657,7 @@ button,
   line-height: 150%;
   color: #011c40;
   background-color: #f9fbfd;
+  border: none;
 }
 
 .button:hover,
@@ -675,18 +669,11 @@ button,
   opacity: 0.5;
 }
 
-.booking__button {
-  width: 93%;
-  margin-top: 23px;
-  margin-left: 25px;
-}
-
 .page-header {
   min-height: 650px;
   background-color: #0b4880;
   background-repeat: no-repeat;
-  background-position-y: 5px;
-  background-size: 100% 650px;
+  background-size: cover;
 }
 
 .page-header__burger {
@@ -713,12 +700,12 @@ button,
   line-height: 66px;
   color: #f9fbfd;
   letter-spacing: -0.9px;
-  text-shadow: 0 4px 4px #ffffff 0.25;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .page-header__antarctic p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-left: 94px;
   font-weight: 400;
   font-size: 20px;
@@ -902,8 +889,9 @@ button,
 }
 
 .catalog__product-info h3 {
-  top: 0;
-  left: 20px;
+  position: static;
+  margin-top: 7px;
+  margin-left: 3px;
 }
 
 .catalog__product-info h4 {
@@ -911,7 +899,7 @@ button,
 }
 
 .catalog__product-info dl {
-  margin-top: 47px;
+  margin-top: 13px;
   margin-bottom: 33px;
   margin-left: 3px;
 }
@@ -930,6 +918,13 @@ button,
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
+}
+
+.catalog__button {
+  width: 100%;
+  margin-left: 3px;
+  padding: 11px 47px;
+  border: none;
 }
 
 .catalog__item:hover .catalog__photo,
@@ -1059,7 +1054,7 @@ button,
 }
 
 .footer__main-nav {
-  margin-right: 348px;
+  margin-right: auto;
 }
 
 .footer__social-list {
@@ -1106,7 +1101,7 @@ button,
   background-color: #d9e6f4;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .booking__wrapper {
@@ -1265,6 +1260,20 @@ button,
   transform: rotate(-135deg);
 }
 
+.booking__button {
+  width: 93%;
+  margin-top: 23px;
+  margin-left: 25px;
+}
+
+.is-valid {
+  border: 1px solid #6aa84f;
+}
+
+.is-invalid {
+  border: 1px solid #cc0000;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1397,16 +1406,6 @@ button,
     padding-left: 45px;
   }
 
-  .catalog__button {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-
-  .booking__button {
-    width: 100%;
-    margin-left: 0;
-  }
-
   .page-header__wrapper {
     margin-bottom: 213px;
     padding-top: 25px;
@@ -1416,7 +1415,6 @@ button,
     min-height: 638px;
     background-image: url("../img/background-tablet.jpg");
     background-position-y: 0;
-    background-size: 100% 638px;
   }
 
   .page-header__main-nav a {
@@ -1527,9 +1525,9 @@ button,
     padding-left: 32px;
   }
 
-  .catalog__product-info h3 {
-    top: 29px;
-    left: 36px;
+  .catalog__button {
+    padding-right: 60px;
+    padding-left: 60px;
   }
 
   .contacts {
@@ -1570,10 +1568,6 @@ button,
   .footer__logo {
     margin-right: 24px;
     padding-top: 7px;
-  }
-
-  .footer__main-nav {
-    margin-right: 87px;
   }
 
   .footer__main-nav a {
@@ -1643,6 +1637,7 @@ button,
   .booking h2 {
     margin-bottom: 5px;
     font-size: 34px;
+    text-align: center;
   }
 
   .booking__modal-boxes p {
@@ -1654,6 +1649,11 @@ button,
   }
 
   .booking__label-agree {
+    margin-left: 0;
+  }
+
+  .booking__button {
+    width: 100%;
     margin-left: 0;
   }
 
@@ -1708,15 +1708,6 @@ button,
     padding-left: 15px;
   }
 
-  .catalog__button {
-    padding-right: 51px;
-    padding-left: 51px;
-  }
-
-  .booking__button {
-    margin-top: 25px;
-  }
-
   .page-header {
     min-height: 500px;
     background-image: url("../img/background-mobile.jpg");
@@ -1752,6 +1743,8 @@ button,
   }
 
   .page-header__burger {
+    position: absolute;
+    left: -39px;
     display: block;
     width: 48px;
     height: 20px;
@@ -1797,10 +1790,6 @@ button,
     align-items: start;
   }
 
-  .main-nav ul {
-    overflow: auto;
-  }
-
   .page-header.is-open .main-nav a {
     color: #011c40;
   }
@@ -1809,6 +1798,11 @@ button,
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
   }
 
   .page-header.is-open .page-header__wrapper {
@@ -1825,6 +1819,7 @@ button,
   }
 
   .page-header.is-open .page-header__burger {
+    left: 254px;
     width: 15px;
     margin-top: 3px;
     background: url("../img/close.svg") no-repeat;
@@ -1843,10 +1838,10 @@ button,
   }
 
   .page-header.is-open .logo__image {
-    margin-left: 0;
-    -webkit-transition: fill 3s margin-left 3s;
-    -o-transition: fill 3s margin-left 3s;
-    transition: fill 3s margin-left 3s;
+    left: 13px;
+    -webkit-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s;
     fill: #011c40;
   }
 
@@ -1863,13 +1858,14 @@ button,
   }
 
   .logo__image {
+    position: absolute;
+    left: -305px;
     width: 42px;
     height: 22px;
-    margin-left: -35px;
   }
 
   .logo__image-footer {
-    margin-left: 0;
+    left: 14px;
   }
 
   .advantages {
@@ -1950,8 +1946,9 @@ button,
     padding-left: 22px;
   }
 
-  .catalog__product-info h3 {
-    left: 25px;
+  .catalog__button {
+    padding-right: 51px;
+    padding-left: 51px;
   }
 
   .contacts {
@@ -2001,10 +1998,6 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .footer__main-nav {
-    margin-right: 0;
   }
 
   .footer__social-list {
@@ -2075,17 +2068,22 @@ button,
     margin-right: 15px;
   }
 
+  .booking__button {
+    margin-top: 25px;
+  }
+
   .main-nav ul {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
-    margin-top: 41px;
+    margin-top: 64px;
+    overflow: auto;
     gap: 26px;
   }
 
   .main-nav a {
     padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 9px;
     font-size: 18px;
     line-height: 22px;
     color: #011c40;
