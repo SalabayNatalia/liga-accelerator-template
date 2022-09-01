@@ -2,9 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-
-  // outline: 1px solid pink;
-  // outline-offset: 1px;
 }
 
 html,
@@ -46,9 +43,10 @@ a {
 
 img,
 video {
-  display: block;
   max-width: 100%;
-  height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 textarea {

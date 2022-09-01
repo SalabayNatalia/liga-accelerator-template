@@ -1,10 +1,22 @@
 .logo {
-  padding-top: 3px;
+  display: block;
+  width: 70px;
+  height: 38px;
+
+  @media (max-width: $tablet-size-max) {
+    width: 38px;
+    height: 20px;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    width: 42px;
+    height: 32px;
+  }
 }
 
 .logo__image {
-  width: 70px;
-  height: 38px;
+  width: 100%;
+  height: 100%;
 
   fill: $alice-blue;
 
@@ -15,30 +27,5 @@
 
   &:active {
     opacity: 0.5;
-  }
-}
-
-@media (max-width: $tablet-size-max) {
-  .logo__image {
-    width: 38px;
-    height: 20px;
-  }
-}
-
-@media (max-width: $mobile-size-max) {
-  .logo {
-    padding-top: 0;
-  }
-
-  .logo__image {
-    position: absolute;
-    left: -305px;
-
-    width: 42px;
-    height: 22px;
-  }
-
-  .logo__image-footer {
-    left: 14px;
   }
 }
