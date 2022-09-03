@@ -8,6 +8,10 @@
   <meta name="description" content="Описание проекта">
   <title>Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style" crossorigin="anonymous">
+  <link rel="preload" href="js/main.min.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -24,16 +28,16 @@
             <nav class="page-header__main-nav main-nav">
               <ul class="list-reset">
                 <li>
-                  <a data-menu-link href="#advantages">Преимущества</a>
+                  <a class="noselect" data-menu-link href="#advantages">Преимущества</a>
                 </li>
                 <li>
-                  <a href="#">Направления</a>
+                  <a class="noselect" href="#">Направления</a>
                 </li>
                 <li>
-                  <a data-menu-link href="#upcoming-cruises">Ближайшие круизы</a>
+                  <a class="noselect" data-menu-link href="#upcoming-cruises">Ближайшие круизы</a>
                 </li>
                 <li>
-                  <a data-menu-link href="#contacts">Контакты</a>
+                  <a class="noselect" data-menu-link href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -60,9 +64,9 @@
             </div>
             <div class="trip__image">
               <picture>
-                <source type="image/webp" srcset="img/trip-desktop.webp 1x, img/trip-desktop@2x.webp 2x" />
+                <source loading="lazy" type="image/webp" srcset="img/trip-desktop.webp 1x, img/trip-desktop@2x.webp 2x" />
                 <!--desktop 1x: 560px; 2x: 1120px -->
-                <img src="img/trip-desktop.jpg" srcset="img/trip-desktop@2x.jpg 2x" width="560" height="301" alt="пингвины">
+                <img loading="lazy" src="img/trip-desktop.jpg" srcset="img/trip-desktop@2x.jpg 2x" width="560" height="301" alt="пингвины">
               </picture>
             </div>
           </div>
@@ -95,9 +99,9 @@
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Астория"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-1.webp 1x, img/cruise-1@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-1.webp 1x, img/cruise-1@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-1.jpg" srcset="img/cruise-1@2x.jpg 2x" width="260" height="386" alt="ледяная гладь на водоёме">
+                  <img loading="lazy" src="img/cruise-1.jpg" srcset="img/cruise-1@2x.jpg 2x" width="260" height="386" alt="ледяная гладь на водоёме">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -112,16 +116,16 @@
                   <dt>Цена</dt>
                   <dd>от 11500 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Элайн"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-3.webp 1x, img/cruise-3@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-3.webp 1x, img/cruise-3@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-3.jpg" srcset="img/cruise-3@2x.jpg 2x" width="260" height="386" alt="завораживающий бирюзовый лёд">
+                  <img loading="lazy" src="img/cruise-3.jpg" srcset="img/cruise-3@2x.jpg 2x" width="260" height="386" alt="завораживающий бирюзовый лёд">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -136,16 +140,16 @@
                   <dt>Цена</dt>
                   <dd>от 14500 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Атлантис"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-3.webp 1x, img/cruise-3@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-3.webp 1x, img/cruise-3@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-3.jpg" srcset="img/cruise-3@2x.jpg 2x" width="260" height="386" alt="бирюзовая красотища">
+                  <img loading="lazy" src="img/cruise-3.jpg" srcset="img/cruise-3@2x.jpg 2x" width="260" height="386" alt="бирюзовая красотища">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -160,16 +164,16 @@
                   <dt>Цена</dt>
                   <dd>от 14500 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Одиссей"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-4.webp 1x, img/cruise-4@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-4.webp 1x, img/cruise-4@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-4.jpg" srcset="img/cruise-4@2x.jpg 2x" width="260" height="386" alt="облачное небо и серые заснеженные скалы">
+                  <img loading="lazy" src="img/cruise-4.jpg" srcset="img/cruise-4@2x.jpg 2x" width="260" height="386" alt="облачное небо и серые заснеженные скалы">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -184,16 +188,16 @@
                   <dt>Цена</dt>
                   <dd>от 9700 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Олимпия"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-5.webp 1x, img/cruise-5@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-5.webp 1x, img/cruise-5@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-5.jpg" srcset="img/cruise-5@2x.jpg 2x" width="260" height="386" alt="идеально ровный срез толщи снега и люди на экскурсии">
+                  <img loading="lazy" src="img/cruise-5.jpg" srcset="img/cruise-5@2x.jpg 2x" width="260" height="386" alt="идеально ровный срез толщи снега и люди на экскурсии">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -208,16 +212,16 @@
                   <dt>Цена</dt>
                   <dd>от 11700 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Аврора"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-6.webp 1x, img/cruise-6@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-6.webp 1x, img/cruise-6@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-6.jpg" srcset="img/cruise-6@2x.jpg 2x" width="260" height="386" alt="некрупные заснеженные льдины плывут по воде">
+                  <img loading="lazy" src="img/cruise-6.jpg" srcset="img/cruise-6@2x.jpg 2x" width="260" height="386" alt="некрупные заснеженные льдины плывут по воде">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -232,16 +236,16 @@
                   <dt>Цена</dt>
                   <dd>от 11700 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Леонор"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-7.webp 1x, img/cruise-7@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-7.webp 1x, img/cruise-7@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-7.jpg" srcset="img/cruise-7@2x.jpg 2x" width="260" height="386" alt="кораблик на холодной, но незамёрзшей воде и ветер">
+                  <img loading="lazy" src="img/cruise-7.jpg" srcset="img/cruise-7@2x.jpg 2x" width="260" height="386" alt="кораблик на холодной, но незамёрзшей воде и ветер">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -256,16 +260,16 @@
                   <dt>Цена</dt>
                   <dd>от 12500 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
             <li class="catalog__item">
               <div class="catalog__photo">
                 <h3>Круиз&nbsp;"Минион&nbsp;-&nbsp;1"</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/cruise-8.webp 1x, img/cruise-8@2x.webp 2x">
+                  <source loading="lazy" type="image/webp" srcset="img/cruise-8.webp 1x, img/cruise-8@2x.webp 2x">
                   <!--desktop 1x: 260px; 2x: 520px -->
-                  <img src="img/cruise-8.jpg" srcset="img/cruise-8@2x.jpg 2x" width="260" height="386" alt="безкрайние снежные горы и подмёрзший водоём">
+                  <img loading="lazy" src="img/cruise-8.jpg" srcset="img/cruise-8@2x.jpg 2x" width="260" height="386" alt="безкрайние снежные горы и подмёрзший водоём">
                 </picture>
               </div>
               <div class="catalog__product-info">
@@ -280,7 +284,7 @@
                   <dt>Цена</dt>
                   <dd>от 12300 $</dd>
                 </dl>
-                <a class="catalog__button button" href="#">Забронировать</a>
+                <a class="catalog__button button noselect" href="#">Забронировать</a>
               </div>
             </li>
           </ul>
@@ -296,19 +300,19 @@
             <div class="booking__form-wrapper">
               <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</p>
               <form class="booking__form" action="https//echo.htmlacadeny.ru" method="post" autocomplete="off" data-form>
-                <div class="booking__inputs">
+                <div class="booking__inputs noselect">
                   <label class="visually-hidden" for="your-name">Ваше имя:</label>
                   <input id="your-name" type="text" name="name" data-input placeholder="Имя" data-rule="" required minlength="2" maxlength="25">
                   <label class="visually-hidden" for="phone">Ваш телефон:</label>
-                  <input id="phone" type="tel" name="telephone" data-phone data-input placeholder="Телефон" required>
+                  <input id="phone" type="tel" pattern="^[0-9]+$" name="telephone" data-phone data-input placeholder="Телефон" required>
                   <label class="visually-hidden" for="email">Ваш email:</label>
                   <input id="email" type="email" name="mail" data-email data-input placeholder="Email" required>
                 </div>
-                <div class="booking__check">
-                  <input type="checkbox" id="agree" checked data-checkbox>
+                <div class="booking__check noselect">
+                  <input type="checkbox" id="agree" checked data-checkbox required>
                   <label for="agree">Я согласен на обработку моих&nbsp;персональных&nbsp;данных</label>
                 </div>
-                <button class="booking__button button" type="submit">Оставить заявку</button>
+                <button class="booking__button button noselect" type="submit">Оставить заявку</button>
               </form>
             </div>
           </div>
@@ -319,7 +323,7 @@
           <h2 class="visually-hidden" id="contacts">Контакты</h2>
           <div class="contacts__wrapper">
             <div class="contacts__map-wrap">
-              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858715897256!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1658435492846!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe class="contacts__map" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858715897256!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1658435492846!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contacts__text">
               <p>У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и мы вам все расскажем.</p>
@@ -341,16 +345,16 @@
           <nav class="footer__main-nav main-nav">
             <ul class="list-reset" data-menu>
               <li>
-                <a data-menu-link href="#advantages">Преимущества</a>
+                <a class="noselect" data-menu-link href="#advantages">Преимущества</a>
               </li>
               <li>
-                <a data-menu-link href="#">Направления</a>
+                <a class="noselect" data-menu-link href="#">Направления</a>
               </li>
               <li>
-                <a data-menu-link href="#upcoming-cruises">Ближайшие круизы</a>
+                <a class="noselect" data-menu-link href="#upcoming-cruises">Ближайшие круизы</a>
               </li>
               <li>
-                <a data-menu-link href="#contacts">Контакты</a>
+                <a class="noselect" data-menu-link href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -381,7 +385,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/vendor.min.js"></script>
+  <!-- <script src="js/vendor.min.js"></script> -->
   <script src="js/main.min.js"></script>
 </body>
 

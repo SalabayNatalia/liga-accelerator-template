@@ -6,10 +6,21 @@
   background-size: cover;
 
   @media (min-width: $desktop-size-min) {
-    background-image: url("../img/advantages-desktop.jpg");
+    background-image: url("../img/advantages-desktop.jpg") no-repeat
+      center/cover;
+
+    @supports (background: url("../img/advantages-desktop.webp")) {
+      background: url("../img/advantages-desktop.webp") no-repeat center/cover;
+    }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/advantages-desktop@2x.jpg");
+      background-image: url("../img/advantages-desktop@2x.jpg") no-repeat
+        center/cover;
+
+      @supports (background: url("../img/advantages-desktop@2x.webp")) {
+        background: url("../img/advantages-desktop@2x.webp") no-repeat
+          center/cover;
+      }
     }
   }
 
@@ -17,10 +28,20 @@
     padding-top: 89px;
     padding-bottom: 102px;
 
-    background-image: url("../img/advantages-tablet.jpg");
+    background-image: url("../img/advantages-tablet.jpg") no-repeat center/cover;
+
+    @supports (background: url("../img/advantages-tablet.webp")) {
+      background: url("../img/advantages-tablet.webp") no-repeat center/cover;
+    }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/advantages-tablet@2x.jpg");
+      background-image: url("../img/advantages-tablet@2x.jpg") no-repeat
+        center/cover;
+
+      @supports (background: url("../img/advantages-tablet@2x.webp")) {
+        background: url("../img/advantages-tablet@2x.webp") no-repeat
+          center/cover;
+      }
     }
   }
 
@@ -28,10 +49,20 @@
     padding-top: 56px;
     padding-bottom: 67px;
 
-    background-image: url("../img/advantages-mobile.jpg");
+    background-image: url("../img/advantages-mobile.jpg") no-repeat center/cover;
+
+    @supports (background: url("../img/advantages-mobile.webp")) {
+      background: url("../img/advantages-mobile.webp") no-repeat center/cover;
+    }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/advantages-mobile@2x.jpg");
+      background-image: url("../img/advantages-mobile@2x.jpg") no-repeat
+        center/cover;
+
+      @supports (background: url("../img/advantages-mobile@2x.webp")) {
+        background: url("../img/advantages-mobile@2x.webp") no-repeat
+          center/cover;
+      }
     }
   }
 }
