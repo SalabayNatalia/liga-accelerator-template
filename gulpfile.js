@@ -14,6 +14,7 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const gcmq = require('gulp-group-css-media-queries');
+const critical = require('critical').stream;
 
 const css = () => {
   return gulp.src('source/sass/style.scss')
@@ -141,6 +142,22 @@ const optimizeImages = () => {
       ]))
       .pipe(gulp.dest('build/img'));
 };
+
+gulp.task('critical', () => {
+  return gulp
+    .src('./*.html')
+    .pipe(
+      critical({
+        base: './',
+        inline: true,
+        css: ['./css/components.css', './css/main.css'],
+      })
+    )
+    .on('error', err => {
+      log.error(err.message);
+    })
+    .pipe(gulp.dest('dist'));
+});
 
 exports.imagemin = optimizeImages;
 exports.webp = createWebp;
