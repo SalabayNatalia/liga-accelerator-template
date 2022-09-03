@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Описание проекта">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Путешествия в Антарктику">
   <title>Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="css/style.min.css" as="style" crossorigin="anonymous">
@@ -302,15 +303,15 @@
               <form class="booking__form" action="https//echo.htmlacadeny.ru" method="post" autocomplete="off" data-form>
                 <div class="booking__inputs noselect">
                   <label class="visually-hidden" for="your-name">Ваше имя:</label>
-                  <input id="your-name" type="text" name="name" data-input placeholder="Имя" data-rule="" required minlength="2" maxlength="25">
-                  <label class="visually-hidden" for="phone">Ваш телефон:</label>
-                  <input id="phone" type="tel" pattern="^[0-9]+$" name="telephone" data-phone data-input placeholder="Телефон" required>
+                  <input id="your-name" type="text" name="name" data-input placeholder="Имя" data-rule="" minlength="2" maxlength="25" aria-label="Ваше имя." required>
+                  <label class=" visually-hidden" for="phone">Ваш телефон:</label>
+                  <input id="phone" type="tel" pattern="^[0-9]+$" name="telephone" data-phone data-input placeholder="Телефон" aria-label="Телефон." required>
                   <label class="visually-hidden" for="email">Ваш email:</label>
-                  <input id="email" type="email" name="mail" data-email data-input placeholder="Email" required>
+                  <input id="email" type="email" name="mail" data-email data-input placeholder="Email" aria-label="Емэйл." required>
                 </div>
                 <div class="booking__check noselect">
-                  <input type="checkbox" id="agree" checked data-checkbox required>
                   <label for="agree">Я согласен на обработку моих&nbsp;персональных&nbsp;данных</label>
+                  <input type="checkbox" id="agree" aria-label="Поставьте галочку, если согласны на обработку персональных данных." checked data-checkbox required>
                 </div>
                 <button class="booking__button button noselect" type="submit">Оставить заявку</button>
               </form>

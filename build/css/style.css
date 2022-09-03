@@ -565,7 +565,6 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -khtml-user-select: none;
   -webkit-touch-callout: none;
 }
 
@@ -1201,10 +1200,6 @@ button,
 .main-nav a:hover,
 .main-nav a:focus {
   color: #339a9a;
-  background-color: #000000;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
 }
 
 .main-nav a:active {
@@ -1964,7 +1959,6 @@ button,
   }
 
   .main-nav a {
-    display: block;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 18px;

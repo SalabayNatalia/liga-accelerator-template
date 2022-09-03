@@ -27,7 +27,6 @@
   color: $alice-blue;
 
   @media (max-width: $mobile-size-max) {
-    display: block;
     padding-right: 10px;
     padding-left: 10px;
 
@@ -38,10 +37,6 @@
   &:hover,
   &:focus {
     color: $java;
-
-    background-color: $color-default-black;
-
-    transition: background-color 0.5s;
   }
 
   &:active {
