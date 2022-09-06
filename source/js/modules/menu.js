@@ -4,6 +4,9 @@ export const menu = function () {
   const header = document.querySelector('[data-header]');
   const link = document.querySelectorAll('[data-menu-link]');
   const body = document.querySelector('body');
+  const overlay = document.querySelector('.page-header__overlay');
+
+  body.classList.remove('nojs');
 
   const onPopupEscKeydown = (evt) => {
     if (evt.keyCode === 27) {
@@ -40,4 +43,13 @@ export const menu = function () {
       }
     });
   });
-};
+
+  overlay.addEventListener ('click', (evt) => {
+    evt.preventDefault();
+    // evt.stopPropagation();
+    if (header.classList.contains('is-open')) {
+        header.classList.remove('is-open');
+        body.classList.remove('no-scroll');
+      }
+   });
+  };

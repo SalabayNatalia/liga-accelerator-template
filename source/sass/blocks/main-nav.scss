@@ -1,3 +1,11 @@
+.main-nav {
+  align-self: center;
+
+  @media (max-width: $tablet-size-max) {
+    align-self: flex-start;
+  }
+}
+
 .main-nav__burger {
   display: none;
 }
