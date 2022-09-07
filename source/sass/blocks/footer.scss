@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 50px;
+  padding-top: 46px;
   padding-bottom: 50px;
 
   background-color: $tangaroa;
@@ -17,7 +17,6 @@
 
 .footer__wrapper {
   display: flex;
-  align-items: center;
 
   @media (max-width: $mobile-size-max) {
     display: block;
@@ -36,7 +35,7 @@
   margin-right: auto;
 
   @media (max-width: $mobile-size-max) {
-    padding-top: 17px;
+    padding-top: 10px;
     padding-bottom: 11px;
   }
 }
@@ -63,7 +62,11 @@
 
 .footer__social-list {
   display: flex;
-  flex-wrap: wrap;
+  margin-top: 5px;
+
+  @media (max-width: $tablet-size-max) {
+    margin-top: 0;
+  }
 }
 
 .footer__social-list li {

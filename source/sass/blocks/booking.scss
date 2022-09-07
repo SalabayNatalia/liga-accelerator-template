@@ -1,5 +1,5 @@
 .booking {
-  padding-top: 50px;
+  padding-top: 54px;
   padding-bottom: 50px;
 
   background-color: $pattens-blue;
@@ -24,7 +24,8 @@
   }
 
   @media (max-width: $tablet-size-max) {
-    padding-bottom: 100px;
+    padding-top: 52px;
+    padding-bottom: 102px;
 
     background-image: url("../img/booking-tablet.jpg") no-repeat center/cover;
 
@@ -98,7 +99,7 @@
 
 .booking h2 {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 
   font-weight: 700;
   font-size: 40px;
@@ -107,6 +108,7 @@
 
   @media (max-width: $tablet-size-max) {
     margin-top: 0;
+    margin-bottom: 3px;
 
     font-size: 34px;
     line-height: 51px;
@@ -143,23 +145,25 @@
 .booking__form-wrapper {
   width: 403px;
   max-height: 455px;
-  padding: 44px 50px 50px;
+  padding: 43px 50px 50px;
 
   background-color: $tangaroa;
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 
   @media (max-width: $tablet-size-max) {
     margin: 0 auto;
+    padding-top: 45px;
   }
 
   @media (max-width: $mobile-size-max) {
     width: 100%;
+    max-height: 460px;
     padding: 35px 30px 40px;
   }
 }
 
 .booking__form-wrapper p {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   font-weight: 500;
   font-size: 18px;
@@ -238,7 +242,7 @@
   appearance: none;
 
   @media (max-width: $mobile-size-max) {
-    width: 20px;
+    width: 27px;
     height: 20px;
   }
 }

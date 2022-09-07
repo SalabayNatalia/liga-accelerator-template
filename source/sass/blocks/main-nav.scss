@@ -18,11 +18,14 @@
   gap: 34px;
 
   @media (max-width: $tablet-size-max) {
+    margin-top: 6px;
+
     gap: 24px;
   }
 
   @media (max-width: $mobile-size-max) {
     flex-direction: column;
+    margin-top: 0;
 
     gap: 26px;
   }

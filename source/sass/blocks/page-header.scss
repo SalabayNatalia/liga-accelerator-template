@@ -8,20 +8,17 @@
   background-size: cover;
 
   @media (min-width: $desktop-size-min) {
-    background-image: url("../img/background-desktop.jpg") no-repeat
-      center/cover;
+    background-image: url("../img/background-desktop.jpg");
 
-    @supports (background: url("../img/background-desktop.webp")) {
-      background: url("../img/background-desktop.webp") no-repeat center/cover;
+    @supports (background-image: url("../img/background-desktop.webp")) {
+      background-image: url("../img/background-desktop.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-desktop@2x.jpg") no-repeat
-        center/cover;
+      background-image: url("../img/background-desktop@2x.jpg");
 
-      @supports (background: url("../img/background-desktop@2x.webp")) {
-        background: url("../img/background-desktop@2x.webp") no-repeat
-          center/cover;
+      @supports (background-image: url("../img/background-desktop@2x.webp")) {
+        background-image: url("../img/background-desktop@2x.webp");
       }
     }
   }

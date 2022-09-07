@@ -30,3 +30,9 @@
     margin-top: 0;
   }
 }
+
+.logo__image-footer {
+  @media (max-width: $tablet-size-max) {
+    margin-top: 10px;
+  }
+}

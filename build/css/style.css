@@ -885,7 +885,8 @@ button,
   position: relative;
   display: -ms-grid;
   display: grid;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
 }
@@ -905,7 +906,8 @@ button,
 
 .catalog__photo {
   z-index: 2;
-  height: 386px;
+  max-width: 100%;
+  height: auto;
   grid-column: 1/-1;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -914,8 +916,10 @@ button,
 
 .catalog__photo img {
   display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .catalog__product-info {
@@ -926,6 +930,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 260px;
   height: 386px;
   padding: 28px 25px 35px;
   overflow: auto;
@@ -1082,7 +1087,7 @@ button,
 }
 
 .booking {
-  padding-top: 50px;
+  padding-top: 54px;
   padding-bottom: 50px;
   background-color: #d9e6f4;
   background-repeat: no-repeat;
@@ -1110,7 +1115,7 @@ button,
 
 .booking h2 {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -1128,14 +1133,14 @@ button,
 .booking__form-wrapper {
   width: 403px;
   max-height: 455px;
-  padding: 44px 50px 50px;
+  padding: 43px 50px 50px;
   background-color: #011c40;
   -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
 .booking__form-wrapper p {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1303,7 +1308,7 @@ button,
 }
 
 .footer {
-  padding-top: 50px;
+  padding-top: 46px;
   padding-bottom: 50px;
   background-color: #011c40;
 }
@@ -1312,9 +1317,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .footer__logo {
@@ -1329,8 +1331,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  margin-top: 5px;
 }
 
 .footer__social-list li {
@@ -1380,12 +1381,12 @@ button,
 
 @media (min-width: 1024px) {
   .page-header {
-    background-image: url("../img/background-desktop.jpg") no-repeat center/cover;
+    background-image: url("../img/background-desktop.jpg");
   }
 
-@supports (background: url("../img/background-desktop.webp")) {
+@supports (background-image: url("../img/background-desktop.webp")) {
     .page-header {
-      background: url("../img/background-desktop.webp") no-repeat center/cover;
+      background-image: url("../img/background-desktop.webp");
     }
 }
 
@@ -1412,12 +1413,12 @@ button,
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .page-header {
-    background-image: url("../img/background-desktop@2x.jpg") no-repeat center/cover;
+    background-image: url("../img/background-desktop@2x.jpg");
   }
 
-@supports (background: url("../img/background-desktop@2x.webp")) {
+@supports (background-image: url("../img/background-desktop@2x.webp")) {
     .page-header {
-      background: url("../img/background-desktop@2x.webp") no-repeat center/cover;
+      background-image: url("../img/background-desktop@2x.webp");
     }
 }
 
@@ -1496,6 +1497,10 @@ button,
     height: 20px;
   }
 
+  .logo__image-footer {
+    margin-top: 10px;
+  }
+
   .advantages {
     padding-top: 89px;
     padding-bottom: 102px;
@@ -1567,13 +1572,25 @@ button,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .catalog__item {
+    width: 309px;
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
   .catalog__item h3 {
     right: 35px;
     bottom: 27px;
     left: 35px;
   }
 
+  .catalog__photo img {
+    width: 309px;
+    height: 386px;
+  }
+
   .catalog__product-info {
+    max-width: 309px;
     padding: 30px 35px 34px;
   }
 
@@ -1604,7 +1621,8 @@ button,
   }
 
   .booking {
-    padding-bottom: 100px;
+    padding-top: 52px;
+    padding-bottom: 102px;
     background-image: url("../img/booking-tablet.jpg") no-repeat center/cover;
   }
 
@@ -1626,6 +1644,7 @@ button,
 
   .booking h2 {
     margin-top: 0;
+    margin-bottom: 3px;
     font-size: 34px;
     line-height: 51px;
   }
@@ -1636,6 +1655,7 @@ button,
 
   .booking__form-wrapper {
     margin: 0 auto;
+    padding-top: 45px;
   }
 
   .booking__form-wrapper p {
@@ -1648,6 +1668,7 @@ button,
   }
 
   .main-nav ul {
+    margin-top: 6px;
     gap: 24px;
   }
 
@@ -1688,6 +1709,10 @@ button,
   .footer__main-nav a {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .footer__social-list {
+    margin-top: 0;
   }
 
   .footer__social-list li:not(:last-child) {
@@ -1746,7 +1771,7 @@ button,
     display: none;
   }
 
-  .nojs .main-nav ul {
+  .nojs .page-header__main-nav ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1763,6 +1788,10 @@ button,
 
   .nojs .page-header__main-nav a:active {
     opacity: 0.5;
+  }
+
+  .nojs .page-header__antarctic {
+    padding-top: 55px;
   }
 
   .page-header {
@@ -1944,13 +1973,23 @@ button,
     grid-template-columns: 1fr;
   }
 
+  .catalog__item {
+    width: 270px;
+  }
+
   .catalog__item h3 {
     right: 25px;
     bottom: 17px;
     left: 25px;
   }
 
+  .catalog__photo img {
+    width: 270px;
+    max-width: 100%;
+  }
+
   .catalog__product-info {
+    max-width: 270px;
     padding: 30px 25px 34px;
   }
 
@@ -2009,6 +2048,7 @@ button,
 
   .booking__form-wrapper {
     width: 100%;
+    max-height: 460px;
     padding: 35px 30px 40px;
   }
 
@@ -2031,7 +2071,7 @@ button,
   }
 
   .booking__check input[type="checkbox"] {
-    width: 20px;
+    width: 27px;
     height: 20px;
   }
 
@@ -2040,6 +2080,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-top: 0;
     gap: 26px;
   }
 
@@ -2080,7 +2121,7 @@ button,
   }
 
   .footer__main-nav {
-    padding-top: 17px;
+    padding-top: 10px;
     padding-bottom: 11px;
   }
 
