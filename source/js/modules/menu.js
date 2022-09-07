@@ -1,10 +1,9 @@
 export const menu = function () {
-
   const menuBtn = document.querySelector('[data-burger]');
   const header = document.querySelector('[data-header]');
   const link = document.querySelectorAll('[data-menu-link]');
   const body = document.querySelector('body');
-  const overlay = document.querySelector('.page-header__overlay');
+  const overlay = document.querySelector('.page-header__popup .container');
 
   body.classList.remove('nojs');
 
@@ -16,18 +15,24 @@ export const menu = function () {
     }
   };
 
+  const onPopupOpened = () => {
+    header.classList.add('is-open');
+    body.classList.add('no-scroll');
+  };
+
+  const onPopupClosed = () => {
+    header.classList.remove('is-open');
+    body.classList.remove('no-scroll');
+  };
+
   menuBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
     if (header.classList.contains('is-open')) {
-      header.classList.remove('is-open');
-
+      onPopupClosed();
       document.removeEventListener('keydown', onPopupEscKeydown);
-      body.classList.remove('no-scroll');
     } else {
-      header.classList.add('is-open');
-
+      onPopupOpened();
       document.addEventListener('keydown', onPopupEscKeydown);
-      body.classList.add('no-scroll');
     }
   });
 
@@ -35,21 +40,18 @@ export const menu = function () {
     element.addEventListener('click', (evt) => {
       evt.preventDefault();
       if (header.classList.contains('is-open')) {
-        header.classList.remove('is-open');
-        body.classList.remove('no-scroll');
-      } else {
-        header.classList.add('is-open');
-        body.classList.add('no-scroll');
+        onPopupClosed();
       }
     });
   });
 
-  overlay.addEventListener ('click', (evt) => {
+  overlay.addEventListener('click', (evt) => {
     evt.preventDefault();
-    // evt.stopPropagation();
-    if (header.classList.contains('is-open')) {
-        header.classList.remove('is-open');
-        body.classList.remove('no-scroll');
+    let target = evt.target;
+    if (target === overlay) {
+      if (header.classList.contains('is-open')) {
+        onPopupClosed();
       }
-   });
-  };
+    }
+  });
+};
