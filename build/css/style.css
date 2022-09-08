@@ -1098,9 +1098,6 @@ button,
 .booking__wrapper {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 0 60px;
   -webkit-column-gap: 144px;
   -moz-column-gap: 144px;
@@ -1110,7 +1107,9 @@ button,
 }
 
 .booking__text {
-  padding: 122px 0 131px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .booking h2 {
