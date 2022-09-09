@@ -27,19 +27,17 @@
     min-height: 638px;
     padding-bottom: 100px;
 
-    background-image: url("../img/background-tablet.jpg") no-repeat center/cover;
+    background-image: url("../img/background-tablet.jpg");
 
-    @supports (background: url("../img/background-tablet.webp")) {
-      background: url("../img/background-tablet.webp") no-repeat center/cover;
+    @supports (background-image: url("../img/background-tablet.webp")) {
+      background-image: url("../img/background-tablet.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-tablet@2x.jpg") no-repeat
-        center/cover;
+      background-image-image: url("../img/background-tablet@2x.jpg");
 
-      @supports (background: url("../img/background-tablet@2x.webp")) {
-        background: url("../img/background-tablet@2x.webp") no-repeat
-          center/cover;
+      @supports (background-image: url("../img/background-tablet@2x.webp")) {
+        background-image: url("../img/background-tablet@2x.webp");
       }
     }
   }
@@ -49,19 +47,17 @@
     padding-top: 21px;
     padding-bottom: 65px;
 
-    background-image: url("../img/background-mobile.jpg") no-repeat center/cover;
+    background-image: url("../img/background-mobile.jpg");
 
-    @supports (background: url("../img/background-mobile.webp")) {
-      background: url("../img/background-mobile.webp") no-repeat center/cover;
+    @supports (background-image: url("../img/background-mobile.webp")) {
+      background-image: url("../img/background-mobile.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-mobile@2x.jpg") no-repeat
-        center/cover;
+      background-image: url("../img/background-mobile@2x.jpg");
 
-      @supports (background: url("../img/background-mobile@2x.webp")) {
-        background: url("../img/background-mobile@2x.webp") no-repeat
-          center/cover;
+      @supports (background-image: url("../img/background-mobile@2x.webp")) {
+        background-image: url("../img/background-mobile@2x.webp");
       }
     }
   }

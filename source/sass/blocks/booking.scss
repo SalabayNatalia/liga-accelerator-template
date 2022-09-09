@@ -4,21 +4,20 @@
 
   background-color: $pattens-blue;
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
 
   @media (min-width: $desktop-size-min) {
-    background-image: url("../img/booking.jpg") no-repeat center/cover;
+    background-image: url("../img/booking.jpg");
 
-    @supports (background: url("../img/booking.webp")) {
-      background: url("../img/booking.webp") no-repeat center/cover;
+    @supports (background-image: url("../img/booking.webp")) {
+      background-image: url("../img/booking.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/booking@2x.jpg") no-repeat center/cover;
+      background-image: url("../img/booking@2x.jpg");
 
-      @supports (background: url("../img/booking@2x.webp")) {
-        background: url("../img/booking@2x.webp") no-repeat center/cover;
+      @supports (background-image: url("../img/booking@2x.webp")) {
+        background-image: url("../img/booking@2x.webp");
       }
     }
   }
@@ -27,18 +26,17 @@
     padding-top: 52px;
     padding-bottom: 102px;
 
-    background-image: url("../img/booking-tablet.jpg") no-repeat center/cover;
+    background-image: url("../img/booking-tablet.jpg");
 
-    @supports (background: url("../img/booking-tablet.webp")) {
-      background: url("../img/booking-tablet.webp") no-repeat center/cover;
+    @supports (background-image: url("../img/booking-tablet.webp")) {
+      background-image: url("../img/booking-tablet.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/booking-tablet@2x.jpg") no-repeat
-        center/cover;
+      background-image: url("../img/booking-tablet@2x.jpg");
 
-      @supports (background: url("../img/booking-tablet@2x.webp")) {
-        background: url("../img/booking-tablet@2x.webp") no-repeat center/cover;
+      @supports (background-image: url("../img/booking-tablet@2x.webp")) {
+        background-image: url("../img/booking-tablet@2x.webp");
       }
     }
   }
@@ -47,18 +45,17 @@
     padding-top: 21px;
     padding-bottom: 65px;
 
-    background-image: url("../img/booking-mobile.jpg") no-repeat center/cover;
+    background-image: url("../img/booking-mobile.jpg");
 
-    @supports (background: url("../img/booking-mobile.webp")) {
-      background: url("../img/booking-mobile.webp") no-repeat center/cover;
+    @supports (background-image: url("../img/booking-mobile.webp")) {
+      background-image: url("../img/booking-mobile.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/booking-mobile@2x.jpg") no-repeat
-        center/cover;
+      background-image: url("../img/booking-mobile@2x.jpg");
 
-      @supports (background: url("../img/booking-mobile@2x.webp")) {
-        background: url("../img/booking-mobile@2x.webp") no-repeat center/cover;
+      @supports (background-image: url("../img/booking-mobile@2x.webp")) {
+        background-image: url("../img/booking-mobile@2x.webp");
       }
     }
   }
