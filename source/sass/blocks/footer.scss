@@ -16,7 +16,9 @@
 }
 
 .footer__wrapper {
-  display: flex;
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
 
   @media (max-width: $mobile-size-max) {
     display: block;
@@ -32,6 +34,7 @@
 }
 
 .footer__main-nav {
+  align-self: start;
   margin-right: auto;
 
   @media (max-width: $mobile-size-max) {
@@ -41,6 +44,9 @@
 }
 
 .footer__main-nav ul {
+  margin-top: 12px;
+  margin-right: 20px;
+
   @media (max-width: $tablet-size-max) {
     margin-top: 6px;
   }
@@ -67,11 +73,23 @@
 }
 
 .footer__social-list {
-  display: flex;
+  display: grid;
+  max-width: 113px;
   margin-top: 5px;
+  margin-left: 12px;
+
+  grid-template-columns: repeat(3, auto);
 
   @media (max-width: $tablet-size-max) {
+    max-width: 90px;
     margin-top: 0;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: none;
+    margin-left: 0;
   }
 }
 
@@ -83,6 +101,10 @@
   margin-right: 26px;
 
   @media (max-width: $tablet-size-max) {
+    margin-right: 19px;
+  }
+
+  @media (max-width: $mobile-size-max) {
     margin-right: 17px;
   }
 }
@@ -96,7 +118,7 @@
 
   color: #f9fbfd;
 
-  @media (max-width: $mobile-size-max) {
+  @media (max-width: $tablet-size-max) {
     width: 17px;
     height: 17px;
   }
